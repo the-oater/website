@@ -1,0 +1,28 @@
+---
+export interface Props {
+	buttonName: string;
+	buttonUrl: string;
+}
+
+const { buttonName, buttonUrl } = Astro.props;
+---
+
+<a
+	href={buttonUrl}
+	class="inline-block rounded border-2 border-oat py-3 pl-5 pr-3 text-base font-bold uppercase text-raisin transition-all delay-75 duration-500 ease-in-out hover:scale-105 hover:bg-oat-superlight hover:shadow-sm"
+>
+	{buttonName}
+	<!--<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5 ml-2 -mt-1 inline-block">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>  -->
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		fill="none"
+		viewBox="0 0 24 24"
+		stroke-width="2.7"
+		stroke="currentColor"
+		class="ml-1 -mt-1 inline-block h-5 w-5"
+	>
+		<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+	</svg>
+</a>

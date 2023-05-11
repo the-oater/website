@@ -1,0 +1,16 @@
+---
+export interface Props {
+	headline: string;
+	subtitle?: string;
+	id?: string;
+}
+
+const { headline, subtitle, id } = Astro.props;
+---
+
+<div class="container mx-auto max-w-7xl px-10 py-10 text-center text-raisin" id={id}>
+	<h2 class="underline-4xl text-4xl font-bold">
+		{headline}
+	</h2>
+	<h3 class="pt-6 text-lg font-bold">{subtitle}</h3>
+</div>

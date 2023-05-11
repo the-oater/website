@@ -1,0 +1,37 @@
+---
+export interface Props {
+	headline?: string;
+	background?: string;
+	specData: Array;
+	imgUrl: string;
+}
+
+const { headline, background, specData, imgUrl } = Astro.props;
+---
+
+<section class={background} id="specs">
+	<div class="mx-auto max-w-7xl py-14 px-10">
+		<h2 class="underline-4xl text-4xl font-bold text-raisin">
+			{headline}
+		</h2>
+
+		<div class="mt-12 flex flex-col items-center text-sonic lg:flex-row">
+			<div class="basis-3/4">
+				<div class="grid grid-cols-1 items-center gap-3 lg:grid-cols-2">
+					{
+						specData.map((specData) => (
+							<div class="flex flex-row items-center gap-x-3">
+								<img class="h-20 fill-raisin" src={specData.img} />
+								<div class="">
+									<h5 class="text-lg font-semibold uppercase">{specData.title}</h5>
+									<p class="mt-1">{specData.body}</p>
+								</div>
+							</div>
+						))
+					}
+				</div>
+			</div>
+			<div class="hidden lg:block lg:basis-1/4"><img class="w-full" src={imgUrl} alt="" /></div>
+		</div>
+	</div>
+</section>

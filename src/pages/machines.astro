@@ -1,0 +1,107 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Primary from "../components/primary.astro";
+import ImgText from "../components/imagetext.astro";
+import Hero from "../components/hero.astro";
+import Headline from "../components/headline.astro";
+import Newsletter from "../components/newslettersignup.astro";
+import Specs from "../components/specs.astro";
+import Hotspots from "../components/hotspots.astro";
+import Usage from "../components/usage.astro";
+---
+
+<Layout title="THE OATER - Machines">
+	<Hero heroHeading="The Oater Machines" heroImage="/machines_header.png">
+		<Primary buttonName="to the waitlist" buttonUrl="https://share-eu1.hsforms.com/1KM3gGgfeS1mdqBzwXyDhbgfnkng" />
+	</Hero>
+
+	<Hotspots headline="The Oater Barista" id="oaterbarista" />
+
+	<Usage
+		background="bg-zinc-200"
+		img1="/functions.png"
+		icon1="/brew.svg"
+		title1="Production"
+		text1="With our machine, you can produce up to 5 Liters per batch. This ensures that you don’t run out of oat drink in your peak demand periods. The batch production takes around 60 minutes. You can follow the progress of the production on the progress bar on the screen."
+		img2="/functions.png"
+		icon2="/dispense.svg"
+		title2="Dispensing"
+		text2="Once the oat drink is ready, you simply dispense it at the push of a button We supply bottles that fit the machine dimensions. We recommend letting the oat drink rest for about 10 minutes and then storing it in the refrigerator since it’s a fresh product."
+		img3="/functions.png"
+		icon3="/clean.svg"
+		title3="Cleaning"
+		text3="The Oater Barista requires no manual cleaning steps. Simply push the cleaning button after dispensing the oat drink and the machine cleans itself. Our hygiene-tested 3-step cleaning cycle takes 10 minutes and achieves 100% cleanliness."
+	/>
+	<Headline headline="Fresh oat drink, no hassle" id="setup" />
+	<ImgText reverse title="Installation" imgUrl="/oatercafe_render.jpg" minusmargin="-mt-10">
+		We get you started with The Oater. Our team handles the installation of our machine at your business. There are only a few requirements you need to meet before we get
+		started. You need to ensure there is:
+		<ul class="list-disc py-2 pl-4 leading-loose">
+			<li>Sufficient counterspace (please consult the dimensions below)</li>
+			<li>Access to an electrical socket (not an extension socket)</li>
+			<li>Access to the fixed water supply OR space for a water tank in proximity</li>
+		</ul>
+		<div class="font-bold">We can’t wait to bring The Oater Barista to your business!</div>
+	</ImgText>
+
+	<ImgText title="Maintenance" imgUrl="/oateroffice_render.jpg" minusmargin="-mt-20">
+		As part of your subscription, we offer maintenance free of charge. This service includes regular servicing, on-demand assistance for urgent issues, as well as the repair
+		and or replacement of the machine or parts. It’s important to us that you feel supported with your new, innovative addition. We are always just an email or phone call away.
+		<Primary slot="button" buttonName="to the waitlist" buttonUrl="https://share-eu1.hsforms.com/1KM3gGgfeS1mdqBzwXyDhbgfnkng" />
+	</ImgText>
+	<Specs
+		headline="Specs"
+		background="bg-zinc-200"
+		imgUrl="/oater-full.png"
+		specData={[
+			{
+				img: "/dimensions.svg",
+				title: "Dimensions",
+				body: "(H) 60cm x (W) 30cm x (D) 50cm",
+			},
+			{ img: "/weight.svg", title: "Weight", body: "40 kg" },
+			{
+				img: "/powersupply.svg",
+				title: "Power Supply",
+				body: "234 V Regular Plug",
+			},
+			{ img: "/noiselevel.svg", title: "Noise Level", body: "40-60 dB" },
+			{
+				img: "/watersupply.svg",
+				title: "Water Supply",
+				body: "Fixed Water Connection OR 10 L tank",
+			},
+			{
+				img: "/volume.svg",
+				title: "Production Volume",
+				body: "5 L per Batch ",
+			},
+			{
+				img: "/duration.svg",
+				title: "Production Duration",
+				body: "60 Minutes",
+			},
+			{
+				img: "/cleaningduration.svg",
+				title: "Cleaning Cycle Duration",
+				body: "10 Minutes",
+			},
+			{
+				img: "/refillables.svg",
+				title: "Refillables",
+				body: "Oater Mix, Canola Oil and Detergent ",
+			},
+			{
+				img: "/bottles.svg",
+				title: "Bottles",
+				body: "1 Liter glass bottles (included)",
+			},
+		]}
+	/>
+
+	<!--<Slider />-->
+	<Newsletter headline="Join the OATeam">
+		Sign up for the newsletter and learn immediately about new recipes and company news! And do not worry for our mails the same claim applies, as for our oat drink - no
+		garbage.
+	</Newsletter>
+</Layout>

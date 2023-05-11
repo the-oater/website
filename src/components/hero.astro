@@ -1,0 +1,36 @@
+---
+export interface Props {
+	heroHeading: string;
+	heroImage: string;
+}
+
+const { heroHeading, heroImage } = Astro.props;
+---
+
+<div class="relative">
+	<div class="absolute inset-0 h-[60vh]">
+		<img class="h-full w-full object-cover opacity-70" src={heroImage} alt="" />
+	</div>
+	<div class="relative mx-auto flex h-[60vh] min-h-fit max-w-7xl px-10">
+		<div class="m-auto">
+			<div class="hidden text-center lg:block">
+				<h1 class="underline-6xl text-6xl font-bold leading-snug text-raisin">
+					{heroHeading}
+				</h1>
+			</div>
+			<div class="hidden text-center md:block lg:hidden">
+				<h1 class="underline-5xl text-5xl font-bold leading-snug text-raisin">
+					{heroHeading}
+				</h1>
+			</div>
+			<div class="text-center md:hidden">
+				<h1 class="underline-4xl text-4xl font-bold leading-snug text-raisin">
+					{heroHeading}
+				</h1>
+			</div>
+			<div class="mt-6 text-center">
+				<slot />
+			</div>
+		</div>
+	</div>
+</div>

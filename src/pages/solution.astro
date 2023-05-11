@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Primary from "../components/primary.astro";
+import Secondary from "../components/secondary.astro";
+import Iconbar from "../components/iconbar.astro";
+import ImgText from "../components/imagetext.astro";
+import Hero from "../components/hero.astro";
+import ImgTextFull from "../components/imagetextfull.astro";
+import Slider from "../components/slider.astro";
+import Oatermix from "../components/oatermix.astro";
+import Headline from "../components/headline.astro";
+---
+
+<Layout title="THE OATER - Solution">
+	<Hero heroHeading="Oat drink as a service" heroImage="/header_solution.webp" />
+
+	<Iconbar
+		bgcolor="bg-zinc-200"
+		icontitle1="Fresh + Local"
+		imgUrl1="/frischlokal.svg"
+		icontitle2="Barista Quality"
+		imgUrl2="/coffee.svg"
+		icontitle3="Low-Waste"
+		imgUrl3="/verpackungsarm.svg"
+		icontitle4="Cost Saving"
+		imgUrl4="/preiswert.svg"
+		icontitle5="Without Added Sugar"
+		imgUrl5="/zucker.svg"
+	/>
+
+	<ImgTextFull reverse title="Your subscription and delivery" imgUrl="/ingredientmix_pattern.webp">
+		As a business, you register on our digital platform. There you specify your weekly oat drink consumption. This is the basis for your subscription. The Oater automatically
+		delivers the right amount of our ingredient mix you need – you pay per usage. No more supply shortages and last-minute purchases at the supermarket. And you can always
+		adjust the subscription - we know that your consumption is not constant throughout the year.
+	</ImgTextFull>
+	<ImgTextFull title="The Oater Barista Machine " imgUrl="/hotel.webp" id="machine">
+		The machine is FREE for participating businesses. You only pay for the Oater Mix per liter. We install the machine and regular maintenance is included in our service.
+		<Secondary slot="button" buttonName="To the Machine" buttonUrl="/machines" />
+	</ImgTextFull>
+
+	<ImgTextFull reverse title="Oat drink production" imgUrl="/machine_ingredientmix.jpg">
+		To make our oat drink you only need our ingredient pack (the provided Oater Mix and canola oil) and water from the tap. Each business can decide for itself whether a fixed
+		water supply or a water tank is more suitable. More information about the ingredient packs can be found here. You can find out how the production works here.
+		<Secondary slot="button" buttonName="The Oater Mix" buttonUrl="/solution#ingredientmix" />
+	</ImgTextFull>
+	<Oatermix id="ingredientmix" />
+	<Headline headline="For Businesses" id="businesses" />
+	<Slider />
+
+	<ImgText title="Waitlist" imgUrl="/waitlist.jpg" minusmargin="-mb-32">
+		Oat drink in a carton was yesterday. The Oater machine produces the oat drink of the future. We are rethinking oat drink - with full barista quality and freshness – no
+		packaging waste, no added sugar and no tradeoffs.
+		<Primary slot="button" buttonName="To the Waitlist" buttonUrl="https://share-eu1.hsforms.com/1KM3gGgfeS1mdqBzwXyDhbgfnkng" />
+	</ImgText>
+</Layout>

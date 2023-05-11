@@ -1,0 +1,198 @@
+---
+export interface Props {
+	navitem1: string;
+	navitem2: string;
+	navitem3: string;
+	navitem4: string;
+	navitem5: string;
+	href1: string;
+	href2: string;
+	href3: string;
+	href4: string;
+	href5: string;
+	hrefLogo: string;
+	language1: string;
+	hreflanguage1: string;
+	hreflanguage2: string;
+	language2: string;
+	languagePicker: string;
+}
+
+const { navitem1, navitem2, navitem3, navitem4, navitem5, href1, href2, href3, href4, href5, hrefLogo, language1, language2, hreflanguage1, hreflanguage2, languagePicker } =
+	Astro.props;
+
+const pathname = new URL(Astro.request.url).pathname;
+
+import logo from "../assets/Oater-Logo.svg";
+---
+
+<header class="top-0 z-20 h-24 bg-white shadow-sm">
+	<nav class="mx-auto max-w-7xl px-10">
+		<div class="hidden h-24 grid-cols-7 place-items-center justify-items-stretch font-zen text-base sm:hidden md:hidden lg:visible lg:block lg:grid">
+			<div class="group">
+				<a href={href1} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic">
+					<span class={pathname === href1 ? "text-oat font-bold" : ""}>
+						{navitem1}
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mb-0.5 inline h-5 w-5">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+						</svg>
+					</span>
+				</a>
+
+				<slot name="dropdown1" />
+			</div>
+
+			<div class="group">
+				<a href={href2} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic">
+					<span class={pathname === href2 ? "text-oat font-bold" : ""}>
+						{navitem2}
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mb-0.5 inline h-5 w-5">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+						</svg>
+					</span>
+				</a>
+
+				<slot name="dropdown2" />
+			</div>
+
+			<div class="group">
+				<a href={href3} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic">
+					<span class={pathname === href3 ? "text-oat font-bold" : ""}>
+						{navitem3}
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mb-0.5 inline h-5 w-5">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+						</svg>
+					</span>
+				</a>
+
+				<slot name="dropdown3" />
+			</div>
+
+			<div class="">
+				<a href={hrefLogo}>
+					<img class="mx-auto w-44" src={logo} alt="Logo The Oater" />
+				</a>
+			</div>
+
+			<div class="group -mr-12 justify-self-end">
+				<a href={href4} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic">
+					<span class={pathname === href4 ? "text-oat font-bold" : ""}
+						>{navitem4}
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mb-0.5 inline h-5 w-5">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+						</svg>
+					</span>
+				</a>
+
+				<slot name="dropdown4" />
+			</div>
+
+			<div class="group -mr-8 justify-self-end">
+				<a href={href5} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic">
+					{navitem5}
+					<!--<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="mb-0.5 inline h-5 w-5"
+					>
+						<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+					</svg>-->
+				</a>
+
+				<slot name="dropdown5" />
+			</div>
+
+			<div class="group justify-self-end text-sonic/50 hover:text-raisin">
+				<a href="#" class="font-zen uppercase transition-all duration-500 ease-in-out">
+					{languagePicker}
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mb-0.5 inline h-5 w-5">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+					</svg>
+				</a>
+				<div class="invisible absolute z-10 -translate-x-2/3 pt-3 group-hover:visible">
+					<div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+						<div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+							<a href={hreflanguage1} class="-m-4 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-zinc-100">
+								<p class="font-medium text-raisin">{language1}</p>
+							</a>
+							<a href={hreflanguage2} class="-m-4 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-zinc-100">
+								<p class="font-medium text-raisin">{language2}</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			const menuButton = document.getElementById("menu-button");
+			const menu = document.getElementById("menu");
+
+			menuButton.addEventListener("click", () => {
+				menu.classList.toggle("hidden");
+
+				menuButton.querySelector(".menu-icon").classList.toggle("hidden");
+				menuButton.querySelector(".close-icon").classList.toggle("hidden");
+
+				document.body.classList.toggle("fixed");
+			});
+
+			window.addEventListener("resize", () => {
+				if (window.innerWidth > 992) {
+					document.body.classList.remove("fixed");
+				}
+			});
+		</script>
+
+		<div class="z-30 bg-white lg:hidden">
+			<div class="flex h-24 flex-row place-items-center justify-between">
+				<div>
+					<a href="/">
+						<img class="mx-auto w-40" src={logo} alt="" />
+					</a>
+				</div>
+
+				<button class="menu-icon text-raisin" id="menu-button">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="menu-icon h-7 w-7">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="close-icon hidden h-7 w-7">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+
+			<div id="menu" class="fixed left-0 z-10 flex hidden h-screen w-full items-center justify-center bg-white">
+				<div class="flex flex-col gap-[5vh] pb-32 text-center font-zen text-xl uppercase text-raisin">
+					<a href={href1} class="">
+						{navitem1}
+					</a>
+
+					<a href={href2} class="">
+						{navitem2}
+					</a>
+
+					<a href={href3} class="">
+						{navitem3}
+					</a>
+
+					<a href={href4} class="">
+						{navitem4}
+					</a>
+
+					<a href={href5} class="">
+						{navitem5}
+					</a>
+					<div class="text-sonic/50">
+						<a href={hreflanguage1} class=""> DE</a>
+						|
+						<a href={hreflanguage2} class=""> EN</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>

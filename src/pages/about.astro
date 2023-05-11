@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Primary from "../components/primary.astro";
+import Secondary from "../components/secondary.astro";
+import ImgText from "../components/imagetext.astro";
+import Hero from "../components/hero.astro";
+import Founder from "../components/founder.astro";
+import ImageCenter from "../components/imagecenter.astro";
+import Newsletter from "../components/newslettersignup.astro";
+---
+
+<Layout title="THE OATER - About">
+	<Hero heroHeading="About Us" heroImage="/header_about.png" />
+	<ImgText title="Mission Manifesto" imgUrl="/missionstatement.png" id="mission">
+		Imagine you could rethink food production without any constraints. What would it look like? What would you produce? How would you produce? Where would you produce? What
+		would drive your decisions?<br />
+		We believe that bringing food production on-site is the future. Locally produced food is more sustainable but also brings transparency and quality to the ingredient lists. <br
+		/>And we started with oat drink. With our The Oater Barista machine we produce the oat drink of the future – locally. Low packaging waste, significantly lower CO2 emissions
+		and better quality and taste. No compromises. And we are just getting started. It’s only impossible until it isn’t.
+	</ImgText>
+
+	<Founder
+		bgcolor="bg-oat-superlight"
+		title="Meet the Founders"
+		id="team"
+		founderData={[
+			{
+				name: "Sarah Nesti",
+				position: "CEO",
+				imgUrl: "/sarah.webp",
+				linkedinUrl: "https://de.linkedin.com/in/sarah-nesti",
+			},
+			{
+				name: "Henrik Burger",
+				position: "CFO",
+				imgUrl: "/henrik.webp",
+				linkedinUrl: "https://de.linkedin.com/in/henrikburger/",
+			},
+			{
+				name: "Lisa Nesti",
+				position: "CMO",
+				imgUrl: "/lisa.webp",
+				linkedinUrl: "https://de.linkedin.com/in/lisanesti/",
+			},
+			{
+				name: "Benjamin Auer",
+				position: "CTO",
+				imgUrl: "/benji.webp",
+				linkedinUrl: "https://de.linkedin.com/in/benjamin-auer-68668a1a7",
+			},
+		]}
+	/>
+
+	<ImageCenter imgUrl="/team.webp" headline="The Team">
+		Behind The Oater is a passionate team of oat drink enthusiasts and ambitious dreamers who share a mission - revolutionizing food production. We are from different countries
+		and have diverse perspectives. We work hybrid, flexible, motivated and at eye level – together! We are revolutionizing oat drink. Do you want to join?
+		<Primary slot="button" buttonName="Careers at The Oater" buttonUrl="/career" />
+	</ImageCenter>
+	<ImgText title="Our Story" imgUrl="/founders.jpg" background="bg-zinc-200" reverse id="story">
+		Our story begins in 2021 when Sarah, who has lived vegan for 7 years, was bothered by all the packaging waste and the lack of freshness of her oat milk. She tried all
+		alternatives to the conventional drink from the carton, but none convinces in taste and foam. Her conclusion: good barista oat drink without packaging waste? There's no
+		such thing! As an engineer, she figured that there had to be a better way and got a team together to find a solution.<br /> And now, over a year later, we are proud to say:
+		Yes, it can be better! Our oat drink is fresher, cheaper, AND more sustainable than comparable barista drink from the carton.<br /> We are Sarah, Benjamin, Henrik, and Lisa.
+		You want to continue writing the story with us? We look forward to meeting you!
+	</ImgText>
+	<Newsletter headline="Join the OATeam">
+		Sign up for the newsletter and learn immediately about new recipes and company news! And do not worry for our mails the same claim applies, as for our oat drink - no
+		garbage.
+	</Newsletter>
+</Layout>

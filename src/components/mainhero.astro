@@ -1,0 +1,43 @@
+---
+export interface Props {
+	heroHeading: string;
+	heroSubtitle?: string;
+	heroText?: string;
+	heroImage: string;
+}
+
+const { heroHeading, heroSubtitle, heroText, heroImage } = Astro.props;
+---
+
+<div class="bg-gradient-to-b from-zinc-300 to-zinc-100 text-raisin">
+	<div class="container mx-auto max-w-7xl px-10">
+		<div class="flex flex-col-reverse items-center gap-10 md:flex-row lg:gap-20">
+			<div class="basis-1/2 pb-20 md:py-20">
+				<div class="hidden lg:block">
+					<h1 class="underline-7xl text-7xl font-bold leading-snug">
+						{heroHeading}
+					</h1>
+					<h2 class="pt-6 text-xl font-bold">{heroSubtitle}</h2>
+					<p class="pt-6 pr-20 text-lg font-normal leading-relaxed">
+						{heroText}
+					</p>
+				</div>
+				<div class="lg:hidden">
+					<h1 class="underline-4xl text-4xl font-bold leading-snug">
+						{heroHeading}
+					</h1>
+					<h2 class="pt-4 text-lg font-bold">{heroSubtitle}</h2>
+					<p class="pt-4 pr-20 text-lg font-normal leading-relaxed">
+						{heroText}
+					</p>
+				</div>
+				<div class="mt-6 lg:mt-8">
+					<slot name="button" />
+				</div>
+			</div>
+			<div class="basis-1/2 md:py-10">
+				<img class="" src={heroImage} alt="" />
+			</div>
+		</div>
+	</div>
+</div>

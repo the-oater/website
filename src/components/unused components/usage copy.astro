@@ -1,0 +1,109 @@
+---
+export interface Props {
+	background?: string;
+	headline?: string;
+	id?: string;
+}
+
+const { background, id } = Astro.props;
+---
+
+<section class={background} id={id}>
+	<div class="mx-auto py-14 px-10">
+		<div class="grid items-center gap-16 sm:grid-cols-1 md:grid-cols-2">
+			<div class="relative order-first w-full">
+				<img class="carousel-image rounded opacity-100 transition-opacity duration-500 ease-in-out" src="/mission.jpg" />
+				<div id="button-wrapper" class="absolute bottom-10 left-10 transform focus:outline-none">
+					<button id="carousel-button" class="relative">
+						<div class="h-10 w-10 animate-ping rounded-full bg-oat"></div>
+					</button>
+				</div>
+			</div>
+			<div class="info max-w-xl opacity-100 transition-opacity duration-500 ease-in-out">
+				<img src="/brew.svg" id="carousel-icon" class="icon h-16 pb-8" />
+				<h2 class="underline-4xl carousel-title text-4xl font-bold text-raisin">Production</h2>
+				<p class="carousel-description mt-12 text-base leading-loose text-raisin">
+					With our machine, you can produce up to 5 Liters per batch. This ensures that you don’t run out of oat drink in your peak demand periods. The batch production
+					takes around 60 minutes. You can follow the progress of the production on the progress bar on the screen.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	const carouselItems = [
+		{
+			image: "/functions.png",
+			icon: "/brew.svg",
+			title: "Production",
+			description:
+				"With our machine, you can produce up to 5 Liters per batch. This ensures that you don’t run out of oat drink in your peak demand periods. The batch production takes around 60 minutes. You can follow the progress of the production on the progress bar on the screen.",
+			position: "left-10",
+		},
+		{
+			image: "/oatercafe_render.jpg",
+			icon: "/dispense.svg",
+			title: "Dispensing",
+			description:
+				"Once the oat drink is ready, you simply dispense it at the push of a button We supply bottles that fit the machine dimensions. We recommend letting the oat drink rest for about 10 minutes and then storing it in the refrigerator since it’s a fresh product.",
+			position: "left-1/2",
+		},
+		{
+			image: "/mission.jpg",
+			icon: "/clean.svg",
+			title: "Cleaning",
+			description:
+				"The Oater Barista requires no manual cleaning steps. Simply push the cleaning button after dispensing the oat drink and the machine cleans itself. Our hygiene-tested 3-step cleaning cycle takes 10 minutes and achieves 100% cleanliness.",
+			position: "right-10",
+		},
+	];
+	let currentItemIndex = 0;
+	function updateCarouselContent(initial = false) {
+		const carouselImage = document.querySelector(".carousel-image") as HTMLImageElement;
+		const carouselIcon = document.querySelector("#carousel-icon") as HTMLImageElement;
+		const carouselTitle = document.querySelector(".carousel-title") as HTMLElement;
+		const carouselDescription = document.querySelector(".carousel-description") as HTMLElement;
+		const info = document.querySelector(".info") as HTMLElement;
+		const buttonWrapper = document.getElementById("button-wrapper");
+
+		if (!initial) {
+			carouselImage.classList.remove("opacity-100");
+			info.classList.remove("opacity-100");
+		}
+		setTimeout(
+			() => {
+				carouselIcon.src = carouselItems[currentItemIndex].icon;
+				carouselImage.src = carouselItems[currentItemIndex].image;
+				carouselTitle.innerText = carouselItems[currentItemIndex].title;
+				carouselDescription.innerText = carouselItems[currentItemIndex].description;
+				buttonWrapper.className = `absolute bottom-10 transform focus:outline-none ${carouselItems[currentItemIndex].position}`;
+
+				carouselImage.classList.add("opacity-100");
+				info.classList.add("opacity-100");
+			},
+			initial ? 0 : 500
+		);
+	}
+
+	function handleClick() {
+		currentItemIndex = (currentItemIndex + 1) % carouselItems.length;
+		updateCarouselContent();
+	}
+	document.querySelector("#carousel-button").addEventListener("click", handleClick);
+	let carouselInterval;
+
+	function startCarousel() {
+		carouselInterval = setInterval(handleClick, 4000);
+	}
+
+	function stopCarousel() {
+		clearInterval(carouselInterval);
+	}
+	const carouselImage = document.querySelector(".carousel-image");
+	carouselImage.addEventListener("mouseover", stopCarousel);
+	carouselImage.addEventListener("mouseout", startCarousel);
+
+	updateCarouselContent(true);
+	startCarousel();
+</script>

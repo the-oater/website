@@ -1,0 +1,49 @@
+---
+export interface Props {
+	title: string;
+	imgUrl: string;
+	reverse?: boolean;
+	background?: string;
+	headline?: string;
+	minusmargin?: string;
+	id?: string;
+}
+
+const { title, imgUrl, reverse = false, background, headline, minusmargin, id } = Astro.props;
+---
+
+<section class={background} id={id}>
+	<div class="mx-auto max-w-7xl py-14 px-10">
+		<div class={minusmargin}>
+			<div class="text-center">
+				<h2 class="underline-4xl text-4xl font-bold text-raisin">
+					{headline}
+				</h2>
+			</div>
+			<div class="grid items-center gap-16 sm:grid-cols-1 md:grid-cols-2">
+				{
+					reverse ? (
+						<div class="order-first md:order-last ">
+							<img class="w-full rounded" src={imgUrl} alt={title} />
+						</div>
+					) : (
+						<div class="order-first">
+							<img class="w-full rounded" src={imgUrl} alt={title} />
+						</div>
+					)
+				}
+				<div>
+					<h2 class="underline-4xl text-4xl font-bold text-raisin">
+						{title}
+					</h2>
+					<p class="mt-12 text-base leading-loose text-raisin">
+						<slot />
+					</p>
+					<div class="mt-12">
+						<slot name="button" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

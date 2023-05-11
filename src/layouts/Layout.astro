@@ -1,0 +1,133 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import "../styles/base.css";
+import Footer from "../components/footer.astro";
+import Navbar from "../components/navbar.astro";
+import Dropdown from "../components/navdropdown.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<script defer data-domain="oater.de" src="https://plausible.io/js/script.js"></script>
+	</head>
+	<body class="scroll-smooth bg-white">
+		<Navbar
+			navitem1="Solution"
+			navitem2="Machines"
+			navitem3="About Us"
+			navitem4="Sustainability"
+			navitem5="Magazine"
+			href1="/solution"
+			href2="/machines"
+			href3="/about"
+			href4="/sustainability"
+			href5="https://magazin.oater.de/de"
+			hrefLogo="/"
+			language1="Deutsch"
+			language2="English"
+			hreflanguage2=""
+			languagePicker="EN"
+		>
+			<Dropdown
+				slot="dropdown1"
+				dropdownData={[
+					{
+						link: "/solution#machine",
+						title: "Our Solution",
+						body: "Learn how our machine and subscription work",
+					},
+					{
+						link: "/solution#ingredientmix",
+						title: "Our Ingredient Mix",
+						body: "Read what our oat drink is made of",
+					},
+					{
+						link: "/solution#businesses",
+						title: "For Businesses",
+						body: "Bring The Oater to your business",
+					},
+				]}
+			/>
+			<Dropdown
+				slot="dropdown2"
+				dropdownData={[
+					{
+						link: "/machines#oaterbarista",
+						title: "Features",
+						body: "Understand how the The Oater Barista works",
+					},
+
+					{
+						link: "/machines#setup",
+						title: "Setup",
+						body: "Learn how the machine setup works",
+					},
+					{
+						link: "/machines#specs",
+						title: "Specs",
+						body: "Dive deep into all the machine details",
+					},
+				]}
+			/>
+			<Dropdown
+				slot="dropdown3"
+				dropdownData={[
+					{
+						link: "/about#mission",
+						title: "Our Mission",
+						body: "Understand what mission and vision drives us",
+					},
+					{
+						link: "/about#team",
+						title: "Meet The Team",
+						body: "Get to know the founders and the OATeam",
+					},
+					{
+						link: "/about#story",
+						title: "Our Story",
+						body: "Learn how we got started and where we are now",
+					},
+					{
+						link: "/career",
+						title: "Careers at The Oater",
+						body: "We are revolutionizing oat drink. Do you want to join?",
+					},
+				]}
+			/>
+			<Dropdown
+				slot="dropdown4"
+				dropdownData={[
+					{
+						link: "/sustainability#how",
+						title: "How we are sustainable",
+						body: "Learn how we save 57% emissions",
+					},
+					{
+						link: "/sustainability#transparency",
+						title: "Full Transparency",
+						body: "Read why and how we measure our impact",
+					},
+					{
+						link: "/sustainability#goals",
+						title: "Our Goals",
+						body: "See what goals we are striving towards",
+					},
+				]}
+			/>
+		</Navbar>
+
+		<slot />
+
+		<Footer />
+	</body>
+</html>

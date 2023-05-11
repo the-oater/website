@@ -1,0 +1,30 @@
+---
+export interface Props {
+	title?: string;
+	founderData: Array;
+	bgcolor?: string;
+	id?: string;
+}
+const { bgcolor, title, founderData, id } = Astro.props;
+---
+
+<div class={bgcolor} id={id}>
+	<div class="container mx-auto max-w-6xl py-14 px-14 text-raisin">
+		<div class="text-center">
+			<h2 class="underline-4xl text-4xl font-bold">{title}</h2>
+		</div>
+		<div class="grid grid-cols-2 gap-12 py-20 md:grid-cols-4">
+			{
+				founderData.map((founder) => (
+					<a href={founder.linkedinUrl}>
+						<div class="col-span-1 text-center hover:text-sonic ">
+							<img class="mx-auto w-auto rounded transition-all delay-100 ease-in-out hover:scale-105" src={founder.imgUrl} alt={founder.name} />
+							<h2 class="pt-4 font-bold">{founder.name}</h2>
+							<p class="text-sm font-normal text-sonic">{founder.position}</p>
+						</div>
+					</a>
+				))
+			}
+		</div>
+	</div>
+</div>

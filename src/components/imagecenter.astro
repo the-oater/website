@@ -1,0 +1,23 @@
+---
+export interface props {
+	imgUrl: string;
+	headline?: string;
+}
+
+const { imgUrl, headline } = Astro.props;
+---
+
+<div class="mx-auto flex max-w-7xl flex-col items-center py-14 px-10">
+	<h2 class="underline-4xl text-4xl font-bold">
+		{headline}
+	</h2>
+	<img class="w-2/3" src={imgUrl} />
+	<div class="flex justify-center text-center">
+		<div class="mt-12 max-w-2xl">
+			<p class="pb-8 text-base leading-loose text-raisin">
+				<slot />
+			</p>
+			<slot name="button" />
+		</div>
+	</div>
+</div>

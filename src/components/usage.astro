@@ -1,0 +1,138 @@
+---
+export interface Props {
+	background?: string;
+	headline?: string;
+	id?: string;
+	img1: string;
+	icon1: string;
+	title1: string;
+	text1: string;
+	img2: string;
+	icon2: string;
+	title2: string;
+	text2: string;
+	img3: string;
+	icon3: string;
+	title3: string;
+	text3: string;
+}
+
+const { background, id, img1, img2, img3, icon1, icon2, icon3, title1, title2, title3, text1, text2, text3 } = Astro.props;
+---
+
+<section class={background} id={id}>
+	<div class="mx-auto py-14 px-10">
+		<div class="grid items-center gap-16 sm:grid-cols-1 md:grid-cols-2" id="card1">
+			<div class="relative order-first w-full">
+				<img class="rounded opacity-100 transition-opacity duration-500 ease-in-out" src={img1} />
+				<div class="absolute left-[12%] bottom-[22%]">
+					<button class="relative h-5 w-5 rounded-full bg-oat outline outline-4 outline-oat/50 lg:h-7 lg:w-7" data-card="1"> </button>
+				</div>
+				<div class="absolute left-1/2 bottom-[25%] pl-10">
+					<button
+						class="relative h-5 w-5 animate-pulse rounded-full bg-white/80 outline outline-4 outline-white/50 transition-transform hover:scale-105 hover:animate-none hover:bg-white lg:h-7 lg:w-7"
+						data-card="2"
+					>
+					</button>
+				</div>
+				<div class="absolute right-[12%] bottom-[22%]">
+					<button
+						class="relative h-5 w-5 animate-pulse rounded-full bg-white/80 outline outline-4 outline-white/50 transition-transform hover:scale-105 hover:animate-none hover:bg-white lg:h-7 lg:w-7"
+						data-card="3"
+					>
+					</button>
+				</div>
+			</div>
+			<div class="info max-w-xl opacity-100 transition-opacity duration-500 ease-in-out">
+				<img src={icon1} class="icon h-16 pb-8" />
+				<h2 class="underline-4xl carousel-title text-4xl font-bold text-raisin">{title1}</h2>
+				<p class="mt-12 text-base leading-loose text-raisin">{text1}</p>
+			</div>
+		</div>
+
+		<div class="grid hidden items-center gap-16 sm:grid-cols-1 md:grid-cols-2" id="card2">
+			<div class="relative order-first w-full">
+				<img class="rounded opacity-100 transition-opacity duration-500 ease-in-out" src={img2} />
+				<div class="absolute left-[12%] bottom-[22%]">
+					<button
+						class="relative h-5 w-5 animate-pulse rounded-full bg-white/80 outline outline-4 outline-white/50 transition-transform hover:scale-105 hover:animate-none hover:bg-white lg:h-7 lg:w-7"
+						data-card="1"
+					>
+					</button>
+				</div>
+				<div class="absolute left-1/2 bottom-[25%] pl-10">
+					<button class="relative h-5 w-5 rounded-full bg-oat outline outline-4 outline-oat/50 lg:h-7 lg:w-7" data-card="2"> </button>
+				</div>
+				<div class="absolute right-[12%] bottom-[22%]">
+					<button
+						class="relative h-5 w-5 animate-pulse rounded-full bg-white/80 outline outline-4 outline-white/50 transition-transform hover:scale-105 hover:animate-none hover:bg-white lg:h-7 lg:w-7"
+						data-card="3"
+					>
+					</button>
+				</div>
+			</div>
+			<div class="info max-w-xl opacity-100 transition-opacity duration-500 ease-in-out">
+				<img src={icon2} class="icon h-16 pb-8" />
+				<h2 class="underline-4xl carousel-title text-4xl font-bold text-raisin">{title2}</h2>
+				<p class="mt-12 text-base leading-loose text-raisin">{text2}</p>
+			</div>
+		</div>
+
+		<div class="grid hidden items-center gap-16 sm:grid-cols-1 md:grid-cols-2" id="card3">
+			<div class="relative order-first w-full">
+				<img class="rounded opacity-100 transition-opacity duration-500 ease-in-out" src={img3} />
+				<div class="absolute left-[12%] bottom-[22%]">
+					<button
+						class="relative h-5 w-5 animate-pulse rounded-full bg-white/80 outline outline-4 outline-white/50 transition-transform hover:scale-105 hover:animate-none hover:bg-white lg:h-7 lg:w-7"
+						data-card="1"
+					>
+					</button>
+				</div>
+				<div class="absolute left-1/2 bottom-[25%] pl-10">
+					<button
+						class="relative h-5 w-5 animate-pulse rounded-full bg-white/80 outline outline-4 outline-white/50 transition-transform hover:scale-105 hover:animate-none hover:bg-white lg:h-7 lg:w-7"
+						data-card="2"
+					>
+					</button>
+				</div>
+				<div class="absolute right-[12%] bottom-[22%]">
+					<button class="relative h-5 w-5 rounded-full bg-oat outline outline-4 outline-oat/50 lg:h-7 lg:w-7" data-card="3"> </button>
+				</div>
+			</div>
+			<div class="info max-w-xl opacity-100 transition-opacity duration-500 ease-in-out">
+				<img src={icon3} class="icon h-16 pb-8" />
+				<h2 class="underline-4xl carousel-title text-4xl font-bold text-raisin">{title3}</h2>
+				<p class="mt-12 text-base leading-loose text-raisin">{text3}</p>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+	const card1 = document.getElementById("card1")!;
+	const card2 = document.getElementById("card2")!;
+	const card3 = document.getElementById("card3")!;
+
+	document.addEventListener("click", function (event) {
+		// Use a type assertion to tell TypeScript that the target is an Element
+		const target = event.target as Element;
+
+		// Check if a button with a data-card attribute was clicked
+		if (target.matches("[data-card]")) {
+			// Use a type assertion to tell TypeScript that getAttribute exists on target
+			const cardNumber = target.getAttribute("data-card")!;
+			showCard(cardNumber);
+		}
+	});
+
+	function showCard(cardNumber: string) {
+		const cards = [card1, card2, card3];
+
+		cards.forEach((card, index) => {
+			if (index + 1 == parseInt(cardNumber)) {
+				card.classList.remove("hidden");
+			} else {
+				card.classList.add("hidden");
+			}
+		});
+	}
+</script>

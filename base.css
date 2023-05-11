@@ -1,0 +1,37 @@
+@import url("opensans.css");
+@import url("ZenMaruGothic.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.underline-3xl {
+	display: inline;
+	background-image: linear-gradient(to right, #ead18c 0%, #ead18c 100%);
+	background-repeat: repeat-x;
+	background-position: 0 82%;
+	background-size: 100% 14px;
+}
+
+.underline-4xl {
+	display: inline;
+	background-image: linear-gradient(to right, #ead18c 0%, #ead18c 100%);
+	background-repeat: repeat-x;
+	background-position: 0 82%;
+	background-size: 100% 17px;
+}
+
+.underline-5xl {
+	display: inline;
+	background-image: linear-gradient(to right, #ead18c 0%, #ead18c 100%);
+	background-repeat: repeat-x;
+	background-position: 0 82%;
+	background-size: 100% 23px;
+}
+
+.underline-7xl {
+	display: inline;
+	background-image: linear-gradient(to right, #ead18c 0%, #ead18c 100%);
+	background-repeat: repeat-x;
+	background-position: 0 82%;
+	background-size: 100% 32px;
+}

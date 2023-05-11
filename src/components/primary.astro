@@ -1,0 +1,14 @@
+---
+export interface Props {
+	buttonName: string;
+	buttonUrl: string;
+}
+
+const { buttonName, buttonUrl } = Astro.props;
+---
+
+<a
+	href={buttonUrl}
+	class="inline-block rounded bg-oat-light px-5 py-3 text-base font-bold uppercase text-raisin transition-all delay-75 duration-500 ease-in-out hover:scale-105 hover:bg-oat hover:shadow-sm"
+	>{buttonName}</a
+>

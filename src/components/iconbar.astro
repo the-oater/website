@@ -1,0 +1,84 @@
+---
+export interface Props {
+	title?: string;
+	icontitle1: string;
+	imgUrl1: string;
+	icontitle2: string;
+	imgUrl2: string;
+	icontitle3: string;
+	imgUrl3: string;
+	icontitle4: string;
+	imgUrl4: string;
+	icontitle5: string;
+	imgUrl5: string;
+	bgcolor?: string;
+	id?: string;
+}
+const { title, icontitle1, icontitle2, icontitle3, icontitle4, icontitle5, bgcolor, id, imgUrl1, imgUrl2, imgUrl3, imgUrl4, imgUrl5 } = Astro.props;
+---
+
+<div class={bgcolor} id={id}>
+	<div class="container mx-auto max-w-7xl py-12 px-4 text-raisin sm:px-6 lg:px-10">
+		{
+			title ? (
+				<>
+					<div class="text-center">
+						<h2 class="underline-4xl text-4xl font-bold">{title}</h2>
+					</div>
+					<div class="grid grid-cols-2 gap-6 py-20 text-sm font-semibold uppercase md:grid-cols-6 lg:grid-cols-5">
+						<div class="col-span-1 text-center md:col-span-2 lg:col-span-1">
+							<img class="mx-auto h-32 fill-raisin" src={imgUrl1} />
+							<span>{icontitle1}</span>
+						</div>
+						<div class="col-span-1 text-center md:col-span-2 lg:col-span-1">
+							<img class="mx-auto h-32 fill-raisin" src={imgUrl2} />
+							<span>{icontitle2}</span>
+						</div>
+						<div class="col-span-1 text-center md:col-span-2 lg:col-span-1">
+							<img class="mx-auto h-32 fill-raisin" src={imgUrl3} />
+							<span>{icontitle3}</span>
+						</div>
+						<div class="col-span-1 text-center md:col-span-3 lg:col-span-1">
+							<img class="mx-auto h-32 fill-raisin" src={imgUrl4} />
+							<span>{icontitle4}</span>
+						</div>
+						<div class="col-span-2 justify-center text-center md:col-span-3 lg:col-span-1">
+							<img class="mx-auto h-32 fill-raisin" src={imgUrl5} />
+							<span>{icontitle5}</span>
+						</div>
+					</div>
+				</>
+			) : (
+				<div class="grid grid-cols-2 gap-6 py-6 text-sm font-semibold uppercase md:grid-cols-6 lg:grid-cols-5">
+					<div class="col-span-1 text-center md:col-span-2 lg:col-span-1">
+						<img class="mx-auto h-32 fill-raisin" src={imgUrl1} />
+						<span>{icontitle1}</span>
+					</div>
+					<div class="col-span-1 text-center md:col-span-2 lg:col-span-1">
+						<img class="mx-auto h-32 fill-raisin" src={imgUrl2} />
+						<span>{icontitle2}</span>
+					</div>
+					<div class="col-span-1 text-center md:col-span-2 lg:col-span-1">
+						<img class="mx-auto h-32 fill-raisin" src={imgUrl3} />
+						<span>{icontitle3}</span>
+					</div>
+					<div class="col-span-1 text-center md:col-span-3 lg:col-span-1">
+						<img class="mx-auto h-32 fill-raisin" src={imgUrl4} />
+						<span>{icontitle4}</span>
+					</div>
+					<div class="col-span-2 justify-center text-center md:col-span-3 lg:col-span-1">
+						<img class="mx-auto h-32 fill-raisin" src={imgUrl5} />
+						<span>{icontitle5}</span>
+					</div>
+				</div>
+			)
+		}
+
+		<div class="text-center">
+			<slot name="button" />
+			<div class="mx-auto max-w-4xl leading-loose">
+				<slot />
+			</div>
+		</div>
+	</div>
+</div>
