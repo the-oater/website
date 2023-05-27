@@ -1,35 +1,37 @@
 ---
 export interface Props {
-	title1: string;
-	title2: string;
-	subtitle1: string;
-	subtitle2: string;
-	imgUrl1: string;
-	imgUrl2: string;
-	info1: string;
-	info2: string;
+    title1: string;
+    title2: string;
+    subtitle1: string;
+    subtitle2: string;
+    imgUrl1: string;
+    imgUrl2: string;
+    info1: string;
+    info2: string;
 }
 
 const { title1, title2, subtitle1, subtitle2, imgUrl1, imgUrl2, info1, info2 } = Astro.props;
 ---
 
 <div class="flex max-h-[1000px] min-h-fit w-full flex-col gap-4 lg:h-[60vh] lg:flex-row">
-	<div class="flex basis-1/2 items-center justify-center bg-cover bg-right 2xl:justify-end" style={imgUrl1}>
-		<div class="m-16 flex max-w-sm flex-col gap-6 text-center lg:text-left 2xl:mr-40">
-			<div class="text-lg font-bold uppercase text-oat drop-shadow-xl md:text-xl">{title1}</div>
-			<div class="text-2xl font-semibold text-white drop-shadow-xl md:text-3xl">{subtitle1}</div>
-			<div class="md:text-md text-sm text-white drop-shadow-xl lg:pl-20">
-				{info1}
-			</div>
-		</div>
-	</div>
-	<div class="flex basis-1/2 items-center justify-center bg-cover bg-left 2xl:justify-start" style={imgUrl2}>
-		<div class="m-16 flex max-w-sm flex-col items-center gap-6 text-center lg:items-end lg:text-right 2xl:ml-40">
-			<div class="text-lg font-bold uppercase text-oat drop-shadow-xl md:text-xl">{title2}</div>
-			<div class="text-2xl font-semibold text-white drop-shadow-xl md:text-3xl">{subtitle2}</div>
-			<div class="md:text-md text-sm text-white drop-shadow-xl lg:pr-20">
-				{info2}
-			</div>
-		</div>
-	</div>
+    <div class="flex basis-1/2 items-center justify-center bg-cover 2xl:justify-end" style={imgUrl1}>
+        <div class="m-16 flex max-w-sm flex-col gap-6 text-center drop-shadow-xl drop-shadow-lg lg:text-left 2xl:mr-40">
+            <div class="text-lg font-bold uppercase text-oat drop-shadow-md md:text-xl">{title1}</div>
+            <div class="text-2xl font-semibold text-white drop-shadow-md md:text-3xl">{subtitle1}</div>
+            <div class="md:text-md text-sm text-white drop-shadow-md">
+                {info1}
+            </div>
+        </div>
+    </div>
+    <div class="flex basis-1/2 items-center justify-center bg-cover bg-left 2xl:justify-start" style={imgUrl2}>
+        <div
+            class="m-16 flex max-w-sm flex-col items-center gap-6 text-center drop-shadow-xl lg:items-end lg:text-right 2xl:ml-40"
+        >
+            <div class="text-lg font-bold uppercase text-oat drop-shadow-md md:text-xl">{title2}</div>
+            <div class="text-2xl font-semibold text-white drop-shadow-md md:text-3xl">{subtitle2}</div>
+            <div class="md:text-md text-sm text-white drop-shadow-md">
+                {info2}
+            </div>
+        </div>
+    </div>
 </div>

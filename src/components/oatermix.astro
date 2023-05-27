@@ -1,76 +1,38 @@
 ---
 export interface Props {
-	id?: string;
+    id?: string;
+    imgUrl: string;
+    title: string;
+    mixpropertiesData: Array;
 }
 
-const { id } = Astro.props;
+const { id, mixpropertiesData, imgUrl, title } = Astro.props;
 ---
 
 <section id={id}>
-	<div class="mx-auto max-w-7xl py-14 px-10">
-		<div class="text-center">
-			<h2 class="underline-4xl text-4xl font-bold text-raisin">The Oater Mix</h2>
-		</div>
-		<div class="mt-12 flex flex-col items-center lg:mt-20 lg:flex-row">
-			<div class="basis-1/2">
-				<img class="max-w-lg lg:w-full" src="/zutaten-mix.png" />
-			</div>
+    <div class="mx-auto max-w-7xl py-14 px-10">
+        <div class="text-center">
+            <h2 class="underline-4xl text-4xl font-bold text-raisin">{title}</h2>
+        </div>
+        <div class="mt-12 flex flex-col items-center lg:mt-20 lg:flex-row">
+            <div class="basis-1/2">
+                <img class="max-w-lg lg:w-full" src={imgUrl} />
+            </div>
 
-			<div class="flex basis-1/2 flex-col items-center sm:gap-6 lg:gap-8">
-				<div class="flex flex-col items-center lg:flex-row">
-					<img src="/biozertifiziert.svg" alt="" class="-ml-5 h-24 place-self-start pr-4" />
+            <div class="flex basis-1/2 flex-col items-center sm:gap-6 lg:gap-8">
+                {
+                    mixpropertiesData.map((properties) => (
+                        <div class="flex flex-col items-center lg:flex-row">
+                            <img src={properties.icon} alt="" class="-ml-5 h-24 place-self-start pr-4" />
 
-					<div class="flex max-w-3xl flex-col">
-						<span class="font-zen text-lg uppercase text-raisin">Origin</span>
-						<div class="pt-2 leading-relaxed text-sonic">
-							All our ingredients are sourced from Germany. We also build close relationships with our suppliers. Like this we guarantee transparency about quality,
-							cultivation methods and transport.
-						</div>
-					</div>
-				</div>
-				<div class="flex flex-col items-center lg:flex-row">
-					<img src="/hafer.svg" alt="" class="-ml-5 h-24 place-self-start pr-4" />
-
-					<div class="flex max-w-3xl flex-col">
-						<span class="font-zen text-lg uppercase text-raisin">Ingredients</span>
-						<div class="pt-2 leading-relaxed text-sonic">
-							The basic ingredient of our oat drink is organic oats. We also use organic canola oil and organic sunflower protein for foamability and enzymes and salt
-							for fermentation (natural sweetness).
-						</div>
-					</div>
-				</div>
-				<div class="flex flex-col items-center lg:flex-row">
-					<img src="/zucker.svg" alt="" class="-ml-5 h-24 place-self-start pr-4" />
-
-					<div class="flex max-w-3xl flex-col">
-						<span class="font-zen text-lg uppercase text-raisin">Sugar</span>
-						<div class="pt-2 leading-relaxed text-sonic">
-							We do not add any sugar to our oat drink. Instead, we use a low-temperature fermentation that makes the oat drink taste naturally sweeter.
-						</div>
-					</div>
-				</div>
-				<div class="flex flex-col items-center lg:flex-row">
-					<img src="/verpackungsarm.svg" alt="" class="-ml-5 h-24 place-self-start pr-4" />
-
-					<div class="flex max-w-3xl flex-col">
-						<span class="font-zen text-lg uppercase text-raisin">packaging</span>
-						<div class="pt-2 leading-relaxed text-sonic">
-							To completely avoid single-use packaging and guarantee food hygiene, we deliver our Oater Mix in a reusable container. These can be returned to the
-							courier with every new delivery.
-						</div>
-					</div>
-				</div>
-				<div class="flex flex-col items-center lg:flex-row">
-					<img src="/pflanzlich.svg" alt="" class="-ml-5 h-24 place-self-start pr-4" />
-
-					<div class="flex max-w-3xl flex-col">
-						<span class="font-zen text-lg uppercase text-raisin">Plant-Based</span>
-						<div class="pt-2 leading-relaxed text-sonic">
-							The Oater Barista oat drink is 100% plant-based and does not contain any animal products. We believe the future is plant-based alternatives
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                            <div class="flex max-w-3xl flex-col">
+                                <span class="font-zen text-lg uppercase text-raisin">{properties.title}</span>
+                                <div class="pt-2 leading-relaxed text-sonic">{properties.text}</div>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
 </section>
