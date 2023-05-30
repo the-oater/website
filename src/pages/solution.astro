@@ -29,21 +29,21 @@ import Headline from "../components/headline.astro";
     />
 
     <ImgTextFull reverse title="Your subscription and delivery" imgUrl="/ingredientmix_pattern.webp">
-        As a business, you register on our digital platform. There you specify your weekly oat drink consumption. This
-        is the basis for your subscription. The Oater automatically delivers the right amount of our ingredient mix you
-        need – you pay per usage. No more supply shortages and last-minute purchases at the supermarket. And you can
-        always adjust the subscription - we know that your consumption is not constant throughout the year.
+        As a business, you register on our digital platform. There you specify your weekly oat drink consumption. This is the basis for your
+        subscription. The Oater automatically delivers the right amount of our ingredient mix you need – you pay per usage. No more supply
+        shortages and last-minute purchases at the supermarket. And you can always adjust the subscription - we know that your consumption
+        is not constant throughout the year.
     </ImgTextFull>
     <ImgTextFull title="The Oater Barista Machine " imgUrl="/hotel.webp" id="machine">
-        The machine is FREE for participating businesses. You only pay for the Oater Mix per liter. We install the
-        machine and regular maintenance is included in our service.
+        The machine is FREE for participating businesses. You only pay for the Oater Mix per liter. We install the machine and regular
+        maintenance is included in our service.
         <Secondary slot="button" buttonName="To the Machine" buttonUrl="/machines" />
     </ImgTextFull>
 
     <ImgTextFull reverse title="Oat drink production" imgUrl="/machine_ingredientmix.jpg">
-        To make our oat drink you only need our ingredient pack (the provided Oater Mix and canola oil) and water from
-        the tap. Each business can decide for itself whether a fixed water supply or a water tank is more suitable. More
-        information about the ingredient packs can be found here. You can find out how the production works here.
+        To make our oat drink you only need our ingredient pack (the provided Oater Mix and canola oil) and water from the tap. Each
+        business can decide for itself whether a fixed water supply or a water tank is more suitable. More information about the ingredient
+        packs can be found here. You can find out how the production works here.
         <Secondary slot="button" buttonName="The Oater Mix" buttonUrl="/solution#ingredientmix" />
     </ImgTextFull>
     <Oatermix
@@ -79,15 +79,39 @@ import Headline from "../components/headline.astro";
         ]}
     />
     <Headline headline="For Businesses" id="businesses" />
-    <Slider />
+    <Slider
+        sliderData={[
+            {
+                title: "Businesses",
+                imgUrl: "/office_kitchen.webp",
+                text: "You want to provide your customers with moments of enjoyment, with flavorful new experiences. We make this possible. Our creamy Barista oat drink and our innovative appliance with timeless design not only provide a harmonious taste experience and superb foam stability, but also offer you a more sustainable drink alternative and a value-adding experience.You do NOT have to buy our machine, you rent it and only pay per liter of oat drink produced. We deliver the ingredient mix you need automatically. If you have any questions, please contact us at partners@oater.de What are you waiting for? Join the waitlist and be one of the first that offer freshly produced oat drink.",
+            },
+            {
+                title: "Cafés",
+                imgUrl: "/cafe.webp",
+                text: "As a café or a coffee shop you value a great customer experience. That includes offering fresh, local and home-made or carefully selected products. As more and more customers are asking for oat drink and other plant-based alternatives, you can ask yourself: Can I combine freshness and regional focus with oat drink? The answer is YES! With our The Oater Barista machine you can produce perfectly foamable and delicious oat drink directly at your café. You’re convinced? Bring fresh oat drink to your café and register on our wait list.",
+            },
+            {
+                title: "Hotels",
+                imgUrl: "/hotel.webp",
+                text: " You would like to offer your guests a unique experience during their stay with you? Our The Oater Barista machine is not only beautifully designed and an aesthetic eye catcher. It also produces delicious Barista-quality oat drink – perfect for starting the day at your hotel with a cozy oat drink cappuccino. As your guests are becoming more and more conscious towards sustainability, you’re actively looking for ways to decrease your environmental footprint and waste. How about adding The Oater Barista and let your guests enjoy the impact they make with you? Register on our wait list to join the oat drink revolution.",
+            },
+            {
+                title: "Coworking Spaces/Offices ",
+                imgUrl: "/coworking_kitchen.webp",
+                text: "Your office is where the magic happens, where ideas come to life, numbers grow, and people come together – all fueled by coffee and other hot beverages. You strive for innovation and impact. Why not strive to bring more innovation, indulgence, and sustainability to the workplace as well? Our The Oater Barista Machine seamlessly integrates into your coffee bar and the daily needs of your employees for coffee, taste and more sustainable choices. What are you waiting for? Join the oat drink revolution and register on our wait list!",
+            },
+            {
+                title: "Zero-Waste Stores",
+                imgUrl: "/zerowastestore.jpg",
+                text: "Just like us, you believe in eliminating packaging waste to create more sustainable consumption behavior. We would like to support you in your mission and let you provide your customers with a new packaging-free alternative: Barista-quality oat drink produced directly in your shop. Customers can bring their own bottles to dispense the oat drink directly into their reusable container. And don’t worry – our ingredient mix also comes in reusable containers with a deposit system.",
+            },
+        ]}
+    />
 
     <ImgText title="Waitlist" imgUrl="/waitlist.jpg" minusmargin="-mb-32">
-        Oat drink in a carton was yesterday. The Oater machine produces the oat drink of the future. We are rethinking
-        oat drink - with full barista quality and freshness – no packaging waste, no added sugar and no tradeoffs.
-        <Primary
-            slot="button"
-            buttonName="To the Waitlist"
-            buttonUrl="https://share-eu1.hsforms.com/1KM3gGgfeS1mdqBzwXyDhbgfnkng"
-        />
+        Oat drink in a carton was yesterday. The Oater machine produces the oat drink of the future. We are rethinking oat drink - with full
+        barista quality and freshness – no packaging waste, no added sugar and no tradeoffs.
+        <Primary slot="button" buttonName="To the Waitlist" buttonUrl="https://share-eu1.hsforms.com/1KM3gGgfeS1mdqBzwXyDhbgfnkng" />
     </ImgText>
 </Layout>

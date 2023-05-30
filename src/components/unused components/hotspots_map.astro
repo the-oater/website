@@ -8,7 +8,7 @@ export interface Props {
 const { headline, id, hotspotData } = Astro.props;
 ---
 
-<div class="image-hotspots mx-auto max-w-7xl pt-10 lg:pt-20" id={id}>
+<div class="image-hotspots mx-auto max-w-7xl pt-20" id={id}>
     <div class="text-center text-raisin">
         <h3 class="lg:underline-5xl underline-4xl text-4xl font-bold leading-snug lg:text-5xl">{headline}</h3>
     </div>
@@ -25,7 +25,7 @@ const { headline, id, hotspotData } = Astro.props;
                         <div
                             class={
                                 spot.orientation +
-                                "-full popover md:visble invisible absolute top-0 z-10 mx-3 hidden w-[35vw] max-w-sm rounded-md bg-zinc-100 p-6 shadow lg:w-[50vw]"
+                                "-full popover absolute top-0 z-10 mx-3 hidden w-[50vw] max-w-sm rounded-md bg-zinc-100 p-6 shadow"
                             }
                         >
                             <button class="absolute top-0 right-0 mt-2 mr-2 hover:text-sonic" id="closePopover">
@@ -50,84 +50,29 @@ const { headline, id, hotspotData } = Astro.props;
             }
         </div>
     </div>
-    <div class="mx-10 mb-10 block rounded-md bg-zinc-100 md:hidden">
-        {
-            hotspotData.map((spot, index) => (
-                <div class="mobile-popover  hidden p-6" data-index={index}>
-                    <div class="mb-2 font-semibold text-raisin">
-                        {index + 1}. {spot.title}
-                    </div>
-                    <p class="mb-2 text-sm text-raisin md:text-base">{spot.text}</p>
-                </div>
-            ))
-        }
-    </div>
 </div>
 <script>
-    let selectedHotspotIndex = null;
-    const mobilePopovers = document.querySelectorAll(".mobile-popover");
-
-    // Define a function that will be called whenever the matchMedia state changes
-    function handleTabletChange(e) {
-        // If we're above md breakpoint
-        if (e.matches) {
-            document.querySelectorAll(".popover").forEach((popover) => {
-                popover.classList.remove("invisible");
-            });
-        } else {
-            // Below the md breakpoint
-            document.querySelectorAll(".popover").forEach((popover) => {
-                popover.classList.add("invisible");
-            });
-        }
-    }
-
-    // Create a media query list using the matchMedia method
-    let mql = window.matchMedia("(min-width: 768px)");
-
-    // Register the handler to the media query list so it will
-    // call handleTabletChange whenever the media query state changes
-    mql.addListener(handleTabletChange);
-
-    // Call the handler right away so it sets the initial state
-    handleTabletChange(mql);
-
     document.querySelectorAll(".image-hotspots").forEach((imageHotspot) => {
         const hotspots = imageHotspot.querySelectorAll(".hotspot");
 
-        hotspots.forEach((hotspot, index) => {
+        hotspots.forEach((hotspot) => {
             const popover = hotspot.querySelector(".popover");
 
             hotspot.addEventListener("click", (event) => {
                 event.stopPropagation();
-                selectedHotspotIndex = index;
-
-                // Hide other popovers
                 hotspots.forEach((otherHotspot) => {
                     if (otherHotspot !== hotspot) {
                         const otherPopover = otherHotspot.querySelector(".popover");
                         otherPopover.classList.add("hidden");
                     }
                 });
-
-                // Show or hide the clicked popover
                 popover.classList.toggle("hidden");
 
-                // Show the corresponding mobile popover
-                mobilePopovers.forEach((popover, popoverIndex) => {
-                    if (popoverIndex === selectedHotspotIndex) {
-                        popover.classList.remove("hidden");
-                    } else {
-                        popover.classList.add("hidden");
-                    }
-                });
-
-                // Close button event listener
+                // Add this event listener for the close button
                 const closeButton = popover.querySelector("#closePopover");
                 closeButton.addEventListener("click", (event) => {
                     event.stopPropagation();
                     popover.classList.add("hidden");
-                    mobilePopovers[selectedHotspotIndex].classList.add("hidden");
                 });
             });
         });
@@ -135,9 +80,6 @@ const { headline, id, hotspotData } = Astro.props;
         document.addEventListener("click", () => {
             hotspots.forEach((hotspot) => {
                 const popover = hotspot.querySelector(".popover");
-                popover.classList.add("hidden");
-            });
-            mobilePopovers.forEach((popover) => {
                 popover.classList.add("hidden");
             });
         });

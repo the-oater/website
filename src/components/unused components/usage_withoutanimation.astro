@@ -47,23 +47,16 @@ const { background, id, cards } = Astro.props;
     </div>
     <script>
         const cards = Array.from(document.querySelectorAll("[id^=card]"));
-        let cardIndex = 0;
-
-        let autoScrollInterval = setInterval(() => {
-            cardIndex = (cardIndex + 1) % cards.length; // This will keep cardIndex in the range 0 to cards.length - 1
-            showCard(String(cardIndex + 1)); // We add 1 to adjust for zero-based indexing in display
-        }, 5000);
 
         document.addEventListener("click", function (event) {
-            const target = event.target;
+            const target = event.target as Element;
             if (target.matches("[data-card]")) {
-                clearInterval(autoScrollInterval); // This will stop the automatic rotation
-                const cardNumber = target.getAttribute("data-card");
+                const cardNumber = target.getAttribute("data-card")!;
                 showCard(cardNumber);
             }
         });
 
-        function showCard(cardNumber) {
+        function showCard(cardNumber: string) {
             const cardIndex = parseInt(cardNumber) - 1; // Adjust for zero-based indexing
             cards.forEach((card, index) => {
                 if (index === cardIndex) {

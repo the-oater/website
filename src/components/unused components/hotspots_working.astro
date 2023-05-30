@@ -1,0 +1,242 @@
+---
+export interface Props {
+    headline: string;
+    id?: string;
+}
+
+const { headline, id } = Astro.props;
+---
+
+<div class="image-hotspots mx-auto max-w-7xl pt-20" id={id}>
+    <div class="text-center text-raisin">
+        <h3 class="lg:underline-5xl underline-4xl text-4xl font-bold leading-snug lg:text-5xl">{headline}</h3>
+    </div>
+    <div class="relative">
+        <img class="mx-auto h-auto w-full max-w-4xl" src="/hotspots.jpg" alt="The Oater Barista" />
+
+        <div class="hotspots absolute inset-0">
+            <div class="hotspot absolute top-[25%] left-[39%]">
+                <div
+                    class="flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-oat-light text-base text-sm text-raisin outline outline-1 outline-oat transition-transform hover:bg-oat lg:h-8 lg:w-8"
+                >
+                    2
+                </div>
+                <div class="popover absolute top-0 right-full z-10 mx-3 hidden w-[50vw] max-w-sm rounded-md bg-zinc-100 p-6 shadow">
+                    <button class="absolute top-0 right-0 mt-2 mr-2" id="closePopover"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="h-6 w-6"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <h3 class="mb-4 font-semibold text-raisin">2. Dosing of Ingredient Mix</h3>
+                    <p class="mb-2 text-sm text-raisin md:text-base">
+                        Our machine doses all ingredients (the Oater mix, oil and water) automatically - no weighing or measuring required.
+                        Simply connect The Oater Barista to the fixed water supply, add the Oater mix and oil separately into the ingredient
+                        containers at the top and<br /> you’re ready to go!
+                    </p>
+                </div>
+            </div>
+            <div class="hotspot absolute top-[60%] left-[52%]">
+                <div
+                    class="lg: flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-oat-light text-base text-sm text-raisin outline outline-1 outline-oat transition-transform hover:bg-oat lg:h-7 lg:w-7"
+                >
+                    6
+                </div>
+                <div class="popover absolute top-0 left-full z-10 mx-3 hidden w-[50vw] max-w-sm rounded bg-zinc-100 p-6 shadow">
+                    <button class="absolute top-0 right-0 mt-2 mr-2" id="closePopover"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="h-6 w-6"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <h3 class="mb-4 font-semibold text-raisin">6. Batch Production</h3>
+                    <p class="mb-2 text-sm text-raisin md:text-base">
+                        The Oater Barista produces up to 5 liters at a time. This batch size guarantees that demand peaks can be covered
+                        with one production cycle.
+                    </p>
+                </div>
+            </div>
+            <div class="hotspot absolute top-[36%] left-[55%]">
+                <div
+                    class="lg: flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-oat-light text-base text-sm text-raisin outline outline-1 outline-oat transition-transform hover:bg-oat lg:h-7 lg:w-7"
+                >
+                    3
+                </div>
+                <div class="popover absolute top-0 left-full z-10 mx-3 hidden w-[50vw] max-w-sm rounded bg-zinc-100 p-6 shadow">
+                    <button class="absolute top-0 right-0 mt-2 mr-2" id="closePopover"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="h-6 w-6"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <h3 class="mb-4 font-semibold text-raisin">3. Automatic Cleaning</h3>
+                    <p class="mb-2 text-sm text-raisin md:text-base">
+                        We know how valuable your time is. That's why our machine cleans itself and requires no manual cleaning steps.
+                    </p>
+                </div>
+            </div>
+            <div class="hotspot absolute left-[39%] top-[75%]">
+                <div
+                    class="lg: flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-oat-light text-base text-sm text-raisin outline outline-1 outline-oat transition-transform hover:bg-oat lg:h-7 lg:w-7"
+                >
+                    7
+                </div>
+                <div class="popover absolute top-0 right-full z-10 mx-3 hidden w-[50vw] max-w-sm rounded bg-zinc-100 p-6 shadow">
+                    <button class="absolute top-0 right-0 mt-2 mr-2" id="closePopover"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="h-6 w-6"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <h3 class="mb-4 font-semibold text-raisin">7. Timeless Design</h3>
+                    <p class="mb-2 text-sm text-raisin md:text-base">
+                        Sustainability doesn't have to be a compromise, not even in design. We combine timeless elegance, minimalist
+                        aesthetics and sustainable technology.
+                    </p>
+                </div>
+            </div>
+            <div class="hotspot absolute top-[22%] left-[58%]">
+                <div
+                    class="lg: flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-oat-light text-base text-sm text-raisin outline outline-1 outline-oat transition-transform hover:bg-oat lg:h-7 lg:w-7"
+                >
+                    1
+                </div>
+
+                <div class="popover absolute top-0 left-full z-10 mx-3 hidden w-[50vw] max-w-sm rounded bg-zinc-100 p-6 shadow">
+                    <button class="absolute top-0 right-0 mt-2 mr-2" id="closePopover"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="h-6 w-6"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <h3 class="mb-4 font-semibold text-raisin">1. Intuitive User Experience</h3>
+                    <p class="mb-2 text-sm text-raisin md:text-base">
+                        We keep things simple and haptic to support our users in their fast-paced workflows. 3 buttons and a minimal display
+                        design to show status. This allows The Oater Barista to fit seamlessly into any workflow.
+                    </p>
+                </div>
+            </div>
+            <div class="hotspot absolute top-[45%] left-[40%]">
+                <div
+                    class="lg: flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-oat-light text-base text-sm text-raisin outline outline-1 outline-oat transition-transform hover:bg-oat lg:h-7 lg:w-7"
+                >
+                    4
+                </div>
+                <div class="popover absolute top-0 right-full z-10 mx-3 hidden w-[50vw] max-w-sm rounded bg-zinc-100 p-6 shadow">
+                    <button class="absolute top-0 right-0 mt-2 mr-2" id="closePopover"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="h-6 w-6"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <h3 class="mb-4 font-semibold text-raisin">4. Integrated Fermentation Process</h3>
+                    <p class="mb-2 text-sm text-raisin md:text-base">
+                        The Oater Barista uses our patented low temperature fermentation process to make our oat drink naturally sweet and
+                        creamy without the addition of sugar. Conventionally, the oat-residuals are filtered out after fermentation,
+                        removing both nutritiens and fiber. We have decided against this. This way all the healthy components of the oats
+                        stay in our milk offering the perfect addition to a healthy and balanced diet. As another benefit, we eliminated
+                        production waste.
+                    </p>
+                </div>
+            </div>
+            <div class="hotspot absolute top-[50%] left-[58%]">
+                <div
+                    class="lg: flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-oat-light text-base text-sm text-raisin outline outline-1 outline-oat transition-transform hover:bg-oat lg:h-7 lg:w-7"
+                >
+                    5
+                </div>
+                <div class="popover absolute top-0 left-full z-10 mx-3 hidden w-[50vw] max-w-sm rounded bg-zinc-100 p-6 shadow">
+                    <button class="absolute top-0 right-0 mt-2 mr-2" id="closePopover"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="h-6 w-6"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+
+                    <h3 class="mb-4 font-semibold text-raisin">5. Made in Germany</h3>
+                    <p class="mb-2 text-sm text-raisin md:text-base">
+                        At The Oater we value quality and sustainability. That's why our machine is completely designed, developed and
+                        manufactured in Germany - exclusively from high-quality materials. We offer regular prevention maintenance, and all
+                        our parts can be repaired or exchanged. It's built to last.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelectorAll(".image-hotspots").forEach((imageHotspot) => {
+        const hotspots = imageHotspot.querySelectorAll(".hotspot");
+
+        hotspots.forEach((hotspot) => {
+            const popover = hotspot.querySelector(".popover");
+
+            hotspot.addEventListener("click", (event) => {
+                event.stopPropagation();
+                hotspots.forEach((otherHotspot) => {
+                    if (otherHotspot !== hotspot) {
+                        const otherPopover = otherHotspot.querySelector(".popover");
+                        otherPopover.classList.add("hidden");
+                    }
+                });
+                popover.classList.toggle("hidden");
+
+                // Add this event listener for the close button
+                const closeButton = popover.querySelector("#closePopover");
+                closeButton.addEventListener("click", (event) => {
+                    event.stopPropagation();
+                    popover.classList.add("hidden");
+                });
+            });
+        });
+
+        document.addEventListener("click", () => {
+            hotspots.forEach((hotspot) => {
+                const popover = hotspot.querySelector(".popover");
+                popover.classList.add("hidden");
+            });
+        });
+    });
+</script>
