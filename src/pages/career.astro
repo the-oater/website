@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Primary from "../components/primary.astro";
-import Secondary from "../components/secondary.astro";
 import Iconbar from "../components/iconbar.astro";
 import ImgText from "../components/imagetext.astro";
 import Hero from "../components/hero.astro";
@@ -47,4 +46,7 @@ import Values from "../components/values.astro";
         <Primary slot="button" buttonName="Apply now" buttonUrl="https://join.com/companies/oater" />
     </ImageCenter>
     <Values title="Our Values" bgcolor="bg-zinc-200" />
+    <ImgText imgUrl="/office.webp" title="Our Office">
+        <span class="font-bold">InnoDom Cologne</span><br /> Weyertal 109 <br />50931 Köln<br /> Germany
+    </ImgText>
 </Layout>

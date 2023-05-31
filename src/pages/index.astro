@@ -6,89 +6,129 @@ import Secondary from "../components/secondary.astro";
 import Iconbar from "../components/iconbar.astro";
 import Sustainable from "../components/sustainable.astro";
 import ImgText from "../components/imagetext.astro";
-import Headline2 from "../components/headline2.astro";
 import Newsletter from "../components/newslettersignup.astro";
 import Blogsection from "../components/blogsection.astro";
 ---
 
 <Layout title="THE OATER">
-	<Mainhero
-		heroImage="oater-full.png"
-		heroHeading="Press for Revolution"
-		heroSubtitle="The Oater Oat Drink Machine"
-		heroText="The machine for fresh and sustainable oat drink with barista quality for professionals"
-	>
-		<Primary slot="button" buttonName="to the waitlist" buttonUrl="https://share-eu1.hsforms.com/1KM3gGgfeS1mdqBzwXyDhbgfnkng" />
-	</Mainhero>
+    <Mainhero
+        heroImage="oater-full.webp"
+        heroHeading="Press for Revolution"
+        heroSubtitle="The Oater Oat Drink Machine"
+        heroText="The machine for fresh and sustainable oat drink with barista quality for professionals"
+    >
+        <Primary slot="button" buttonName="to the waitlist" buttonUrl="https://share-eu1.hsforms.com/1KM3gGgfeS1mdqBzwXyDhbgfnkng" />
+    </Mainhero>
 
-	<ImgText title="Our Mission" imgUrl="/mission.jpg">
-		Oat drink in a carton was yesterday. The Oater machine produces the oat drink of the future. We are rethinking oat drink - with full barista quality and freshness – no
-		packaging waste, no added sugar and no tradeoffs.
-		<Secondary slot="button" buttonName="Our Mission" buttonUrl="/about" />
-	</ImgText>
+    <ImgText title="Our Mission" imgUrl="/mission.jpg">
+        Oat drink in a carton was yesterday. The Oater machine produces the oat drink of the future. We are rethinking oat drink - with full
+        barista quality and freshness – no packaging waste, no added sugar and no tradeoffs.
+        <Secondary slot="button" buttonName="Our Mission" buttonUrl="/about" />
+    </ImgText>
 
-	<Iconbar
-		bgcolor="bg-oat-superlight"
-		title="Oat Drink without Tradeoffs"
-		icontitle1="Fresh + Local"
-		imgUrl1="/frischlokal.svg"
-		icontitle2="Barista Quality"
-		imgUrl2="/coffee.svg"
-		icontitle3="Low-Waste"
-		imgUrl3="/verpackungsarm.svg"
-		icontitle4="Cost Saving"
-		imgUrl4="/preiswert.svg"
-		icontitle5="Without Added Sugar"
-		imgUrl5="/zucker.svg"
-	>
-		<Secondary slot="button" buttonName="Our Solution" buttonUrl="/solution" />
-	</Iconbar>
+    <Iconbar
+        bgcolor="bg-oat-superlight"
+        title="Oat Drink without Tradeoffs"
+        icontitle1="Fresh + Local"
+        imgUrl1="/frischlokal.svg"
+        icontitle2="Barista Quality"
+        imgUrl2="/coffee.svg"
+        icontitle3="Low-Waste"
+        imgUrl3="/verpackungsarm.svg"
+        icontitle4="Cost Saving"
+        imgUrl4="/preiswert.svg"
+        icontitle5="Without Added Sugar"
+        imgUrl5="/zucker.svg"
+    >
+        <Secondary slot="button" buttonName="Our Solution" buttonUrl="/solution" />
+    </Iconbar>
 
-	<ImgText title="The OATeam" imgUrl="/founders.jpg" reverse>
-		We are a team of dreamers and oat drink enthusiasts from Cologne, who firmly believe that there is still room for improvement in oat drink. It all started when our CEO
-		Sarah, who has been vegan for 7 years, was bothered by all the packaging waste and the lack of freshness of her oat drink. There has to be a better way, she thought to
-		herself. And now over 1 year later, we can say with conviction: Yes, it can be better! Our oat drink is fresher, more regional, cheaper, more delicious AND more sustainable
-		than other solutions in the market today. We are
-		<a
-			href="https://de.linkedin.com/in/sarah-nesti"
-			class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all">Sarah</a
-		>, <a
-			href="https://de.linkedin.com/in/henrikburger/en"
-			class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all">Henrik</a
-		>, <a
-			href="https://de.linkedin.com/in/lisanesti/en"
-			class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all">Lisa</a
-		> and
-		<a
-			href="https://de.linkedin.com/in/benjamin-auer-68668a1a7/en"
-			class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all">Benjamin</a
-		> – <span class="font-semibold">Join our oat drink revolution!</span>
-		<Secondary slot="button" buttonName="About Us" buttonUrl="/about" />
-	</ImgText>
+    <ImgText title="The OATeam" imgUrl="/founders.webp" reverse>
+        We are a team of dreamers and oat drink enthusiasts from Cologne, who firmly believe that there is still room for improvement in oat
+        drink. It all started when our CEO Sarah, who has been vegan for 7 years, was bothered by all the packaging waste and the lack of
+        freshness of her oat drink. There has to be a better way, she thought to herself. And now over 1 year later, we can say with
+        conviction: Yes, it can be better! Our oat drink is fresher, more regional, cheaper, more delicious AND more sustainable than other
+        solutions in the market today. We are
+        <a
+            href="https://de.linkedin.com/in/sarah-nesti"
+            class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all"
+            >Sarah</a
+        >, <a
+            href="https://de.linkedin.com/in/henrikburger/en"
+            class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all"
+            >Henrik</a
+        >, <a
+            href="https://de.linkedin.com/in/lisanesti/en"
+            class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all"
+            >Lisa</a
+        > and
+        <a
+            href="https://de.linkedin.com/in/benjamin-auer-68668a1a7/en"
+            class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all"
+            >Benjamin</a
+        > – <span class="font-semibold">Join our oat drink revolution!</span>
+        <Secondary slot="button" buttonName="About Us" buttonUrl="/about" />
+    </ImgText>
 
-	<Sustainable
-		background="bg-zinc-200"
-		heading="Sustainability"
-		subtitle="With The Oater…"
-		heading1="…you reduce C02 emissions."
-		imgUrl1="/kohlenstoffdioxid.svg"
-		text1="Our ingredient packs weigh only 1/10 of a packaged oat drink. And less weight and organic oats from Germany means less transport emissions."
-		heading2="…you save 100% packaging waste."
-		imgUrl2="/verpackung.svg"
-		text2="Our oat drink comes without any disposable packaging at all, saving up to 100% packaging waste. We have developed a reusable packaging system for our ingredient mix."
-		heading3="…you stay climate-neutral"
-		text3="It’s important to us to produce as few emissions as possible in our entire value chain and we optimize continuously. The unavoidable emissions are compensated."
-		imgUrl3="/klimaneutral.svg"
-	>
-		<Secondary slot="button" buttonName="sustainability" buttonUrl="/sustainability" />
-	</Sustainable>
+    <Sustainable
+        background="bg-zinc-200"
+        heading="Sustainability"
+        subtitle="With The Oater…"
+        susData={[
+            {
+                iconUrl: "/kohlenstoffdioxid.svg",
+                title: "…you reduce C02 emissions.",
+                text: "Our ingredient packs weigh only 1/10 of a packaged oat drink. And less weight and organic oats from Germany means less transport emissions.",
+            },
+            {
+                iconUrl: "/verpackung.svg",
+                title: "…you save 100% packaging waste.",
+                text: "Our oat drink comes without any disposable packaging at all, saving up to 100% packaging waste. We have developed a reusable packaging system for our ingredient mix.",
+            },
+            {
+                iconUrl: "/klimaneutral.svg",
+                title: "…you stay climate-neutral",
+                text: "It’s important to us to produce as few emissions as possible in our entire value chain and we optimize continuously. The unavoidable emissions are compensated.",
+            },
+        ]}
+    >
+        <Secondary slot="button" buttonName="sustainability" buttonUrl="/sustainability" />
+    </Sustainable>
 
-	<Blogsection headline="Magazine">
-		<Secondary slot="button" buttonName="Read more articles" buttonUrl="https://magazin.oater.de/de" />
-	</Blogsection>
+    <Blogsection
+        headline="Magazine"
+        blogData={[
+            {
+                href: "https://magazin.oater.de/de/2022/10/19/mehr-nachhaltigkeit-im-cafe",
+                imgUrl: "/sowirddeincafenachhaltiger.webp",
+                tag: "sustainable",
+                title: "So wird Dein Café nachhaltiger",
+                author: "Sebastian",
+                date: "Okt. 19, 2022",
+            },
+            {
+                href: "https://magazin.oater.de/de/2022/07/07/das-ultimative-vegane-macaroni-and-cheese-rezept",
+                imgUrl: "/macaroni.webp",
+                tag: "REZEPT HUB",
+                title: "DAS vegane Macaroni and Cheese Rezept",
+                author: "Lisa",
+                date: "Jul. 7, 2022",
+            },
+            {
+                href: "https://magazin.oater.de/de/2022/08/02/tipps-gegen-lebensmittelverschwendung",
+                imgUrl: "/retteretich.webp",
+                tag: "ECO-FRIENDLY LIVING",
+                title: "5 Tipps für weniger Lebensmittelverschwendung",
+                author: "Katharina",
+                date: "Aug. 2, 2022",
+            },
+        ]}
+    >
+        <Secondary slot="button" buttonName="Read more articles" buttonUrl="https://magazin.oater.de/de" />
+    </Blogsection>
 
-	<Newsletter headline="Join the OATeam">
-		Sign up for the newsletter and learn immediately about new recipes and company news! And do not worry for our mails the same claim applies, as for our oat drink - no
-		garbage.
-	</Newsletter>
+    <Newsletter headline="Join the OATeam">
+        Sign up for the newsletter and learn immediately about new recipes and company news! And do not worry for our mails the same claim
+        applies, as for our oat drink - no garbage.
+    </Newsletter>
 </Layout>

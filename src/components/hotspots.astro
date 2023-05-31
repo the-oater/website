@@ -2,10 +2,11 @@
 export interface Props {
     headline: string;
     id?: string;
+    imgUrl: string;
     hotspotData: Array;
 }
 
-const { headline, id, hotspotData } = Astro.props;
+const { headline, id, imgUrl, hotspotData } = Astro.props;
 ---
 
 <div class="image-hotspots mx-auto max-w-7xl pt-10 lg:pt-20" id={id}>
@@ -13,13 +14,13 @@ const { headline, id, hotspotData } = Astro.props;
         <h3 class="lg:underline-5xl underline-4xl text-4xl font-bold leading-snug lg:text-5xl">{headline}</h3>
     </div>
     <div class="relative mx-auto max-w-4xl">
-        <img class="mx-auto h-auto w-full" src="/hotspots.jpg" alt="The Oater Barista" />
+        <img class="mx-auto h-auto w-full" src={imgUrl} alt="The Oater Barista" />
 
         <div class="hotspots inset-0">
             {
                 hotspotData.map((spot, index) => (
                     <div class={spot.pos + " hotspot absolute"}>
-                        <div class="flex h-6 w-6 cursor-pointer select-none items-center justify-center rounded-full bg-oat-light text-sm text-raisin outline outline-1 outline-oat drop-shadow-sm transition-all hover:scale-105 hover:bg-oat hover:text-white hover:outline-oat-lighter lg:h-8 lg:w-8 lg:text-base">
+                        <div class="flex h-6 w-6 cursor-pointer select-none items-center justify-center rounded-full bg-oat-light text-sm text-raisin drop-shadow-sm transition-all hover:scale-105 hover:bg-oat hover:text-white lg:h-8 lg:w-8 lg:text-base">
                             {index + 1}
                         </div>
                         <div
@@ -87,7 +88,7 @@ const { headline, id, hotspotData } = Astro.props;
 
     // Register the handler to the media query list so it will
     // call handleTabletChange whenever the media query state changes
-    mql.addListener(handleTabletChange);
+    mql.addEventListener("change", handleTabletChange);
 
     // Call the handler right away so it sets the initial state
     handleTabletChange(mql);
@@ -142,4 +143,7 @@ const { headline, id, hotspotData } = Astro.props;
             });
         });
     });
+
+    // When you're done with it, you can remove the event listener
+    // mql.removeEventListener("change", handleTabletChange);
 </script>
