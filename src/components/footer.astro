@@ -1,5 +1,17 @@
 ---
 import logo from "../assets/Oater-Logo.svg";
+
+export interface Props {
+    claim: string;
+    firstcolData: Array;
+    firstcoltitle: string;
+    secondcolData: Array;
+    secondcoltitle: string;
+    thirdcolData: Array;
+    thirdcoltitle: string;
+}
+
+const { claim, firstcolData, firstcoltitle, secondcolData, secondcoltitle, thirdcoltitle, thirdcolData } = Astro.props;
 ---
 
 <footer class="bg-[url('/footer.svg')] bg-cover">
@@ -9,7 +21,7 @@ import logo from "../assets/Oater-Logo.svg";
                 <img src={logo} class="w-40" alt="" />
 
                 <p class="mt-4 max-w-xs text-sm text-gray-600">
-                    The machine for fresh and sustainable oat drink with barista quality for professionals.
+                    {claim}
                 </p>
 
                 <div class="mt-8 flex gap-4 text-gray-600">
@@ -54,51 +66,44 @@ import logo from "../assets/Oater-Logo.svg";
             </div>
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-4 lg:col-span-2 lg:grid-cols-3">
                 <div>
-                    <p class="font-medium">Company</p>
+                    <p class="font-medium">{firstcoltitle}</p>
 
                     <nav class="mt-4 flex flex-col space-y-2 text-sm text-gray-600">
-                        <a class="hover:opacity-75" href="/">Home</a>
-                        <a class="hover:opacity-75" href="/solution">Solution</a>
-                        <a class="hover:opacity-75" href="/machines">Machines</a>
-                        <a class="hover:opacity-75" href="/about">About Us</a>
-                        <a class="hover:opacity-75" href="/sustainability">Sustainability</a>
-                        <a class="hover:opacity-75" href="/career">Career</a>
-                        <a class="hover:opacity-75" href="https://magazin.oater.de/de">Magazine</a>
+                        {
+                            firstcolData.map((col) => (
+                                <a class="hover:opacity-75" href={col.href}>
+                                    {col.name}
+                                </a>
+                            ))
+                        }
                     </nav>
                 </div>
 
                 <div>
-                    <p class="font-medium">Contact</p>
+                    <p class="font-medium">{secondcoltitle}</p>
 
                     <nav class="mt-4 flex flex-col space-y-2 text-sm text-gray-600">
-                        <a class="hover:opacity-75" href="mailto:hello@oater.de" target="_blank" rel="noreferrer">E-Mail</a>
-                        <a class="hover:opacity-75" href="https://www.instagram.com/the_oater/" target="_blank" rel="noreferrer"
-                            >Instagram</a
-                        >
-                        <a class="hover:opacity-75" href="https://www.linkedin.com/company/oater" target="_blank" rel="noreferrer"
-                            >Linkedin</a
-                        >
-                        <a
-                            class="hover:opacity-75"
-                            href="https://share-eu1.hsforms.com/1Aq5AD-i8RbixcL95b9kT4Afnkng"
-                            target="_blank"
-                            rel="noreferrer">Newsletter</a
-                        >
-                        <a
-                            class="hover:opacity-75"
-                            href="https://oater.us8.list-manage.com/subscribe?u=39c4c7c39b291aaa33750c897&id=7c37cda616"
-                            target="_blank"
-                            rel="noreferrer">Waitlist</a
-                        >
+                        {
+                            secondcolData.map((col) => (
+                                <a class="hover:opacity-75" href={col.href} target="_blank" rel="noreferrer">
+                                    {col.name}
+                                </a>
+                            ))
+                        }
                     </nav>
                 </div>
 
                 <div>
-                    <p class="font-medium">Legal</p>
+                    <p class="font-medium">{thirdcoltitle}</p>
 
                     <nav class="mt-4 flex flex-col space-y-2 text-sm text-gray-600">
-                        <a class="hover:opacity-75" href="/imprint"> Imprint</a>
-                        <a class="hover:opacity-75" href="/privacypolicy">Privacy policy</a>
+                        {
+                            thirdcolData.map((col) => (
+                                <a class="hover:opacity-75" href={col.href} target="_blank" rel="noreferrer">
+                                    {col.name}
+                                </a>
+                            ))
+                        }
                     </nav>
                 </div>
             </div>

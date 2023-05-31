@@ -22,38 +22,38 @@ import Dropdown from "../components/navdropdown.astro";
     </head>
     <body class="scroll-smooth bg-white">
         <Navbar
-            navitem1="Solution"
-            navitem2="Machines"
-            navitem3="About Us"
-            navitem4="Sustainability"
-            navitem5="Magazine"
-            href1="/solution"
-            href2="/machines"
-            href3="/about"
-            href4="/sustainability"
+            navitem1="Lösung"
+            navitem2="Maschinen"
+            navitem3="Über Uns"
+            navitem4="Nachhaltigkeit"
+            navitem5="Magazin"
+            href1="/de/solution"
+            href2="/de/machines"
+            href3="/de/about"
+            href4="/de/sustainability"
             href5="https://magazin.oater.de/de"
-            hrefLogo="/"
+            hrefLogo="/de"
             language1="Deutsch"
             language2="English"
             hreflanguage2="/"
             hreflanguage1="/de"
-            languagePicker="EN"
+            languagePicker="DE"
         >
             <Dropdown
                 slot="dropdown1"
                 dropdownData={[
                     {
-                        link: "/solution#machine",
+                        link: "/de/solution#machine",
                         title: "Our Solution",
                         body: "Learn how our machine and subscription work",
                     },
                     {
-                        link: "/solution#ingredientmix",
+                        link: "/de/solution#ingredientmix",
                         title: "Our Ingredient Mix",
                         body: "Read what our oat drink is made of",
                     },
                     {
-                        link: "/solution#businesses",
+                        link: "/de/solution#businesses",
                         title: "For Businesses",
                         body: "Bring The Oater to your business",
                     },
@@ -63,18 +63,18 @@ import Dropdown from "../components/navdropdown.astro";
                 slot="dropdown2"
                 dropdownData={[
                     {
-                        link: "/machines#oaterbarista",
+                        link: "/de/machines#oaterbarista",
                         title: "Features",
                         body: "Understand how the The Oater Barista works",
                     },
 
                     {
-                        link: "/machines#setup",
+                        link: "/de/machines#setup",
                         title: "Setup",
                         body: "Learn how the machine setup works",
                     },
                     {
-                        link: "/machines#specs",
+                        link: "/de/machines#specs",
                         title: "Specs",
                         body: "Dive deep into all the machine details",
                     },
@@ -84,22 +84,22 @@ import Dropdown from "../components/navdropdown.astro";
                 slot="dropdown3"
                 dropdownData={[
                     {
-                        link: "/about#mission",
+                        link: "/de/about#mission",
                         title: "Our Mission",
                         body: "Understand what mission and vision drives us",
                     },
                     {
-                        link: "/about#team",
+                        link: "/de/about#team",
                         title: "Meet The Team",
                         body: "Get to know the founders and the OATeam",
                     },
                     {
-                        link: "/about#story",
+                        link: "/de/about#story",
                         title: "Our Story",
                         body: "Learn how we got started and where we are now",
                     },
                     {
-                        link: "/career",
+                        link: "/de/career",
                         title: "Careers at The Oater",
                         body: "We are revolutionizing oat drink. Do you want to join?",
                     },
@@ -109,17 +109,17 @@ import Dropdown from "../components/navdropdown.astro";
                 slot="dropdown4"
                 dropdownData={[
                     {
-                        link: "/sustainability#how",
+                        link: "/de/sustainability#how",
                         title: "How we are sustainable",
                         body: "Learn how we save 57% emissions",
                     },
                     {
-                        link: "/sustainability#transparency",
+                        link: "/de/sustainability#transparency",
                         title: "Full Transparency",
                         body: "Read why and how we measure our impact",
                     },
                     {
-                        link: "/sustainability#goals",
+                        link: "/de/sustainability#goals",
                         title: "Our Goals",
                         body: "See what goals we are striving towards",
                     },
@@ -162,7 +162,7 @@ import Dropdown from "../components/navdropdown.astro";
                     name: "Magazine",
                 },
             ]}
-            secondcoltitle="Contact"
+            secondcoltitle="Kontakt"
             secondcolData={[
                 {
                     href: "mailto:hello@oater.de",

@@ -1,0 +1,85 @@
+---
+import Layout from "../../layouts/Layout_de.astro";
+import ImgText from "../../components/imagetext.astro";
+import Headline2 from "../../components/headline2.astro";
+import TwoImage from "../../components/twoimagesfull.astro";
+import Hero from "../../components/hero.astro";
+import ImgTextFull from "../../components/imagetextfull.astro";
+import Sustainable from "../../components/sustainable.astro";
+---
+
+<Layout title="THE OATER - Sustainability">
+    <Hero heroHeading="Sustainability is numbers not words" heroImage="/header_sustainability.webp" />
+    <ImgText reverse title="How are we sustainable?" imgUrl="/sustainability.webp" id="how" background="bg-zinc-200">
+        Our independent Lifecycle Assessment study has shown that The Oater oat drink emits 0.15kg CO2/L which is already <span
+            class="font-semibold">57% less CO2</span
+        > equivalents compared to conventional packaged oat drink and 93% less emissions than cow milk. Here are some of the ways we do it:
+    </ImgText>
+    <ImgText title="Save packaging" imgUrl="/mission.jpg">
+        With The Oater, your business can eliminate single-use packaging. Our fresh oat drink doesn't need a carton. Instead, the oat drink
+        can be dispensed directly into reusable bottles. We also supply our ingredient mix in reusable containers, which are returned with
+        every new delivery.
+    </ImgText>
+    <ImgText background="bg-oat-superlight" reverse title="Save emissions " imgUrl="/saveemissions.webp">
+        Oat drink is 90% water. Since our machine uses local tap water, only 10% of the weight needs to be transported for every liter
+        produced. And less transportation means fewer emissions. And we save even more emissions by sourcing our ingredients regionally and
+        building our distribution hub close to our key suppliers.
+    </ImgText>
+    <ImgText title="Local ingredients and production" imgUrl="/localingredients.webp">
+        We only use regional ingredients, such as organic oats from Germany, which allows us to shorten the transport distances of our oat
+        drink even more. Also, our machine was fully developed and produced in Germany and does not need long transport routes to your
+        counter. By making some adjustments, we are able to reduce our emissions even further to become 79% less polluting than conventional
+        oat drink? You want to see for yourself? Download our full sustainability report here, which includes all data from the lifecycle
+        assessment.
+    </ImgText>
+
+    <Headline2 headline="Full transparency" subtitle="Why we measure our environmental footprint" id="transparency" />
+    <ImgTextFull background="bg-zinc-200" imgUrl="/footprint.jpg">
+        In today's world, the terms "sustainable" and "green" are used loosely by many companies. Without numbers, they mean little as any
+        company can use them regardless of their environmental impact. This is where Life Cycle Assessment (LCA) comes in. It involves
+        analyzing the environmental impact of all stages of a product from production to disposal. LCA allows us to quantify the
+        environmental impact at every stage and optimize areas that need improvement. Transparency is important to us, which is why we share
+        our environmental footprint.
+    </ImgTextFull>
+    <ImgTextFull imgUrl="/lca.webp" reverse background="bg-zinc-200" align="lg:text-right">
+        The results of the independent LCA are clear: our oat drink creates 0.15kg CO2 equivalents per liter produced. Of this amount, 42
+        percent can be attributed to the cultivation of the raw ingredients (oats, canola), 25 percent of emissions to packaging, 24 percent
+        to production onsite and 9 percent to transport. This amount is 57 percent lower than conventional packaged oat drink and 93% lower
+        than cow milk. But there are still some levers that can help us improve and reach up to 79% less emissions and that is what we are
+        working on now. To learn more about our ecological footprint, download our entire sustainability report here.
+    </ImgTextFull>
+
+    <Sustainable
+        heading="Our Goals"
+        id="goals"
+        susData={[
+            {
+                iconUrl: "/co2reduction.svg",
+                title: "Reduce CO2 Emissions by 79%",
+                text: "We have identified 3 key levers that we will use to further reduce CO2 emissions compared to conventional oat drink production.",
+            },
+            {
+                iconUrl: "/shortdistances.svg",
+                title: "Locate logistics hub near suppliers",
+                text: "By shortening distances, we are able to significantly reduce transport and in consequence emissions.",
+            },
+            {
+                iconUrl: "/greenenergy.svg",
+                title: "Incentivize the switch to green energy",
+                text: "We aim to provide green energy solutions of our partners as well as information to our customers to facilitate the switch.",
+            },
+        ]}
+    />
+
+    <Headline2 headline="Our Mission" />
+    <TwoImage
+        title1="Mission 1"
+        subtitle1="500 Million Oat drink cartons saved by 2030 "
+        info1="With every liter of oat drink produced, you save 1 oat drink carton, since we produce on-site and dispense our oat drink into reusable bottles."
+        imgUrl1="background-image: url(/mission1.webp)"
+        title2="Mission 2"
+        subtitle2="1 Billion kg CO2 equivalents saved by 2030"
+        info2="Our production process reduces emissions by 57 % in comparison to conventional oat drink production and we "
+        imgUrl2="background-image: url(/mission2.webp)"
+    />
+</Layout>
