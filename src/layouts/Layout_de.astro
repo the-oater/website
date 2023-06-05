@@ -27,10 +27,10 @@ import Dropdown from "../components/navdropdown.astro";
             navitem3="Über Uns"
             navitem4="Nachhaltigkeit"
             navitem5="Magazin"
-            href1="/de/solution"
-            href2="/de/machines"
-            href3="/de/about"
-            href4="/de/sustainability"
+            href1="/de/produkt"
+            href2="/de/maschinen"
+            href3="/de/überuns"
+            href4="/de/nachhaltigkeit"
             href5="https://magazin.oater.de/de"
             hrefLogo="/de"
             language1="Deutsch"
@@ -43,17 +43,17 @@ import Dropdown from "../components/navdropdown.astro";
                 slot="dropdown1"
                 dropdownData={[
                     {
-                        link: "/de/solution#machine",
-                        title: "Our Solution",
+                        link: "/de/produkt#machine",
+                        title: "Our produkt",
                         body: "Learn how our machine and subscription work",
                     },
                     {
-                        link: "/de/solution#ingredientmix",
+                        link: "/de/produkt#ingredientmix",
                         title: "Our Ingredient Mix",
                         body: "Read what our oat drink is made of",
                     },
                     {
-                        link: "/de/solution#businesses",
+                        link: "/de/produkt#businesses",
                         title: "For Businesses",
                         body: "Bring The Oater to your business",
                     },
@@ -63,18 +63,18 @@ import Dropdown from "../components/navdropdown.astro";
                 slot="dropdown2"
                 dropdownData={[
                     {
-                        link: "/de/machines#oaterbarista",
+                        link: "/de/maschinen#oaterbarista",
                         title: "Features",
                         body: "Understand how the The Oater Barista works",
                     },
 
                     {
-                        link: "/de/machines#setup",
+                        link: "/de/maschinen#setup",
                         title: "Setup",
                         body: "Learn how the machine setup works",
                     },
                     {
-                        link: "/de/machines#specs",
+                        link: "/de/maschinen#specs",
                         title: "Specs",
                         body: "Dive deep into all the machine details",
                     },
@@ -84,23 +84,23 @@ import Dropdown from "../components/navdropdown.astro";
                 slot="dropdown3"
                 dropdownData={[
                     {
-                        link: "/de/about#mission",
+                        link: "/de/überuns#mission",
                         title: "Our Mission",
                         body: "Understand what mission and vision drives us",
                     },
                     {
-                        link: "/de/about#team",
+                        link: "/de/überuns#team",
                         title: "Meet The Team",
                         body: "Get to know the founders and the OATeam",
                     },
                     {
-                        link: "/de/about#story",
+                        link: "/de/überuns#story",
                         title: "Our Story",
                         body: "Learn how we got started and where we are now",
                     },
                     {
-                        link: "/de/career",
-                        title: "Careers at The Oater",
+                        link: "/de/karriere",
+                        title: "Karrieres at The Oater",
                         body: "We are revolutionizing oat drink. Do you want to join?",
                     },
                 ]}
@@ -109,17 +109,17 @@ import Dropdown from "../components/navdropdown.astro";
                 slot="dropdown4"
                 dropdownData={[
                     {
-                        link: "/de/sustainability#how",
+                        link: "/de/nachhaltigkeit#how",
                         title: "How we are sustainable",
                         body: "Learn how we save 57% emissions",
                     },
                     {
-                        link: "/de/sustainability#transparency",
+                        link: "/de/nachhaltigkeit#transparency",
                         title: "Full Transparency",
                         body: "Read why and how we measure our impact",
                     },
                     {
-                        link: "/de/sustainability#goals",
+                        link: "/de/nachhaltigkeit#goals",
                         title: "Our Goals",
                         body: "See what goals we are striving towards",
                     },
@@ -135,31 +135,31 @@ import Dropdown from "../components/navdropdown.astro";
             firstcolData={[
                 {
                     href: "/",
-                    name: "Home",
+                    name: "Startseite",
                 },
                 {
-                    href: "/solution",
-                    name: "Solution",
+                    href: "/produkt",
+                    name: "Produkt",
                 },
                 {
-                    href: "/machines",
-                    name: "Machines",
+                    href: "/maschinen",
+                    name: "Maschinen",
                 },
                 {
-                    href: "/about",
-                    name: "About Us",
+                    href: "/überuns",
+                    name: "Über uns",
                 },
                 {
-                    href: "/sustainability",
-                    name: "Sustainability",
+                    href: "/nachhaltigkeit",
+                    name: "Nachhaltigkeit",
                 },
                 {
-                    href: "/career",
-                    name: "Career",
+                    href: "/karriere",
+                    name: "Karriere",
                 },
                 {
                     href: "https://magazin.oater.de/de",
-                    name: "Magazine",
+                    name: "Magazin",
                 },
             ]}
             secondcoltitle="Kontakt"
@@ -182,18 +182,18 @@ import Dropdown from "../components/navdropdown.astro";
                 },
                 {
                     href: "https://oater.us8.list-manage.com/subscribe?u=39c4c7c39b291aaa33750c897&id=7c37cda616",
-                    name: "Waitlist",
+                    name: "Warteliste",
                 },
             ]}
-            thirdcoltitle="Legal"
+            thirdcoltitle="Rechtliches"
             thirdcolData={[
                 {
-                    href: "/imprint",
-                    name: "Imprint",
+                    href: "/impressum",
+                    name: "Impressum",
                 },
                 {
-                    href: "/privacypolicy",
-                    name: "Privacy policy",
+                    href: "/datenschutzerklärung",
+                    name: "Datenschutzerklärung",
                 },
             ]}
         />

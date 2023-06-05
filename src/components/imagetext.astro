@@ -7,9 +7,10 @@ export interface Props {
     headline?: string;
     minusmargin?: string;
     id?: string;
+    alignright?: boolean;
 }
 
-const { title, imgUrl, reverse = false, background, headline, minusmargin, id } = Astro.props;
+const { title, imgUrl, reverse = false, background, headline, minusmargin, id, alignright = false } = Astro.props;
 ---
 
 <section class={background} id={id}>
@@ -33,12 +34,24 @@ const { title, imgUrl, reverse = false, background, headline, minusmargin, id } 
                     )
                 }
                 <div>
-                    <h2 class="underline-4xl text-4xl font-bold text-raisin">
-                        {title}
-                    </h2>
-                    <p class="mt-12 text-base leading-loose text-raisin">
-                        <slot />
-                    </p>
+                    {
+                        alignright ? (
+                            <div class="md:text-right">
+                                <h2 class="underline-4xl text-4xl font-bold text-raisin">{title}</h2>
+                                <p class="mt-12 text-base leading-loose text-raisin ">
+                                    <slot />
+                                </p>
+                            </div>
+                        ) : (
+                            <>
+                                <h2 class="underline-4xl text-4xl font-bold text-raisin">{title}</h2>
+                                <p class="mt-12 text-base leading-loose text-raisin">
+                                    <slot />
+                                </p>
+                            </>
+                        )
+                    }
+
                     <div class="mt-12">
                         <slot name="button" />
                     </div>
