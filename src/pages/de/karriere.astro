@@ -45,7 +45,42 @@ import Values from "../../components/values.astro";
     <ImageCenter imgUrl="/team_career.webp" headline="The Team">
         <Primary slot="button" buttonName="Apply now" buttonUrl="https://join.com/companies/oater" />
     </ImageCenter>
-    <Values title="Our Values" bgcolor="bg-zinc-200" />
+    <Values
+        title="Our Values"
+        bgcolor="bg-zinc-200"
+        cardData={[
+            {
+                icon: "/ownership.webp",
+                title: "Ownership",
+                text: "It is important to us that our employees learn, develop, and feel challenged at The Oater without feeling overwhelmed or left alone. Therefore, each team member takes responsibility over projects, and always receives support and regular feedback.",
+            },
+            {
+                icon: "/gratitude.webp",
+                title: "Gratitude",
+                text: "We are mindful and show appreciation for ourselves and others. We are humble, appreciative and celebrate each other (and ourselves) for our successes.",
+            },
+            {
+                icon: "/care.webp",
+                title: "Care",
+                text: "All our actions have consequences and affect those around us and our environment. Therefore, we make all our decisions striving towards a more livable future on this planet for all.",
+            },
+            {
+                icon: "/goodvibes.webp",
+                title: "Good Vibes",
+                text: "At The Oater, we are optimistic and have a positive attitude. We believe that striving for a shared vision does not only bring us together but should also be fun.",
+            },
+            {
+                icon: "/excellence.webp",
+                title: "Excellence",
+                text: " fehlt",
+            },
+            {
+                icon: "/together.webp",
+                title: "Together",
+                text: "Team spirit is the foundation for a strong team and a successful company. We strive to make all team members feel comfortable. That's why we focus on collaboration, trust and support within the team. This includes respect, empathy, and support.",
+            },
+        ]}
+    />
     <ImgText imgUrl="/office1.jpg" title="Our Office" minusmargin="-mb-20">
         <span class="font-bold">InnoDom Cologne</span><br /> Weyertal 109 <br />50931 Köln<br /> Germany
     </ImgText>
