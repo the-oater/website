@@ -12,15 +12,19 @@ const { id, sliderData } = Astro.props;
     }
 </style>
 <div class="relative" id={id}>
-    <div class="navigation-container mb-6 flex hidden justify-center space-x-1 md:flex lg:space-x-3">
-        <button class="nav-item font-zen uppercase text-raisin decoration-2 underline-offset-4">Businesses</button><span>|</span>
-        <button class="nav-item font-zen uppercase text-raisin decoration-2 underline-offset-4">Cafés</button><span>|</span>
-        <button class="nav-item font-zen uppercase text-raisin decoration-2 underline-offset-4">Hotels</button><span>|</span>
-        <button class="nav-item font-zen uppercase text-raisin decoration-2 underline-offset-4">Co-working Spaces</button><span>|</span>
-        <button class="nav-item font-zen uppercase text-raisin decoration-2 underline-offset-4">Zero-Waste Stores</button>
+    <div class="navigation-container mb-6 flex hidden justify-center space-x-1 lg:flex lg:space-x-3">
+        <button class="nav-item font-zen uppercase text-raisin decoration-2 underline-offset-4 hover:underline">Businesses</button><span
+            >|</span
+        >
+        <button class="nav-item font-zen uppercase text-raisin decoration-2 underline-offset-4 hover:underline">Cafés</button><span>|</span>
+        <button class="nav-item font-zen uppercase text-raisin decoration-2 underline-offset-4 hover:underline">Hotels</button><span>|</span
+        >
+        <button class="nav-item font-zen uppercase text-raisin decoration-2 underline-offset-4 hover:underline">Co-working Spaces</button
+        ><span>|</span>
+        <button class="nav-item font-zen uppercase text-raisin decoration-2 underline-offset-4 hover:underline">Zero-Waste Stores</button>
     </div>
     <div
-        class="container-snap no-scrollbar relative flex w-full snap-x snap-mandatory gap-6 overflow-x-auto"
+        class="container-snap no-scrollbar relative hidden w-full snap-x snap-mandatory gap-6 overflow-x-auto lg:flex"
         style="scrollbar-width: none;-ms-overflow-style: none;"
     >
         <div class="w-5xl hidden shrink-0 md:block">
@@ -58,7 +62,25 @@ const { id, sliderData } = Astro.props;
             <div class="w-96 shrink-0"></div>
         </div>
     </div>
-    <div class="indicators-container absolute bottom-7 left-1/2 flex -translate-x-1/2 transform justify-center space-x-2"></div>
+    <div
+        class="indicators-container invisible absolute bottom-7 left-1/2 flex -translate-x-1/2 transform justify-center space-x-2 lg:visible"
+    >
+    </div>
+</div>
+
+<div class="container-snap relative flex w-full snap-x snap-mandatory flex-row gap-6 overflow-x-auto lg:hidden">
+    {
+        sliderData.map((slide) => (
+            <div class="relative w-full max-w-5xl shrink-0 snap-center">
+                <div class="mx-10">
+                    <h3 class="text-lg font-bold">{slide.title}</h3>
+                    <img class="rounded" src={slide.imgUrl} />
+
+                    {slide.text}
+                </div>
+            </div>
+        ))
+    }
 </div>
 
 <script>

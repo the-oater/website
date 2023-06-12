@@ -45,6 +45,7 @@ https://manual.uberspace.de/
 3. We use git for versioning, install [Git in VS Code](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git) or use the [Github Desktop app](https://desktop.github.com/).
 4. Use the company github account or get added as an collaborator on your own account.
 5. To upload the built site manually you need access to the uberspace account and an ftp program.
+6. Login to the [uberspace](https://dashboard.uberspace.de/login?lang=en) and set a new ssh password to connect to the server via sftp. The username is oater and the server hamal.uberspace.de
 
 **Setup**
 
@@ -86,6 +87,7 @@ https://manual.uberspace.de/
 -   Astro looks for `.astro`files in the `src/pages/` directory. Each `.astro` file in the `pages/` directory corresponds to a site on our website e.g. `machines.astro` contains the content for `www.oater.de/machines`
 -   The `layout.astro` file in `layouts/`contains components and html-code that are displayed on each site. For example the footer and navbar.
 -   The styles/ directory contains the `base.css` of tailwindcss and css files for the custom fonts we use. `base.css` is used for custom styles added to tailwind. In our case styles for the headlines.
+-   for the german translation we have a subdirectory `/de` all files will be routed to www.oater.de/de/filename all the german pages must use the `Layout_de` to get the german navbar and footer.
 
 ### Commands
 
@@ -168,12 +170,12 @@ Layouts are specifically used for components that are displayed on each page. Th
 
 # Hubspot
 
-Hubspot is used for the Magazine/Blog. It is directly linked in the Navigation.
+Hubspot is used for the Magazine/Blog. It is directly linked in the Navigation and not hosted by uberspace. Instead the subdomain magazine.oater.de/de (for the german magazine) is connected to hubspots servers. All changes regarding the blog have to go through hubspot.
 
 -   If changes are made to the navbar or the footer on the main site, the code needs to be manually changed on Hubspot. This can be done under Settings>Tools>Website>Blog>Templates>Header HTML and Footer HTML
 -   Save the code that is in there before you paste new code in! This way you can compare, if something with the new code does not work.
 -   It is important that you manually change all the links to the full ones. `/solution` becomes [`https://oater.de/solution`](https://oater.de/solution) and so on..
 -   The link to the footer background has to be replaced `style="background-image: url({{ get_asset_url('/atlas-theme-oater-iframe/images/footer.svg') }})”`
 -   Links to icons and logos have to be replaced with the svg code
--   If you make changes to the styling of the footer or to the navbar the css and js has to be changed in the template file too Marketing>Files and Templates>Files>atlas-theme-oater-iframe>child.css or child.js
+-   If you make changes to the styling of the footer or to the navbar on the astro site, the css and js has to be changed in the template file of the hubspot theme. Copy the generated css/js from `_astro` go to Marketing>Files and Templates>Files>atlas-theme-oater-iframe and paste it into child.css or child.js
 -   Keep in mind that you can only use the code from the built site. You can’t copy the code from the component directly

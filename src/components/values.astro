@@ -16,7 +16,7 @@ const { title, bgcolor, id, cardData } = Astro.props;
                 cardData.map((card, index) => (
                     <div class={`outline-3 rounded-2xl outline ${index % 2 === 0 ? "outline-sonic" : "outline-oat"}`}>
                         <div class="px-5 pb-6">
-                            <img src={card.icon} aria- class="mx-auto w-48" />
+                            <img src={card.icon} class="mx-auto w-48" />
                             <div class="text-center text-raisin">
                                 <span class="font-zen text-lg uppercase">{card.title}</span>
                                 <p class="pt-4 leading-loose">{card.text}</p>

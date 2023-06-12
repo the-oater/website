@@ -11,6 +11,7 @@ export interface Props {
     href4: string;
     href5: string;
     hrefLogo: string;
+    logoTitle: string;
     language1: string;
     hreflanguage1: string;
     hreflanguage2: string;
@@ -30,6 +31,7 @@ const {
     href4,
     href5,
     hrefLogo,
+    logoTitle,
     language1,
     language2,
     hreflanguage1,
@@ -110,7 +112,7 @@ import logo from "../assets/Oater-Logo.svg";
 
             <div class="">
                 <a href={hrefLogo}>
-                    <img class="mx-auto w-44" src={logo} alt="Home" />
+                    <img class="mx-auto w-44" src={logo} title={logoTitle} aria-label={logoTitle} />
                 </a>
             </div>
 
@@ -200,16 +202,21 @@ import logo from "../assets/Oater-Logo.svg";
                 }
             });
         </script>
+        <style>
+            .no-scrollbar::-webkit-scrollbar {
+                display: none; /* Safari and Chrome */
+            }
+        </style>
 
-        <div class="z-30 bg-white lg:hidden">
+        <div class="no-scrollbar z-30 bg-white lg:hidden" style="scrollbar-width: none;-ms-overflow-style: none;">
             <div class="flex h-24 flex-row place-items-center justify-between">
                 <div>
-                    <a href="/">
-                        <img class="mx-auto w-40" src={logo} alt="" />
+                    <a href={hrefLogo}>
+                        <img class="mx-auto w-40" src={logo} title={logoTitle} aria-label={logoTitle} />
                     </a>
                 </div>
 
-                <button class="menu-icon text-raisin" id="menu-button">
+                <button class="menu-icon text-raisin" id="menu-button" aria-label="Menu" title="Menu">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

@@ -13,12 +13,12 @@ const { heading, subtitle, susData, id, background } = Astro.props;
 <div class={background} id={id}>
     <div class="container mx-auto max-w-7xl py-14 px-20 text-raisin sm:px-36 md:px-48 lg:px-10">
         <div class="text-center">
-            <h1 class="underline-4xl text-4xl font-bold">
+            <h2 class="underline-4xl text-4xl font-bold">
                 {heading}
-            </h1>
-            <h2 class="mt-6 text-lg font-bold">
-                {subtitle}
             </h2>
+            <h3 class="mt-6 text-lg font-bold">
+                {subtitle}
+            </h3>
         </div>
         <div class="flex flex-col justify-center gap-14 lg:flex-row">
             {

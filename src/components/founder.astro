@@ -16,7 +16,7 @@ const { bgcolor, title, founderData, id } = Astro.props;
         <div class="grid grid-cols-2 gap-8 py-14 md:grid-cols-4 md:gap-12">
             {
                 founderData.map((founder) => (
-                    <a href={founder.linkedinUrl}>
+                    <a href={founder.linkedinUrl} target="_blank">
                         <div class="col-span-1 text-center hover:text-sonic ">
                             <img
                                 class="mx-auto w-auto rounded transition-all delay-100 ease-in-out hover:scale-105"
