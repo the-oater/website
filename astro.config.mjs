@@ -9,8 +9,8 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: {
-    // Указывайте base URL в поле `url`
-    url: "https://website/", // Замените на ваш URL
+    // Здесь указывается URL вашего репозитория на GitHub как базовый URL
+    url: "https://github.com/the-oater/website", // Замените на ваш URL
   },
   integrations: [
     tailwind({
