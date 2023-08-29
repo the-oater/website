@@ -8,7 +8,10 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://website/",
+  site: {
+    // Указывайте base URL в поле `url`
+    url: "https://website/", // Замените на ваш URL
+  },
   integrations: [
     tailwind({
       // Example: Disable injecting a basic `base.css` import on every page.
