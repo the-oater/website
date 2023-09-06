@@ -6,7 +6,7 @@ import Iconbar from "../../components/iconbar.astro";
 import ImgText from "../../components/imagetext.astro";
 import Hero from "../../components/hero.astro";
 import ImgTextFull from "../../components/imagetextfull.astro";
-import Slider from "../../components/slider.astro";
+import Slider from "../../components/sliderde.astro";
 import Oatermix from "../../components/oatermix.astro";
 import Headline from "../../components/headline.astro";
 ---
@@ -29,90 +29,98 @@ import Headline from "../../components/headline.astro";
     />
 
     <ImgTextFull reverse title="Abonnement und Lieferung" imgUrl="/ingredientmix_pattern.webp">
-        Dein Unternehmen registriert sich auf unserer digitalen Plattform. Dort gibst du deinen wöchentlichen Haferdrink-Verbrauch an, der
-        die Grundlage für dein individuelles Abonnement ist. The Oater liefert automatisch die exakt benötigte Menge unseres Zutatenmixes -
-        du zahlst nur für die tatsächliche Nutzung. Nie wieder Engpässe in der Versorgung oder Last-Minute-Einkäufe im Supermarkt. Und das
-        Beste daran: Du kannst dein Abonnement jederzeit flexibel anpassen, wenn sich dein Verbrauch im Laufe des Jahres ändert.
+        Als Unternehmen registrierst Du Dich auf unserer digitalen Plattform. 
+        Dort gibst Du deinen wöchentlichen Haferdrink-Konsum an. Dies ist die Grundlage für die Berechnung Deines Abonnements. 
+        Der Oater liefert automatisch unsere Zutatenmischung, die Du benötigst – Du zahlst monatlich je nach Abo-Größe.
+        Schluss mit Lieferengpässen und Last-Minute-Einkäufen im Supermarkt. Du kannst das Abonnement anpassen - wir wissen, 
+        dass Dein Verbrauch nicht das ganze Jahr über konstant ist.
+        <br><b>Zum Beispiel kannst Du...</b><br>
+        <ul class="list-disc py-2 pl-4 leading-loose">
+            <li>Deine Abonnementgröße monatlich anpassen</li>
+            <li>In bestimmten Wochen/Monaten vorübergehend mehr Hafermix bestellen</li>
+            <li>Dein Abonnement für bis zu 4 Wochen pro Jahr pausieren</li>
+        </ul>
     </ImgTextFull>
-    <ImgTextFull title="The Oater Barista" imgUrl="/hotel.webp" id="machine">
-        Die Maschine ist KOSTENLOS für teilnehmende Unternehmen. Du zahlst nur für den Oater Mix pro Liter. Wir installieren die Maschine
-        und regelmäßige Wartungsarbeiten sind in unserem Service enthalten.
-        <Secondary slot="button" buttonName="To the Machine" buttonUrl="/machines" />
+    <ImgTextFull title="The Oater Barista Maschine" imgUrl="/hotel.webp" id="machine">
+        Du leihst die The Oater Barista Maschine und zahlst dafür eine monatliche Leihgebühr. 
+        Die Installation und die regelmäßige Wartung der Maschine sind ebenfalls in dieser Pauschale enthalten. 
+        Du zahlst zudem für den Hafer-Mix pro Liter im Abo. Je nach Verbrauch kannst Du zwischen unterschiedlichen
+         Abo-Größen wählen.
+        <Secondary slot="button" buttonName="Mehr erfahren" buttonUrl="/machines" />
     </ImgTextFull>
 
-    <ImgTextFull reverse title="Haferdrinkproduktion" imgUrl="/machine_ingredientmix.webp">
-        To make our oat drink you only need our ingredient pack (the provided Oater Mix and canola oil) and water from the tap. Each
-        business can decide for itself whether a fixed water supply or a water tank is more suitable. More information about the ingredient
-        packs can be found here. You can find out how the production works here.
+    <ImgTextFull reverse title="Herstellung von Haferdrinks" imgUrl="/machine_ingredientmix.webp">
+        Für die Zubereitung unseres Haferdrinks benötigst Du nur unsere Zutatenpackung (die mitgelieferte Hafermischung und Rapsöl) 
+        und Wasser aus der Leitung. Jedes Unternehmen kann selbst entscheiden, ob ein Festwasseranschluss oder ein Wassertank 
+        besser geeignet ist. Weitere Informationen zu den Zutatenpackungen findest Du hier. 
 
-        <Secondary slot="button" buttonName="The Oater Mix" buttonUrl="/solution#ingredientmix" />
+        <Secondary slot="button" buttonName="Mehr erfahren" buttonUrl="/solution#ingredientmix" />
     </ImgTextFull>
     <Oatermix
         id="ingredientmix"
         imgUrl="/zutaten-mix.webp"
-        title="The Oater Mix"
+        title="Der Oater Mix"
         mixpropertiesData={[
             {
                 icon: "/biozertifiziert.svg",
-                title: "Origin",
-                text: "All our ingredients are sourced from Germany. We also build close relationships with our suppliers. Like this we guarantee transparency about quality, cultivation methods and transport.",
+                title: "HERKUNFT",
+                text: "Alle unsere Zutaten stammen aus Deutschland. Wir bauen auch enge Beziehungen zu unseren Lieferanten auf. So garantieren wir Transparenz bei Qualität, Anbaumethoden und Transport.",
             },
             {
                 icon: "/hafer.svg",
-                title: "Ingredients",
-                text: "The basic ingredient of our oat drink is organic oats. We also use organic canola oil and organic sunflower protein for foamability and enzymes and salt for fermentation (natural sweetness).",
+                title: "ZUTATEN:",
+                text: "Die Grundzutat unseres Haferdrinks ist Bio-Hafer. Wir verwenden auch Bio-Rapsöl und Bio-Sonnenblumenprotein für die Schäumbarkeit und Enzyme und Salz für die Fermentation (natürliche Süße).",
             },
             {
                 icon: "/zucker.svg",
-                title: "Sugar",
-                text: "We do not add any sugar to our oat drink. Instead, we use a low-temperature fermentation that makes the oat drink taste naturally sweeter.",
+                title: "ZUCKER",
+                text: "Wir fügen unserem Haferdrink keinen Zucker hinzu. Stattdessen verwenden wir eine Niedertemperaturfermentation, die den Haferdrink natürlich süßer schmecken lässt.",
             },
             {
                 icon: "/verpackungsarm.svg",
-                title: "Packaging",
-                text: "To completely avoid single-use packaging and guarantee food hygiene, we deliver our Oater Mix in a reusable container. These can be returned to the courier with every new delivery.",
+                title: "VERPACKUNG:",
+                text: "Um Einwegverpackungen zu vermeiden und die Lebensmittelhygiene zu gewährleisten, liefern wir unseren Hafermix in einem Mehrwegbehälter. Diese können bei jeder neuen Lieferung an den Kurier zurückgeschickt werden.",
             },
             {
                 icon: "/pflanzlich.svg",
-                title: "Plant-Based",
-                text: "The Oater Barista oat drink is 100% plant-based and does not contain any animal products. We believe the future is plant-based alternatives.",
+                title: "PFLANZLICH",
+                text: "Der Haferdrink Oater Barista ist zu 100% pflanzlich und enthält keine tierischen Produkte. Wir glauben, dass die Zukunft in pflanzlichen Alternativen liegt.",
             },
         ]}
     />
-    <Headline headline="For Businesses" id="businesses" />
+    <Headline headline="Für Unternehmen" id="businesses" />
     <Slider
         sliderData={[
             {
                 title: "Businesses",
                 imgUrl: "/office_kitchen.webp",
-                text: "You want to provide your customers with moments of enjoyment, with flavorful new experiences. We make this possible. Our creamy Barista oat drink and our innovative appliance with timeless design not only provide a harmonious taste experience and superb foam stability, but also offer you a more sustainable drink alternative and a value-adding experience.You do NOT have to buy our machine, you rent it and only pay per liter of oat drink produced. We deliver the ingredient mix you need automatically. If you have any questions, please contact us at partners@oater.de What are you waiting for? Join the waitlist and be one of the first that offer freshly produced oat drink.",
+                text: "Du möchtest Deinen Kund:innen Genussmomente bieten, mit köstlichen neuen Erlebnissen. Wir machen es möglich. Unsere cremiger Barista Haferdrink und unsere innovative Maschine mit zeitlosem Design sorgen nicht nur für ein harmonisches Geschmackserlebnis und eine hervorragende Schaumstabilität, sondern bieten Dir auch eine nachhaltigere Alternative und ein besonderes Erlebnis. Du musst unsere Maschine nicht kaufen, Du mietest sie und zahlst im Abo für den Oater Mix, den Du benötigst um in der Maschine Haferdrink herzustellen. Wenn Du Fragen hast, kontaktiere uns bitte unter hello@oater.de Keine Fragen mehr? Trage Dich in die Warteliste ein und gehöre zu den ersten, die frisch produzierte Haferdrinks anbieten. Good news are coming!",
             },
             {
-                title: "Cafés",
+                title: "Für Cafés",
                 imgUrl: "/cafe.webp",
-                text: "As a café or a coffee shop you value a great customer experience. That includes offering fresh, local and home-made or carefully selected products. As more and more customers are asking for oat drink and other plant-based alternatives, you can ask yourself: Can I combine freshness and regional focus with oat drink? The answer is YES! With our The Oater Barista machine you can produce perfectly foamable and delicious oat drink directly at your café. You’re convinced? Bring fresh oat drink to your café and register on our wait list.",
+                text: "Als Café oder Coffee Shop legst Du Wert auf ein großartiges Kundenerlebnis. Dazu gehört auch, frische, lokale und hausgemachte oder sorgfältig ausgewählte Produkte anzubieten. Da immer mehr Kund:innen nach Haferdrink und anderen pflanzlichen Alternativen bestellen, stellt sich die Frage: Kann ich Frische und Regionalität mit Haferdrink verbinden? Die Antwort ist JA! Mit unserer The Oater Barista Maschine kannst Du perfekt schäumbare und leckere Haferdrinks direkt in Deinem Café herstellen. Du bist überzeugt? Bringe frischen Haferdrink in Dein Café und trage Dich hier in unsere Warteliste ein.",
             },
             {
                 title: "Hotels",
                 imgUrl: "/hotel.webp",
-                text: " You would like to offer your guests a unique experience during their stay with you? Our The Oater Barista machine is not only beautifully designed and an aesthetic eye catcher. It also produces delicious Barista-quality oat drink – perfect for starting the day at your hotel with a cozy oat drink cappuccino. As your guests are becoming more and more conscious towards sustainability, you’re actively looking for ways to decrease your environmental footprint and waste. How about adding The Oater Barista and let your guests enjoy the impact they make with you? Register on our wait list to join the oat drink revolution.",
+                text: "Du möchtest Deinen Gäst:innen während ihres Aufenthalts bei Dir ein einzigartiges Erlebnis bieten? Unsere The Oater Barista Maschine ist nicht nur schön gestaltet und ein ästhetischer Hingucker. Sie produziert auch köstliche Haferdrinks in Barista-Qualität – perfekt, um den Tag in Deinem Hotel mit einem gemütlichen Haferdrink-Cappuccino zu beginnen. Nachhaltigkeit wird auch im Tourismus immer mehr Thema und Gäst:innen suchen aktiv nach Möglichkeiten, ihren ökologischen Fußabdruck zu verringern. The Oater Barista ist eine gute Wahl, um dem Wunsch Deiner Gäst:innen hier entgegenzukommen. Melde Dich auf unserer Warteliste an, um Teil der Haferdrink-Revolution zu werden.",
             },
             {
-                title: "Coworking Spaces/Offices ",
+                title: "Coworking Spaces/Büros",
                 imgUrl: "/coworking_kitchen.webp",
-                text: "Your office is where the magic happens, where ideas come to life, numbers grow, and people come together – all fueled by coffee and other hot beverages. You strive for innovation and impact. Why not strive to bring more innovation, indulgence, and sustainability to the workplace as well? Our The Oater Barista Machine seamlessly integrates into your coffee bar and the daily needs of your employees for coffee, taste and more sustainable choices. What are you waiting for? Join the oat drink revolution and register on our wait list!",
+                text: "Dein Büro ist ein magischer Ort, wo Ideen zum Leben erweckt werden, Zahlen wachsen und Menschen zusammenkommen – alles angeheizt von Kaffee und anderen heißen Getränken. Du strebst nach Innovation und Impact. Warum nicht danach streben, mehr Innovation, Genuss und Nachhaltigkeit auch an den Arbeitsplatz zu bringen? Unsere The Oater Barista Maschine fügt sich nahtlos in Deine Kaffeebar ein und in den täglichen Bedarf Deiner Mitarbeiter:innen an Kaffee, Geschmack und nachhaltigeren Entscheidungen. Worauf wartest Du? Werde Teil der Haferdrink-Revolution und trage Dich in unsere Warteliste ein!",
             },
             {
-                title: "Zero-Waste Stores",
+                title: "Für Unverpacktläden",
                 imgUrl: "/zerowastestore.webp",
-                text: "Just like us, you believe in eliminating packaging waste to create more sustainable consumption behavior. We would like to support you in your mission and let you provide your customers with a new packaging-free alternative: Barista-quality oat drink produced directly in your shop. Customers can bring their own bottles to dispense the oat drink directly into their reusable container. And don’t worry – our ingredient mix also comes in reusable containers with a deposit system.",
+                text: "Genau wie wir glaubst Du an die Beseitigung von Verpackungsmüll, um ein nachhaltigeres Konsumverhalten zu schaffen. Wir möchten Dich bei Deiner Mission unterstützen und Deinen Kunden eine neue verpackungsfreie Alternative zur Verfügung stellen: Haferdrink in Barista-Qualität, der direkt in Deinem Geschäft hergestellt wird. Kund:innen können ihre eigenen Flaschen mitbringen, um den Haferdrink direkt in ihren Mehrwegbehälter zu geben. Worauf wartest Du? Mach Haferdrink abfallfrei und trage Dich auf unsere Warteliste ein!",
             },
         ]}
     />
 
-    <ImgText title="Waitlist" imgUrl="/waitlist.webp" minusmargin="-mb-32">
-        Oat drink in a carton was yesterday. The Oater machine produces the oat drink of the future. We are rethinking oat drink - with full
-        barista quality and freshness – no packaging waste, no added sugar and no tradeoffs.
-        <Primary slot="button" buttonName="To the Waitlist" buttonUrl="https://share-eu1.hsforms.com/1KM3gGgfeS1mdqBzwXyDhbgfnkng" />
+    <ImgText title="Warteliste" imgUrl="/waitlist.webp" minusmargin="-mb-32">
+        Haferdrink im Karton war gestern. The Oater Barista produziert den Haferdrink der Zukunft. Wir denken Haferdrink neu – bei voller Barista Qualität und Frische, ohne Verpackungsmüll, ohne Zuckerzusatz und ohne Kompromisse.
+        <Primary slot="button" buttonName="Auf die Warteliste" buttonUrl="https://share-eu1.hsforms.com/1KM3gGgfeS1mdqBzwXyDhbgfnkng" />
     </ImgText>
 </Layout>

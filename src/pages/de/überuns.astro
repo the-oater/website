@@ -9,23 +9,22 @@ import Newsletter from "../../components/newslettersignup.astro";
 ---
 
 <Layout title="THE OATER - About">
-    <Hero heroHeading="About Us" heroImage="/header_about.webp" />
-    <ImgText title="Mission" imgUrl="/missionstatement.webp" id="mission">
-        Stell dir vor, du könntest die Lebensmittelproduktion völlig neu gestalten, ohne jegliche Beschränkungen. Wie würde das Ganze
-        aussehen? Was würdest du herstellen? Wie würdest du es anstellen? Wo würdest du produzieren? Was würde deine Entscheidungsfindung
-        beeinflussen?
+    <Hero heroHeading="Über uns" heroImage="/header_about.webp" />
+    <ImgText title="Unsere Mission" imgUrl="/missionstatement.webp" id="mission">
+        Stell Dir vor, Du könntest die Produktion von Lebensmitteln umdenken. Ohne Einschränkungen. Wie würde sie aussehen? Was würdest Du produzieren? 
+        Wo würdest Du es herstellen? Welche Faktoren würden deine Entscheidungen beeinflussen?
         <br />
-        Wir sind der Überzeugung, dass die Lokalisierung der Lebensmittelproduktion der Schlüssel zur Zukunft ist. Lebensmittel, die vor Ort
-        produziert werden, sind nicht nur nachhaltiger, sondern sie sorgen auch für Transparenz und Qualität.
+        Wir glauben, dass eine Herstellung vor Ort die Zukunft ist. 
+        Lokal produzierte Lebensmittel sind nachhaltiger, ihre Herstellung transparenter und sie sind qualitativ hochwertig.
         <br />
-        Wir beginnen mit Haferdrinks. Unsere Maschine, The Oater Barista, erzeugt den Haferdrink der Zukunft - und das direkt vor Ort. Geringere
-        Abfallmengen durch weniger Verpackung, deutlich reduzierte CO2-Emissionen, überlegener Geschmack und Qualität. Hier gehen wir keine Kompromisse
-        ein. Und das ist nur der Anfang. Unmöglich ist nur das, was noch nicht verwirklicht wurde.
+        Und Haferdrink ist für uns nur der Anfang. Mit unserer The Oater Barista Maschine produzieren wir den Haferdrink der Zukunft – direkt vor Ort.
+         Kaum Verpackungsmüll, erheblich niedrigere CO2 Emissionen und dazu bessere Qualität und ein besserer Geschmack. 
+         Ohne Kompromisse. Unmöglich ist nur, was ungetan bleibt.
     </ImgText>
 
     <Founder
         bgcolor="bg-oat-superlight"
-        title="Meet the Founders"
+        title="Lern die Gründer:innen kennen"
         id="team"
         founderData={[
             {
@@ -55,23 +54,25 @@ import Newsletter from "../../components/newslettersignup.astro";
         ]}
     />
 
-    <ImageCenter imgUrl="/team.webp" headline="The Team">
-        Hinter The Oater steht ein leidenschaftliches Team von Haferdrink-Enthusiasten und ambitionierten Träumern, die eine Mission teilen
-        - die Revolutionierung der Lebensmittelproduktion. Wir kommen aus verschiedenen Ländern und haben unterschiedliche Perspektiven. Wir
-        arbeiten hybrid, flexibel, motiviert und auf Augenhöhe - zusammen! Wir revolutionieren den Haferdrink. Möchtest du dabei sein?<br
-        /><br />
-        <Primary slot="button" buttonName="Careers at The Oater" buttonUrl="/career" />
+    <ImageCenter imgUrl="/team.webp" headline="Das OATeam">
+        Hinter The Oater steckt ein leidenschaftliches Team aus Haferdrink-Enthusiasten und ambitionierten Visionär:innen, 
+        die eine gemeinsame Mission verfolgen die Lebensmittelherstellung zu revolutionieren. Wir sind ein internationales 
+        Team mit vielen unterschiedlichen Perspektiven und Ansichten. Wir arbeiten hybrid, flexibel, motiviert und auf 
+        Augenhöhe – gemeinsam!<br>Wir revolutionieren Haferdrink. Bist Du auch dabei?<br/>
+        <br>
+        <Primary slot="button" buttonName="Karriere bei The Oater" buttonUrl="/career" />
     </ImageCenter>
-    <ImgText title="Our Story" imgUrl="/founders.webp" background="bg-zinc-200" reverse id="story">
-        Our story begins in 2021 when Sarah, who has lived vegan for 7 years, was bothered by all the packaging waste and the lack of
-        freshness of her oat milk. She tried all alternatives to the conventional drink from the carton, but none convinces in taste and
-        foam. Her conclusion: good barista oat drink without packaging waste? There's no such thing! As an engineer, she figured that there
-        had to be a better way and got a team together to find a solution.<br /> And now, over a year later, we are proud to say: Yes, it can
-        be better! Our oat drink is fresher, cheaper, AND more sustainable than comparable barista drink from the carton.<br /> We are Sarah,
-        Benjamin, Henrik, and Lisa. You want to continue writing the story with us? We look forward to meeting you!
+    <ImgText title="Unsere Geschichte" imgUrl="/founders.webp" background="bg-zinc-200" reverse id="story">
+        Unsere Geschichte begann 2021, als Sarah, die zu diesem Zeitpunkt seit 7 Jahren vegan lebte, sich über all den Verpackungsmüll 
+        und die fehlende Frische ihres Haferdrinks ärgerte. Sie probierte alle Alternativen zu Haferdrink im Karton aus, aber 
+        keine davon überzeugte in Geschmack oder Schaum. Ihr Fazit: Guter Barista Haferdrink ohne Verpackungsmüll? So etwas gibt es nicht! 
+        Als Ingenieurin wollte sie das so nicht hinnehmen. Sie suchte sich ein Team zusammen, um eine Lösung für dieses 
+        Problem zu finden.Und jetzt, über ein Jahr später, können wir stolz sagen: Ja, es geht besser! Unser Haferdrink ist frischer, preiswerter UND nachhaltiger als vergleichbare Barista Drinks aus dem Karton.<br/>
+        Wir sind Sarah, Benjamin, Henrik und Lisa. 
+        Du möchtest diese Geschichte mit uns weiterschreiben? Dann freuen wir uns darauf Dich kennenzulernen!
     </ImgText>
-    <Newsletter headline="Join the OATeam">
-        Sign up for the newsletter and learn immediately about new recipes and company news! And do not worry for our mails the same claim
-        applies, as for our oat drink - no garbage.
+    <Newsletter headline="Werde Teil des OATeams">
+        Melde dich für den Newsletter an und erfahre sofort von neuen Rezepten und Firmennews! Keine Sorge, 
+        für unsere Mails gilt der gleiche Anspruch wie für unseren Haferdrink - kein Müll.
     </Newsletter>
 </Layout>

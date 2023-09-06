@@ -8,7 +8,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://the-oater.github.io/website/",
+  site: "https://oater.de/",
   integrations: [
     tailwind({
       // Example: Disable injecting a basic `base.css` import on every page.
