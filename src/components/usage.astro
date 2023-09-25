@@ -9,21 +9,22 @@ const { background, id, cards } = Astro.props;
 ---
 
 <section class={background} id={id}>
-    <div class="mx-auto py-14 px-10">
+    <div class="mx-auto py-20 px-24"> <!-- change the img padding/margin -->
         {
             cards.map((card, index) => (
                 <div
-                    class={`grid ${index === 0 ? "" : "hidden"} items-center gap-16 sm:grid-cols-1 md:grid-cols-2`}
+                    class={`grid ${index === 0 ? "" : "hidden"} items-center gap-12 sm:grid-cols-1 md:grid-cols-2`} 
                     id={`card${index + 1}`}
+                    style={{ position: "relative", left: "calc(50% + -1cm)", transform: "translateX(-50%)" }} // Move the second card to the right by 2cm 
                 >
                     <div class="relative order-first w-full">
                         <img class="rounded opacity-100 transition-opacity duration-500 ease-in-out" src={card.img} />
                         {cards.map((_, i) => (
                             <button
                                 class={`hover:outline-3 absolute ${
-                                    i === 0 ? "left-[9.5%]" : i === 1 ? "left-[37%]" : "right-[9.5%]"
-                                } bottom-[19.5%] h-[17%] w-[26%] rounded-md ${i === index ? "outline-3" : ""} ${
-                                    i === 0 ? "rounded-bl-2xl" : i === 2 ? "rounded-br-2xl" : ""
+                                    i === 0 ? "left-[15.6%]" : i === 1 ? "left-[39.6%]" : "right-[15.5%]"             //change button positioning: left(1) left (2) right (3)
+                                } bottom-[37%] h-[31.6%] w-[21%] rounded-lg ${i === index ? "outline-3" : ""} ${ //change the size of buttons
+                                    i === 0 ? "rounded-lg-2xl" : i === 2 ? "rounded-lg-2xl" : ""
                                 } transition-all hover:bg-oat/50 ${
                                     i === index ? "outline outline-oat" : "hover:outline hover:outline-oat"
                                 }`}
