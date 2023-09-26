@@ -37,7 +37,40 @@ Optimierung: Der Schlüssel liegt im Optimieren. Trotz unserer hohen Standards s
     </ImgTextFull>
     <ImgTextFull imgUrl="/lca.webp" reverse background="white" align="lg:text-right">
         Die Ergebnisse der unabhängigen Ökobilanz sind eindeutig: Unser Haferdrink emittiert nur 0,15 kg CO2-Äquivalente pro Liter. Von diesem Betrag entfallen 42 % auf den Anbau der Rohstoffe (Hafer, Raps), 25 % auf die Verpackung, 24 % auf die Produktion vor Ort und 9 % auf den Transport. Dies entspricht einer signifikanten Reduktion, mit 57 % weniger CO2-Äquivalenten als konventionell verpackter Haferdrink und 93 % weniger Emissionen als Kuhmilch.
-.Aber es gibt immer noch einige Stellschrauben, die uns helfen können, uns zu verbessern und bis zu 79 % weniger Emissionen zu erreichen, und genau daran arbeiten wir jetzt. Um mehr über unseren ökologischen Fußabdruck zu erfahren, lade hier unseren gesamten Nachhaltigkeitsbericht herunter.
+.Aber es gibt immer noch einige Stellschrauben, die uns helfen können, uns zu verbessern und bis zu 79 % weniger Emissionen zu erreichen, und genau daran arbeiten wir jetzt.
+ Um mehr über unseren ökologischen Fußabdruck zu erfahren, lade unseren gesamten Nachhaltigkeitsbericht herunter.
+ <br>
+ <br><button id="downloadButton" class="inline-block rounded border-2 border-oat py-3 pl-5 pr-3 text-base font-bold uppercase text-raisin transition-all delay-75 duration-500 ease-in-out hover:scale-105 hover:bg-oat-superlight hover:shadow-sm">
+    Download LCA
+
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2.7"
+        stroke="currentColor"
+        class="ml-1 -mt-1 inline-block h-5 w-5"
+    >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+    </svg>
+</button>
+</ImgTextFull>
+
+<script>
+document.getElementById("downloadButton").addEventListener("click", function () {
+    // Create an anchor element
+    var a = document.createElement("a");
+    
+    // Set the anchor's href attribute to the PDF file URL
+    a.href = "/LCA_TheOater.pdf";
+    
+    // Specify the filename for the downloaded file
+    a.download = "LCA_TheOater";
+    
+    // Programmatically trigger a click event on the anchor element
+    a.click();
+});
+</script>
     </ImgTextFull>
 
     <Sustainable
