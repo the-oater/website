@@ -10,6 +10,7 @@ export interface Props {
     href3: string;
     href4: string;
     href5: string;
+    href6: string;
     hrefLogo: string;
     logoTitle: string;
     language1: string;
@@ -30,6 +31,7 @@ const {
     href3,
     href4,
     href5,
+    href6,
     hrefLogo,
     logoTitle,
     language1,
@@ -117,7 +119,7 @@ import logo from "../assets/Oater-Logo.svg";
             </div>
 
             <div class="group -mr-12 justify-self-end">
-                <a href={href4} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic">
+                <a href={href4} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic mr-3">
                     <span class={pathname === href4 ? "text-oat font-bold" : ""}
                         >{navitem4}
                         <svg
@@ -137,7 +139,7 @@ import logo from "../assets/Oater-Logo.svg";
             </div>
 
             <div class="group -mr-8 justify-self-end">
-                <a href={href5} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic">
+                <a href={href5} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic mr-11">
                     {navitem5}
                     <!--<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -154,34 +156,43 @@ import logo from "../assets/Oater-Logo.svg";
                 <slot name="dropdown5" />
             </div>
 
-            <div class="group justify-self-end text-sonic/50 hover:text-raisin">
-                <div class="cursor-default font-zen uppercase transition-all duration-500 ease-in-out">
-                    {languagePicker}
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        class="delay-50 mb-0.5 inline h-5 w-5 transition-all duration-200 group-hover:rotate-180"
-                    >
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                    </svg>
-                </div>
-                <div class="invisible absolute z-10 -translate-x-2/3 pt-3 group-hover:visible">
-                    <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                        <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                            <a href={hreflanguage1} class="-m-4 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-zinc-100">
-                                <p class="font-medium text-raisin">{language1}</p>
-                            </a>
-                            <a href={hreflanguage2} class="-m-4 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-zinc-100">
-                                <p class="font-medium text-raisin">{language2}</p>
-                            </a>
+            <div class="flex justify-between items-center"> <!-- Add a flex container -->
+                <div class="group justify-self-end text-sonic/50 hover:text-raisin ml-12">
+                    <div class="cursor-default font-zen uppercase transition-all duration-500 ease-in-out">
+                        {languagePicker}
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                            class="delay-50 mb-0.5 inline h-5 w-5 transition-all duration-200 group-hover:rotate-180"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                        </svg>
+                    </div>
+                    <div class="invisible absolute z-10 -translate-x-2/3 pt-3 group-hover:visible">
+                        <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                            <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                                <a href={hreflanguage1} class="-m-4 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-zinc-100">
+                                    <p class="font-medium text-raisin">{language1}</p>
+                                </a>
+                                <a href={hreflanguage2} class="-m-4 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-zinc-100">
+                                    <p class="font-medium text-raisin">{language2}</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            
+                <!-- Add the "Log in" link here -->
+                <div class="group">
+                    <a href={href6} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic mr-2 relative">
+                        Log in
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-500 hover:text-sonic mt-1 transform scale-x-0.5 origin-left group-hover:scale-x-0.25"></span>
+                    </a>
+                </div>                                               
             </div>
-        </div>
 
         <script>
             const menuButton = document.getElementById("menu-button");

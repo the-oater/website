@@ -8,6 +8,7 @@ import ImgTextFull from "../components/imagetextfull.astro";
 import Sustainable from "../components/sustainable.astro";
 import Secondary from "../components/secondary.astro";
 import Primary from "../components/primary.astro";
+import Imagetext from "../components/imagetext.astro";
 ---
 
 <Layout title="THE OATER - Sustainability">
@@ -19,17 +20,17 @@ import Primary from "../components/primary.astro";
             class="font-semibold">57% less CO2</span
         > equivalent compared to conventional packaged oat drinks and a staggering 93% less emissions than cow's milk. Here's how we achieve it:
     </ImgText>
-    <ImgText title="Save packaging" imgUrl="/mission.jpg">
+    <ImgText title="Save packaging" background="bg-oat-superlight" imgUrl="/mission.jpg">
         With The Oater, your business can eliminate compound cartons. Our fresh oat drink doesn't need a carton. 
         Instead, it can be dispensed directly into reusable bottles.
     </ImgText>
-    <ImgText background="bg-oat-superlight" reverse title="Learn how we save 57% emissions" imgUrl="/saveemissions.jpg">
+    <ImgText background="white" reverse title="Learn how we save 57% emissions" imgUrl="/saveemissions.jpg">
         Oat drink is composed of 90% water. Since our machine utilizes the local water supply, 
         only 10% of the weight needs to be transported for every liter produced. Less transportation 
         means fewer emissions.
 
     </ImgText>
-    <ImgText title="Local manufacturing" imgUrl="/localingredients.webp">
+    <ImgText title="Local manufacturing" background="bg-oat-superlight" imgUrl="/localingredients.webp">
         Our machine is fully developed and assembled in Germany, reducing the need for long transport routes to your counter.
         By making further adjustments, we are committed to reducing our emissions even further, with the goal of becoming 79% less polluting than conventional oat drinks. You want to see for yourself? 
         Download our full sustainability report, which includes all data from the lifecycle assessment.
@@ -47,8 +48,7 @@ import Primary from "../components/primary.astro";
         than cow milk. But there are still some levers that can help us improve and reach up to 79% less emissions and that is what we are
         working on now. To learn more about our ecological footprint, download our entire sustainability report here.
         <Secondary slot="button" buttonName="Download LCA" buttonUrl="/solution#ingredientmix" />
-    </ImgTexlFull>
-
+    </ImgTextFull>
     <Sustainable
         heading="Our Goals" 
         subtitle="See what goals we are striving towards."

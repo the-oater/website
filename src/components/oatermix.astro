@@ -16,7 +16,7 @@ const { id, mixpropertiesData, imgUrl, title } = Astro.props;
         </div>
         <div class="mt-12 flex flex-col items-center lg:mt-20 lg:flex-row">
             <div class="basis-1/2">
-                <img class="max-w-lg lg:w-full" src={imgUrl} />
+                <img class="max-w-lg lg:w-full" src={imgUrl} style="max-width: 370px; height: auto"/>  <!-- Change the Image size -->
             </div>
 
             <div class="flex basis-1/2 flex-col items-center sm:gap-6 lg:gap-8">
