@@ -46,9 +46,39 @@ import Imagetext from "../components/imagetext.astro";
         percent can be attributed to the cultivation of the raw ingredients (oats, canola), 25 percent of emissions to packaging, 24 percent
         to production onsite and 9 percent to transport. This amount is 57 percent lower than conventional packaged oat drink and 93% lower
         than cow milk. But there are still some levers that can help us improve and reach up to 79% less emissions and that is what we are
-        working on now. To learn more about our ecological footprint, download our entire sustainability report here.
-        <Secondary slot="button" buttonName="Download LCA" buttonUrl="/solution#ingredientmix" />
+        working on now. To learn more about our ecological footprint, <br>
+        <br><button id="downloadButton" class="inline-block rounded border-2 border-oat py-3 pl-5 pr-3 text-base font-bold uppercase text-raisin transition-all delay-75 duration-500 ease-in-out hover:scale-105 hover:bg-oat-superlight hover:shadow-sm">
+            Download LCA
+        
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.7"
+                stroke="currentColor"
+                class="ml-1 -mt-1 inline-block h-5 w-5"
+            >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+            </svg>
+        </button>
     </ImgTextFull>
+    
+    <script>
+        document.getElementById("downloadButton").addEventListener("click", function () {
+            // Create an anchor element
+            var a = document.createElement("a");
+            
+            // Set the anchor's href attribute to the PDF file URL
+            a.href = "/LCA_TheOater.pdf";
+            
+            // Specify the filename for the downloaded file
+            a.download = "LCA_TheOater";
+            
+            // Programmatically trigger a click event on the anchor element
+            a.click();
+        });
+    </script>
+    
     <Sustainable
         heading="Our Goals" 
         subtitle="See what goals we are striving towards."
