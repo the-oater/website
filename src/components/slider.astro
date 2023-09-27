@@ -52,7 +52,8 @@ const { id, sliderData } = Astro.props;
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
                             </div>
-                            <div class="hidden text-sm text-white group-hover:block md:text-base">{slide.text}</div>
+                            <div class="hidden text-sm text-white group-hover:block md:text-base"  style="font-size: 22px; line-height: 1.5;">{slide.text}</div> 
+                            <div class="hidden text-sm text-white group-hover:block md:text-base"  style="font-size: 22px; line-height: 1.5;">{slide.text2}</div>
                         </div>
                     </div>
                 </div>
@@ -80,8 +81,8 @@ const { id, sliderData } = Astro.props;
                     <div class="absolute top-0 h-28 w-full rounded-t-xl bg-gradient-to-b from-raisin " />
                     <h3 class="absolute p-5 text-lg font-bold text-white">{slide.title}</h3>
                     <img class="rounded-t-xl" src={slide.imgUrl} />
-
                     <div class="m-7 pb-5 leading-7 text-raisin">{slide.text}</div>
+                     <div class="m-7 pb-5 leading-7 text-raisin">{slide.text2}</div>
                 </div>
             </div>
         ))
