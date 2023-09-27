@@ -22,8 +22,8 @@ const { background, id, cards } = Astro.props;
                         {cards.map((_, i) => (
                             <button
                                 class={`hover:outline-3 absolute ${
-                                    i === 0 ? "left-[15.6%]" : i === 1 ? "left-[39.6%]" : "right-[15.5%]"             //change button positioning: left(1) left (2) right (3)
-                                } bottom-[37%] h-[31.6%] w-[21%] rounded-lg ${i === index ? "outline-3" : ""} ${ //change the size of buttons
+                                    i === 0 ? "left-[15.6%]" : i === 1 ? "left-[40%]" : "right-[14.1%]"             //change button positioning: left(1) left (2) right (3)
+                                } bottom-[36%] h-[32%] w-[21.3%] rounded-lg ${i === index ? "outline-3" : ""} ${ //change the size of buttons
                                     i === 0 ? "rounded-lg-2xl" : i === 2 ? "rounded-lg-2xl" : ""
                                 } transition-all hover:bg-oat/50 ${
                                     i === index ? "outline outline-oat" : "hover:outline hover:outline-oat"

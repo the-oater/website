@@ -8,12 +8,13 @@ import Sustainable from "../components/sustainable.astro";
 import ImgText from "../components/imagetext.astro";
 import Newsletter from "../components/newslettersignup.astro";
 import Blogsection from "../components/blogsection.astro";
+import IconbarHome from "../components/iconbarHome.astro";
 ---
 
 <Layout title="THE OATER">
     <Mainhero
         heroImage="oater-full.png"
-        heroHeading="Press for Revolution"
+        heroHeading="Press For Revolution"
         heroSubtitle="The Oater Oat Drink Machine"
         heroText="The machine for fresh and sustainable oat drink with barista quality for professionals"
 >
@@ -27,9 +28,9 @@ import Blogsection from "../components/blogsection.astro";
         <Secondary slot="button" buttonName="Our Mission" buttonUrl="/about" />
     </ImgText>
 
-    <Iconbar
+    <IconbarHome
         bgcolor="bg-oat-superlight"
-        title="Oat Drink without Tradeoffs"
+        title="Oat Drink Without Tradeoffs"
         icontitle1="Fresh + Local"
         imgUrl1="/frischlokal.svg"
         icontitle2="Barista Quality"
@@ -42,7 +43,7 @@ import Blogsection from "../components/blogsection.astro";
         imgUrl5="/zucker.svg"
     >
         <Secondary slot="button" buttonName="Our Solution" buttonUrl="/solution" />
-    </Iconbar>
+    </IconbarHome>
 
     <ImgText title="The OATeam" imgUrl="/founders.webp" reverse>
         We are a team of dreamers and oat drink enthusiasts from Cologne, who firmly believe that there is still room for improvement in oat
@@ -132,7 +133,7 @@ import Blogsection from "../components/blogsection.astro";
         <Secondary slot="button" buttonName="Read more articles" buttonUrl="https://magazin.oater.de/de" />
     </Blogsection>
 
-    <Newsletter headline="Join the OATeam">
+    <Newsletter headline="Join The OATeam">
         Sign up for the newsletter and learn immediately about new recipes and company news! And do not worry for our mails the same claim
         applies, as for our oat drink - no garbage.
     </Newsletter>
