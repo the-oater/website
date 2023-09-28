@@ -42,9 +42,3 @@
 	background-position: 0 82%;
 	background-size: 100% 32px;
 }
-@media only screen and (max-width: 768px) {
-	/* For mobile phones: */
-	[class*="burgermenu"] {
-	  width: 100%;
-	}
-}
