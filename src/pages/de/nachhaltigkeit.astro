@@ -6,20 +6,22 @@ import TwoImage from "../../components/twoimagesfull.astro";
 import Hero from "../../components/hero.astro";
 import ImgTextFull from "../../components/imagetextfull.astro";
 import Sustainable from "../../components/sustainable.astro";
+import Headline3 from "../../components/headline3.astro";
+import Headline from "../../components/headline.astro";
 ---
 
 <Layout title="THE OATER - Sustainability">
-    <Hero heroHeading="Unsere Zahlen sprechen für sich." heroImage="/header_sustainability.jpg" />
-    <ImgText reverse title="Wie sind wir nachhaltig?" imgUrl="/sustainability.webp" id="how" background="white">
+    <Hero heroHeading="Unsere Zahlen Sprechen Für Sich." heroImage="/header_sustainability.jpg" />
+    <ImgText reverse title="Wie Sind Wir Nachhaltig?" imgUrl="/sustainability.webp" id="how" background="white">
         Bei The Oater ist Nachhaltigkeit nicht ein leeres Versprechen sie basiert auf Daten. Unsere unabhängige Studie zur Ökobilanz zeigt unser Engagement zur erheblichen Reduzierung unserer Umweltauswirkungen.
         Unser unabhängiges Life Cycle Assessement zeigt, dass der Haferdrink von The Oater 0,15 kg CO2 pro Liter emittiert. Das sind bereits <span
             class="font-semibold">57 % weniger CO2</span
         >-Äquivalente im Vergleich zu herkömmlichem abgepacktem Haferdrink und 93 % weniger Emissionen als Kuhmilch.<br>Und so erreichen wir dieses Ergebnis.
     </ImgText>
-    <ImgText title="Verpackung sparen" imgUrl="/mission.jpg" background="bg-oat-superlight">
+    <ImgText title="Verpackung Sparen" imgUrl="/mission.jpg" background="bg-oat-superlight">
         Mit The Oater kann Dein Betrieb Einwegverpackungen eliminieren. Unser frischer Haferdrink benötigt keine Verpackung. Stattdessen kann der Haferdrink direkt in wiederverwendbare Flaschen abgefüllt werden.
     </ImgText>
-    <ImgText background="white" reverse title="Emissionen einsparen" imgUrl="/saveemissions.jpg">
+    <ImgText background="white" reverse title="Emissionen Einsparen" imgUrl="/saveemissions.jpg">
         Haferdrink besteht zu 90% aus Wasser. Da unsere Maschine lokales Leitungswasser verwendet, müssen nur 10 % des Gewichts für jeden Liter transportiert werden.  
         Und weniger Transport bedeutet weniger Emissionen.
     </ImgText>
@@ -27,9 +29,18 @@ import Sustainable from "../../components/sustainable.astro";
         Unsere Maschine wird vollständig in Deutschland entwickelt und montiert, wodurch lange Transportwege zu Deiner Theke vermieden werden.
 <br>Durch weitere Anpassungen wollen wir unsere Emissionen noch weiter senken, mit dem Ziel, 79 % weniger umweltschädlich zu sein als Haferdrinks  aus dem Einwegkarton.  Du möchtest Dich selbst davon überzeugen? Lade unser vollständiges Life Cycle Assessment herunter.
     </ImgText>
-    <Headline2 headline="Volle Transparenz" subtitle="Warum wir unseren ökologischen Fußabdruck messen?" id="transparency" />
+    <br>
+    <br>
+    <br>
     <ImgTextFull background="white" imgUrl="/footprint.jpg">
-        In der heutigen Welt werden Begriffe wie "nachhaltig" und "grün" oft inflationär verwendet und nicht ausreichend definiert. Wir bei The Oater glauben, dass Nachhaltigkeit mehr ist als nur ein leeres Wort. Es geht um Fakten und Zahlen. Wir haben eine Lebenszyklusanalyse (LCA) durchgeführt, um die Umweltauswirkungen jeder Phase unseres Produkts zu bewerten, vom Anbau der Rohstoffe bis zum Standort unseres Mischzentrums. Dies hilft uns, unsere Umweltauswirkungen zu quantifizieren und uns mit anderen Produkten in der gleichen Größenordnung zu vergleichen. Wir haben eine deutsche Hochschule gebeten zu überprüfen, ob wir unsere Vorhaben auch in die Tat umsetzen. Unten kannst du die Ergebnisse nachlesen.
+        <Headline3 headline="Volle Transparenz" subtitle="Warum wir unseren ökologischen Fußabdruck messen:" id="transparency" />
+        <div style="line-height: 2;"> In der heutigen Welt werden Begriffe wie "nachhaltig" und "grün" oft inflationär verwendet und nicht ausreichend definiert. 
+        Wir bei The Oater glauben, dass Nachhaltigkeit mehr ist als nur ein leeres Wort. Es geht um Fakten und Zahlen. 
+        Wir haben eine Lebenszyklusanalyse (LCA) durchgeführt, um die Umweltauswirkungen jeder Phase unseres Produkts zu bewerten, 
+        vom Anbau der Rohstoffe bis zum Standort unseres Mischzentrums. 
+        Dies hilft uns, unsere Umweltauswirkungen zu quantifizieren und uns mit anderen Produkten in der gleichen 
+        Größenordnung zu vergleichen. Wir haben eine deutsche Hochschule gebeten zu überprüfen, ob wir unsere 
+        Vorhaben auch in die Tat umsetzen. Unten kannst du die Ergebnisse nachlesen.</div>
     </ImgTextFull>
     <ImgTextFull imgUrl="/lca.webp" reverse background="white" align="lg:text-right">
         Die Ergebnisse der unabhängigen Ökobilanz sind eindeutig: Unser Haferdrink emittiert nur 0,15 kg CO2-Äquivalente pro Liter. Von diesem Betrag entfallen 42 % auf den Anbau der Rohstoffe (Hafer, Raps), 25 % auf die Verpackung, 24 % auf die Produktion vor Ort und 9 % auf den Transport. Dies entspricht einer signifikanten Reduktion, mit 57 % weniger CO2-Äquivalenten als konventionell verpackter Haferdrink und 93 % weniger Emissionen als Kuhmilch.
@@ -74,7 +85,7 @@ document.getElementById("downloadButton").addEventListener("click", function () 
             {
                 iconUrl: "/co2reduction.svg",
                 title: "Reduzierung Der CO2 Emissionen Um 79%",
-                text: "Wir haben Hebel identifiziert, um die Emissionen weiter zu reduzieren:",
+                text: "Wir haben Hebel identifiziert, um die Emissionen weiter zu reduzieren.",
             },
             {
                 iconUrl: "/shortdistances.svg",
@@ -92,12 +103,12 @@ document.getElementById("downloadButton").addEventListener("click", function () 
     <Headline2 headline="Unsere Mission" />
     <TwoImage
         title1="Mission 1"
-        subtitle1="500 Millionen Haferdrink-Kartons gerettet bis 2030"
+        subtitle1="500 Millionen Haferdrink-Kartons Gerettet Bis 2030"
         info1="Mit jedem Liter Haferdrink, den wir produzieren, sparen wir einen Haferdrink-Karton, da wir vor Ort produzieren und unseren Haferdrink in wiederverwendbare Flaschen abfüllen.        "
         imgUrl1="background-image: url(/mission1.webp)"
         title2="Mission 2"
-        subtitle2="1 Milliarde kg CO2 eingespart bis 2030"
-        info2="UUnser CO2-Fußabdruck ist bereits um 57 % niedriger im Vergleich zu konventionellem Haferdrink. Der Wechsel zu unserem Produkt spart bei jedem Liter CO2-Äquivalente. Je mehr The Oater Haferdrink produziert wird, desto mehr sparen wir."
+        subtitle2="1 Milliarde kg CO2 Eingespart Bis 2030"
+        info2="Unser CO2-Fußabdruck ist bereits um 57 % niedriger im Vergleich zu konventionellem Haferdrink. Der Wechsel zu unserem Produkt spart bei jedem Liter CO2-Äquivalente. Je mehr The Oater Haferdrink produziert wird, desto mehr sparen wir."
         imgUrl2="background-image: url(/mission2.webp)"
     />
 </Layout>
