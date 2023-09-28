@@ -29,11 +29,9 @@ import Headline from "../../components/headline.astro";
         Unsere Maschine wird vollständig in Deutschland entwickelt und montiert, wodurch lange Transportwege zu Deiner Theke vermieden werden.
 <br>Durch weitere Anpassungen wollen wir unsere Emissionen noch weiter senken, mit dem Ziel, 79 % weniger umweltschädlich zu sein als Haferdrinks  aus dem Einwegkarton.  Du möchtest Dich selbst davon überzeugen? Lade unser vollständiges Life Cycle Assessment herunter.
     </ImgText>
-    <br>
-    <br>
-    <br>
+
+    <Headline2 headline="Volle Transparenz" subtitle="Warum wir unseren ökologischen Fußabdruck messen" id="transparency"/>
     <ImgTextFull background="white" imgUrl="/footprint.jpg">
-        <Headline2 headline="Volle Transparenz" subtitle="Warum wir unseren ökologischen Fußabdruck messen" id="transparency"/>
         <div style="line-height: 2;"> In der heutigen Welt werden Begriffe wie "nachhaltig" und "grün" oft inflationär verwendet und nicht ausreichend definiert. 
         Wir bei The Oater glauben, dass Nachhaltigkeit mehr ist als nur ein leeres Wort. Es geht um Fakten und Zahlen. 
         Wir haben eine Lebenszyklusanalyse (LCA) durchgeführt, um die Umweltauswirkungen jeder Phase unseres Produkts zu bewerten, 
@@ -47,20 +45,23 @@ import Headline from "../../components/headline.astro";
 .Aber es gibt immer noch einige Stellschrauben, die uns helfen können, uns zu verbessern und bis zu 79 % weniger Emissionen zu erreichen, und genau daran arbeiten wir jetzt.
  Um mehr über unseren ökologischen Fußabdruck zu erfahren, lade unseren gesamten Nachhaltigkeitsbericht herunter.
  <br>
- <br><button id="downloadButton" class="inline-block rounded border-2 border-oat py-3 pl-5 pr-3 text-base font-bold uppercase text-raisin transition-all delay-75 duration-500 ease-in-out hover:scale-105 hover:bg-oat-superlight hover:shadow-sm">
-    Download LCA
+ <br><a href="https://share-eu1.hsforms.com/1jeIi5M6GR-qpwnjruL5_jAfnkng" target="_blank" rel="noopener noreferrer">
+    <button id="downloadButton" class="inline-block rounded border-2 border-oat py-3 pl-5 pr-3 text-base font-bold uppercase text-raisin transition-all delay-75 duration-500 ease-in-out hover:scale-105 hover:bg-oat-superlight hover:shadow-sm">
+        Download LCA
 
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="2.7"
-        stroke="currentColor"
-        class="ml-1 -mt-1 inline-block h-5 w-5"
-    >
-        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
-    </svg>
-</button>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2.7"
+            stroke="currentColor"
+            class="ml-1 -mt-1 inline-block h-5 w-5"
+        >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+        </svg>
+    </button>
+</a>
+<!-- 
 <script>
 document.getElementById("downloadButton").addEventListener("click", function () {
     // Create an anchor element
@@ -76,6 +77,7 @@ document.getElementById("downloadButton").addEventListener("click", function () 
     a.click();
 });
 </script>
+-->
     </ImgTextFull>
 
     <Sustainable
