@@ -18,6 +18,7 @@ export interface Props {
     hreflanguage2: string;
     language2: string;
     languagePicker: string;
+
 }
 
 const {
@@ -44,240 +45,280 @@ const {
 const pathname = new URL(Astro.request.url).pathname;
 
 import logo from "../assets/Oater-Logo.svg";
+
+let isMenuOpen = false;
+
+function toggleMenu() {
+  isMenuOpen = !isMenuOpen;
+  document.body.classList.toggle("fixed", isMenuOpen);
+}
 ---
 
 <header class="top-0 z-20 h-24 bg-white shadow-sm">
     <nav class="mx-auto max-w-7xl px-10">
-        <div
-            class="hidden h-24 grid-cols-7 place-items-center justify-items-stretch font-zen text-base sm:hidden md:hidden lg:visible lg:block lg:grid"
-        >
-            <div class="group">
-                <a href={href1} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic">
-                    <span class={pathname === href1 ? "text-oat font-bold" : ""}>
-                        {navitem1}
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="2"
-                            stroke="currentColor"
-                            class="delay-50 mb-0.5 inline h-5 w-5 transition-all duration-200 group-hover:rotate-180"
-                        >
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                        </svg>
-                    </span>
-                </a>
-
-                <slot name="dropdown1" />
-            </div>
-
-            <div class="group">
-                <a href={href2} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic">
-                    <span class={pathname === href2 ? "text-oat font-bold" : ""}>
-                        {navitem2}
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="2"
-                            stroke="currentColor"
-                            class="delay-50 mb-0.5 inline h-5 w-5 transition-all duration-200 group-hover:rotate-180"
-                        >
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                        </svg>
-                    </span>
-                </a>
-
-                <slot name="dropdown2" />
-            </div>
-
-            <div class="group">
-                <a href={href3} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic">
-                    <span class={pathname === href3 ? "text-oat font-bold" : ""}>
-                        {navitem3}
-
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="2"
-                            stroke="currentColor"
-                            class="delay-50 mb-0.5 inline h-5 w-5 transition-all duration-200 group-hover:rotate-180"
-                        >
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                        </svg>
-                    </span>
-                </a>
-
-                <slot name="dropdown3" />
-            </div>
-
-            <div class="">
-                <a href={hrefLogo}>
-                    <img class="mx-auto w-44" src={logo} title={logoTitle} aria-label={logoTitle} />
-                </a>
-            </div>
-
-            <div class="group -mr-12 justify-self-end">
-                <a href={href4} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic mr-3">
-                    <span class={pathname === href4 ? "text-oat font-bold" : ""}
-                        >{navitem4}
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="2"
-                            stroke="currentColor"
-                            class="delay-50 mb-0.5 inline h-5 w-5 transition-all duration-200 group-hover:rotate-180"
-                        >
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                        </svg>
-                    </span>
-                </a>
-
-                <slot name="dropdown4" />
-            </div>
-
-            <div class="group -mr-8 justify-self-end">
-                <a href={href5} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic mr-11">
-                    {navitem5}
-                    <!--<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke-width="1.5"
-						stroke="currentColor"
-						class="mb-0.5 inline h-5 w-5"
-					>
-						<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-					</svg>-->
-                </a>
-
-                <slot name="dropdown5" />
-            </div>
-
-            <div class="flex justify-between items-center"> <!-- Add a flex container -->
-                <div class="group justify-self-end text-sonic/50 hover:text-raisin ml-12">
-                    <div class="cursor-default font-zen uppercase transition-all duration-500 ease-in-out">
-                        {languagePicker}
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="2"
-                            stroke="currentColor"
-                            class="delay-50 mb-0.5 inline h-5 w-5 transition-all duration-200 group-hover:rotate-180"
-                        >
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                        </svg>
-                    </div>
-                    <div class="invisible absolute z-10 -translate-x-2/3 pt-3 group-hover:visible">
-                        <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                            <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                                <a href={hreflanguage1} class="-m-4 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-zinc-100">
-                                    <p class="font-medium text-raisin">{language1}</p>
-                                </a>
-                                <a href={hreflanguage2} class="-m-4 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-zinc-100">
-                                    <p class="font-medium text-raisin">{language2}</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add the "Log in" link here -->
-                <div class="group">
-                    <a href={href6} class="uppercase text-raisin transition-all duration-500 ease-in-out hover:text-sonic mr-2 relative">
-                        Log in
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-500 hover:text-sonic mt-1 transform scale-x-0.5 origin-left group-hover:scale-x-0.25"></span>
-                    </a>
-                </div>                                               
-            </div>
-
-        <script>
-            const menuButton = document.getElementById("menu-button");
-            const menu = document.getElementById("menu");
-
-            menuButton.addEventListener("click", () => {
-                menu.classList.toggle("hidden");
-
-                menuButton.querySelector(".menu-icon").classList.toggle("hidden");
-                menuButton.querySelector(".close-icon").classList.toggle("hidden");
-
-                document.body.classList.toggle("fixed");
-            });
-
-            window.addEventListener("resize", () => {
-                if (window.innerWidth > 992) {
-                    document.body.classList.remove("fixed");
-                }
-            });
-        </script>
-        <style>
-            .no-scrollbar::-webkit-scrollbar {
-                display: none; /* Safari and Chrome */
-            }
-        </style>
-
-        <div class="no-scrollbar z-30 bg-white lg:hidden" style="scrollbar-width: none;-ms-overflow-style: none;">
-            <div class="flex h-24 flex-row place-items-center justify-between">
-                <div>
-                    <a href={hrefLogo}>
-                        <img class="mx-auto w-40" src={logo} title={logoTitle} aria-label={logoTitle} />
-                    </a>
-                </div>
-
-                <button class="menu-icon text-raisin" id="menu-button" aria-label="Menu" title="Menu">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        class="menu-icon h-7 w-7"
-                    >
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-                    </svg>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        class="close-icon hidden h-7 w-7"
-                    >
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-
-            <div id="menu" class="fixed left-0 z-10 flex hidden h-screen w-full items-center justify-center bg-white">
-                <div class="flex flex-col gap-[5vh] pb-32 text-center font-zen text-xl uppercase text-raisin">
-                    <a href={href1} class="">
-                        {navitem1}
-                    </a>
-
-                    <a href={href2} class="">
-                        {navitem2}
-                    </a>
-
-                    <a href={href3} class="">
-                        {navitem3}
-                    </a>
-
-                    <a href={href4} class="">
-                        {navitem4}
-                    </a>
-
-                    <a href={href5} class="">
-                        {navitem5}
-                    </a>
-                    <div class="text-sonic/50">
-                        <a href={hreflanguage1} class="">DE</a>
-                        |
-                        <a href={hreflanguage2} class="">EN</a>
-                    </div>
-                </div>
-            </div>
+      <!-- Desktop Navbar -->
+      <div class="hidden h-24 grid-cols-7 place-items-center justify-items-stretch font-zen text-base sm:hidden md:hidden lg:visible lg:block lg:grid">
+        <!-- Nav Item 1 -->
+        <div class="group">
+          <a href={href1} class="uppercase text-black transition-all duration-500 ease-in-out hover:text-sonic">
+            <span class={pathname === href1 ? "text-oat font-bold" : ""}>
+              {navitem1}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="delay-50 mb-0.5 inline h-5 w-5 transition-all duration-200 group-hover:rotate-180"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+              </svg>
+            </span>
+          </a>
+          <slot name="dropdown1" />
         </div>
+  
+        <!-- Repeat for other Nav Items -->
+        
+        <!-- Nav Item 2 -->
+        <div class="group">
+          <a href={href2} class="uppercase text-black transition-all duration-500 ease-in-out hover:text-sonic">
+            <span class={pathname === href2 ? "text-oat font-bold" : ""}>
+              {navitem2}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="delay-50 mb-0.5 inline h-5 w-5 transition-all duration-200 group-hover:rotate-180"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+              </svg>
+            </span>
+          </a>
+          <slot name="dropdown2" />
+        </div>
+  
+        <!-- Nav Item 3 -->
+        <div class="group">
+          <a href={href3} class="uppercase text-black transition-all duration-500 ease-in-out hover:text-sonic">
+            <span class={pathname === href3 ? "text-oat font-bold" : ""}>
+              {navitem3}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="delay-50 mb-0.5 inline h-5 w-5 transition-all duration-200 group-hover:rotate-180"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+              </svg>
+            </span>
+          </a>
+          <slot name="dropdown3" />
+        </div>
+  
+        <!-- Logo -->
+        <div class="">
+          <a href={hrefLogo}>
+            <img class="mx-auto w-44" src={logo} title={logoTitle} aria-label={logoTitle} />
+          </a>
+        </div>
+  
+        <!-- Nav Item 4 -->
+        <div class="group -mr-12 justify-self-end">
+          <a href={href4} class="uppercase text-black transition-all duration-500 ease-in-out hover:text-sonic mr-3">
+            <span class={pathname === href4 ? "text-oat font-bold" : ""}>{navitem4}</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="delay-50 mb-0.5 inline h-5 w-5 transition-all duration-200 group-hover:rotate-180"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+            </svg>
+          </a>
+          <slot name="dropdown4" />
+        </div>
+  
+        <!-- Nav Item 5 -->
+        <div class="group -mr-8 justify-self-end">
+          <a href={href5} class="uppercase text-black transition-all duration-500 ease-in-out hover:text-sonic mr-11">
+            {navitem5}
+          </a>
+          <slot name="dropdown5" />
+        </div>
+  
+        <!-- Language Picker and Log In -->
+        <div class="flex justify-between items-center">
+          <div class="group justify-self-end text-sonic/50 hover:text-raisin ml-12">
+            <div class="cursor-default font-zen uppercase transition-all duration-500 ease-in-out">
+              {languagePicker}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="delay-50 mb-0.5 inline h-5 w-5 transition-all duration-200 group-hover:rotate-180"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+              </svg>
+            </div>
+            <div class="invisible absolute z-10 -translate-x-2/3 pt-3 group-hover:visible">
+              <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                  <a href={hreflanguage1} class="-m-4 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-zinc-100">
+                    <p class="font-medium text-raisin">{language1}</p>
+                  </a>
+                  <a href={hreflanguage2} class="-m-4 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-zinc-100">
+                    <p class="font-medium text-raisin">{language2}</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Log In link -->
+          <div class="group">
+            <a href={href6} class="uppercase text-black transition-all duration-500 ease-in-out hover:text-sonic mr-2 relative">
+              Log in
+              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-500 hover:text-sonic mt-1 transform scale-x-0.5 origin-left group-hover:scale-x-0.25"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+ <!-- Mobile Navbar with Burger Menu -->
+<div class="no-scrollbar z-30 bg-white lg:hidden">
+    <div class="flex h-24 flex-row place-items-center justify-between">
+      <!-- Logo and Menu Button -->
+      <div>
+        <a href={hrefLogo}>
+          <img class="mx-auto w-40" src={logo} title={logoTitle} aria-label={logoTitle} />
+        </a>
+      </div>
+  
+      <button class="menu-icon text-raisin" id="menu-button" aria-label="Menu" title="Menu" on:click={toggleMenu}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          class="menu-icon h-7 w-7"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          class="close-icon hidden h-7 w-7"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="menu" class="fixed left-0 z-10 flex hidden h-screen w-full items-center justify-center bg-white translate-x-full">
+      <div class="flex flex-col gap-[5vh] pb-32 text-center font-zen text-xl uppercase text-raisin">
+        <!-- Mobile Nav Items -->
+        <a href={href1}>{navitem1}</a>
+        <a href={href2}>{navitem2}</a>
+        <a href={href3}>{navitem3}</a>
+        <a href={href4}>{navitem4}</a>
+        <a href={href5}>{navitem5}</a>
+        <!-- Language Picker for Mobile -->
+        <div class="text-sonic/50">
+          <a href={hreflanguage1}>DE</a> |
+          <a href={hreflanguage2}>EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+      <script>
+        let isMenuOpen = false; // Initially, the menu is closed
+      
+        function toggleMenu() {
+          isMenuOpen = !isMenuOpen; // Toggle the menu's visibility
+          if (isMenuOpen) {
+            document.body.classList.add("fixed"); // Disable scrolling when the menu is open
+          } else {
+            document.body.classList.remove("fixed"); // Enable scrolling when the menu is closed
+          }
+        }
+      </script>
+          <style>
+            /* Common Styles for Both Desktop and Mobile */
+            .uppercase {
+              text-transform: uppercase;
+            }
+          
+            .text-black {
+              color: black;
+            }
+          
+            /* Desktop Navbar Styles */
+            .navbar {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              background-color: #333;
+              color: white;
+              padding: 10px 20px;
+            }
+          
+            .navbar-brand a {
+              color: white;
+              text-decoration: none;
+              font-weight: bold;
+            }
+          
+            .navbar-items {
+              list-style: none;
+              display: flex;
+            }
+          
+            .navbar-items li {
+              margin-right: 20px;
+            }
+          
+            .navbar-items a {
+              color: white;
+              text-decoration: none;
+            }
+          
+            /* Mobile Navbar Styles */
+            .menu-icon,
+            .close-icon {
+              cursor: pointer;
+            }
+          
+            .close-icon {
+              display: none;
+            }
+          
+            .no-scrollbar::-webkit-scrollbar {
+              display: none; /* Hide scrollbars for mobile menu */
+            }
+          
+            #menu {
+              transform: translateX(-100%);
+              transition: transform 0.3s ease-in-out;
+            }
+          
+            body.fixed {
+              overflow: hidden;
+            }
+          </style>
     </nav>
-</header>
+  </header>
+  
