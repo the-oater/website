@@ -201,61 +201,80 @@ function toggleMenu() {
           <img class="mx-auto w-40" src={logo} title={logoTitle} aria-label={logoTitle} />
         </a>
       </div>
-  
+  <!-- LAST CHANGES -->
       <button class="menu-icon text-raisin" id="menu-button" aria-label="Menu" title="Menu" on:click={toggleMenu}>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          class="menu-icon h-7 w-7"
-        >
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="black"
+        class="burger-icon h-7 w-7"
+      >
+          <!-- Add a unique class for the burger icon -->
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
         </svg>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          class="close-icon hidden h-7 w-7"
-        >
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="2"
+    stroke="black" 
+    class="close-icon hidden h-7 w-7"
+  >
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
+      <!-- LAST CHANGES -->
     </div>
-  
-    <!-- Mobile Menu -->
-    <div id="menu" class="fixed left-0 z-10 flex hidden h-screen w-full items-center justify-center bg-white translate-x-full">
-      <div class="flex flex-col gap-[5vh] pb-32 text-center font-zen text-xl uppercase text-raisin">
-        <!-- Mobile Nav Items -->
-        <a href={href1}>{navitem1}</a>
-        <a href={href2}>{navitem2}</a>
-        <a href={href3}>{navitem3}</a>
-        <a href={href4}>{navitem4}</a>
-        <a href={href5}>{navitem5}</a>
-        <!-- Language Picker for Mobile -->
-        <div class="text-sonic/50">
-          <a href={hreflanguage1}>DE</a> |
-          <a href={hreflanguage2}>EN</a>
-        </div>
+
+<!-- Mobile Menu -->
+<div id="menu" class="fixed left-0 z-10 flex translate-x-full h-screen w-full items-center justify-center bg-white">
+    <div class="flex flex-col gap-[5vh] pb-32 text-center font-zen text-xl uppercase text-raisin">
+      <!-- Mobile Nav Items -->
+      <a href={href1}>{navitem1}</a>
+      <a href={href2}>{navitem2}</a>
+      <a href={href3}>{navitem3}</a>
+      <a href={href4}>{navitem4}</a>
+      <a href={href5}>{navitem5}</a>
+      <!-- Language Picker for Mobile -->
+      <div class="text-sonic/50">
+        <a href={hreflanguage1}>DE</a> |
+        <a href={hreflanguage2}>EN</a>
       </div>
     </div>
   </div>
+  <script>
+    let isMenuOpen = false;
   
-      <script>
-        let isMenuOpen = false; // Initially, the menu is closed
-      
-        function toggleMenu() {
-          isMenuOpen = !isMenuOpen; // Toggle the menu's visibility
-          if (isMenuOpen) {
-            document.body.classList.add("fixed"); // Disable scrolling when the menu is open
-          } else {
-            document.body.classList.remove("fixed"); // Enable scrolling when the menu is closed
-          }
-        }
-      </script>
+// Function to toggle the mobile menu
+// Function to toggle the mobile menu and icons
+function toggleMobileMenu() {
+  const menu = document.getElementById("menu");
+  isMenuOpen = !isMenuOpen;
+  const menuButton = document.getElementById("menu-button");
+  const burgerIcon = menuButton.querySelector(".burger-icon");
+  const closeIcon = menuButton.querySelector(".close-icon");
+
+  if (isMenuOpen) {
+    menu.style.transform = "translateX(0)"; // Slide in the menu
+    document.body.classList.add("fixed");
+    burgerIcon.classList.add("hidden");
+    closeIcon.classList.remove("hidden");
+  } else {
+    menu.style.transform = "translateX(-100%)"; // Slide out the menu
+    document.body.classList.remove("fixed");
+    burgerIcon.classList.remove("hidden");
+    closeIcon.classList.add("hidden");
+  }
+}
+
+// Add an event listener to the burger menu button
+const menuButton = document.getElementById("menu-button");
+menuButton.addEventListener("click", toggleMobileMenu);
+
+  </script>
+  
           <style>
             /* Common Styles for Both Desktop and Mobile */
             .uppercase {
@@ -299,7 +318,22 @@ function toggleMenu() {
             /* Mobile Navbar Styles */
             .menu-icon,
             .close-icon {
-              cursor: pointer;
+            cursor: pointer;
+            }
+
+            .close-icon {
+            display: none;
+           }
+           .burger-icon {
+           display: block;
+            }
+            .close-icon {
+            display: none;
+}
+
+           /* Add a class to hide the menu button by default on mobile */
+           .menu-icon.hidden {
+           display: none;
             }
           
             .close-icon {
@@ -318,6 +352,7 @@ function toggleMenu() {
             body.fixed {
               overflow: hidden;
             }
+            
           </style>
     </nav>
   </header>
