@@ -5,6 +5,7 @@ export interface Props {
     navitem3: string;
     navitem4: string;
     navitem5: string;
+    navitem6: string;
     href1: string;
     href2: string;
     href3: string;
@@ -27,6 +28,7 @@ const {
     navitem3,
     navitem4,
     navitem5,
+    navitem6,
     href1,
     href2,
     href3,
@@ -186,7 +188,7 @@ function toggleMenu() {
           <div class="group">
             <a href={href6} class="uppercase text-black transition-all duration-500 ease-in-out hover:text-sonic mr-2 relative">
               Log in
-              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-500 hover:text-sonic mt-1 transform scale-x-0.5 origin-left group-hover:scale-x-0.25"></span>
+              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-500 hover:text-sonic mt-1 transform scale-x-0.5 origin-left group-hover:scale-x-0.25"> {navitem6}</span>
             </a>
           </div>
         </div>
@@ -241,6 +243,10 @@ function toggleMenu() {
       <div class="text-sonic/50">
         <a href={hreflanguage1}>DE</a> |
         <a href={hreflanguage2}>EN</a>
+         <!-- Add the Log In link below the language switcher -->
+         <br>
+         <br><a href={href6}>{navitem6}Log In</a>
+      </div>
       </div>
     </div>
   </div>
