@@ -132,6 +132,74 @@ import IconbarHome from "../components/iconbarHome.astro";
         <Secondary slot="button" buttonName="Read more articles" buttonUrl="https://magazin.oater.de/de" />
     </Blogsection>
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/26294092.js"></script>
+    <!-- Add a container div to wrap the button -->
+    <div id="cookie_button_container">
+        <!-- Add HubSpot Cookie trigger button HTML -->
+        <button
+            type="button"
+            id="hs_show_banner_button"
+            onClick="(function(){
+                var _hsp = window._hsp = window._hsp || [];
+                _hsp.push(['showBanner']);
+            })()"
+        >
+            Cookie Settings
+        </button>
+    </div>
+
+    <style>
+        /* Add custom CSS for the container */
+        #cookie_button_container {
+            display: none; /* Hide the container by default */
+        }
+
+        /* Adjust the vertical position as needed, e.g., top: 30%; */
+        #cookie_button_container.show-button {
+            display: block; /* Show the container when it has the "show-button" class */
+            position: fixed;
+            right: 0;
+            top: 21%; /* Set the initial vertical position to 30% */
+            z-index: 999; /* Ensure it's above other content */
+        }
+
+        /* Add custom CSS for the HubSpot Cookie trigger button */
+        #hs_show_banner_button {
+            background-color: #ead18c;
+            border: 1px solid #ead18c;
+            border-radius: 3px;
+            padding: 10px 16px;
+            text-decoration: none;
+            color: #fff;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: normal;
+            line-height: inherit;
+            text-align: left;
+            text-shadow: none;
+            cursor: pointer;
+            transition:  0.3s; /* Add a smooth transition effect */
+            opacity: 0.3;
+        }
+
+        #hs_show_banner_button:hover {
+            opacity: 1; /* Increase opacity on hover to 100% */
+        }
+    </style>
+
+    <script>
+        // JavaScript to show the button container after the Newsletter section
+        window.addEventListener("scroll", function() {
+            var newsletterSection = document.getElementById("newsletter_section");
+            var buttonContainer = document.getElementById("cookie_button_container");
+
+            if (newsletterSection && window.scrollY >= newsletterSection.offsetTop) {
+                buttonContainer.classList.add("show-button");
+            } else {
+                buttonContainer.classList.remove("show-button");
+            }
+        });
+    </script>
+    <a id="newsletter_section"></a>
     <Newsletter headline="Join The OATeam">
         Sign up for the newsletter and learn immediately about new recipes and company news! And do not worry for our mails the same claim
         applies, as for our oat drink - no garbage.

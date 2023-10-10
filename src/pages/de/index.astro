@@ -19,7 +19,9 @@ import IconbarHome from "../../components/iconbarHome.astro";
     >
         <Primary slot="button" buttonName="Auf die Warteliste" buttonUrl="https://share-eu1.hsforms.com/1KM3gGgfeS1mdqBzwXyDhbgfnkng" />
     </Mainhero>
-
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/26294092.js"></script>
+<!-- End of HubSpot Embed Code -->
     <ImgText title="Unsere Mission" imgUrl="/mission.jpg">
         Haferdrink im Karton war gestern. The Oater Barista produziert den Haferdrink der Zukunft. Wir denken Haferdrink neu – bei voller
         Barista Qualität und Frische, ohne Verpackungsmüll, ohne Zuckerzusatz und ohne Kompromisse.
@@ -131,6 +133,74 @@ import IconbarHome from "../../components/iconbarHome.astro";
         <Secondary slot="button" buttonName="Mehr Artikel" buttonUrl="https://magazin.oater.de/de" />
     </Blogsection>
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/26294092.js"></script>
+    <!-- Add a container div to wrap the button -->
+    <div id="cookie_button_container">
+        <!-- Add HubSpot Cookie trigger button HTML -->
+        <button
+            type="button"
+            id="hs_show_banner_button"
+            onClick="(function(){
+                var _hsp = window._hsp = window._hsp || [];
+                _hsp.push(['showBanner']);
+            })()"
+        >
+            Cookie Settings
+        </button>
+    </div>
+
+    <style>
+        /* Add custom CSS for the container */
+        #cookie_button_container {
+            display: none; /* Hide the container by default */
+        }
+
+        /* Adjust the vertical position as needed, e.g., top: 30%; */
+        #cookie_button_container.show-button {
+            display: block; /* Show the container when it has the "show-button" class */
+            position: fixed;
+            right: 0;
+            top: 21%; /* Set the initial vertical position to 30% */
+            z-index: 999; /* Ensure it's above other content */
+        }
+
+        /* Add custom CSS for the HubSpot Cookie trigger button */
+        #hs_show_banner_button {
+            background-color: #ead18c;
+            border: 1px solid #ead18c;
+            border-radius: 3px;
+            padding: 10px 16px;
+            text-decoration: none;
+            color: #fff;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: normal;
+            line-height: inherit;
+            text-align: left;
+            text-shadow: none;
+            cursor: pointer;
+            transition:  0.3s; /* Add a smooth transition effect */
+            opacity: 0.3;
+        }
+
+        #hs_show_banner_button:hover {
+            opacity: 1; /* Increase opacity on hover to 100% */
+        }
+    </style>
+
+    <script>
+        // JavaScript to show the button container after the Newsletter section
+        window.addEventListener("scroll", function() {
+            var newsletterSection = document.getElementById("newsletter_section");
+            var buttonContainer = document.getElementById("cookie_button_container");
+
+            if (newsletterSection && window.scrollY >= newsletterSection.offsetTop) {
+                buttonContainer.classList.add("show-button");
+            } else {
+                buttonContainer.classList.remove("show-button");
+            }
+        });
+    </script>
+    <a id="newsletter_section"></a>
     <Newsletter headline="Verfolge Unsere Haferdrink Revolution!">
         Melde dich für den Newsletter an und erfahre sofort von neuen Rezepten und Firmennews! Keine Sorge, für unsere Mails gilt der
         gleiche Anspruch wie für unseren Haferdrink - kein Müll. </Newsletter>
