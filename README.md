@@ -50,6 +50,7 @@ https://manual.uberspace.de/
 **Setup&Work**
 
 1. Clone the repository locally
+1. run `npm install`
 2. run `npm run dev` in the terminal in the root of the project to get a local server while developing
 3. run `npm run build` to build the site. The production site will be created in the `/dist` directory.
 4. Copy all the files and fodlers in the `/dist` directory to the server to upload your changes
