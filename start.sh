@@ -1,1 +1,4 @@
-npm run dev.
+#!/bin/sh
+
+npm install
+npm run dev

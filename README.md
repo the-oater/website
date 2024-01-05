@@ -47,21 +47,24 @@ https://manual.uberspace.de/
 5. You need access to the uberspace account and an ftp program.
 6. Login to the [uberspace](https://dashboard.uberspace.de/login?lang=en) and set a new ssh password to connect to the server via sftp (under "Logins"). The username is oater and the server hamal.uberspace.de (more information under "Datasheet" in the uberspace account)
 
-**Setup&Work**
+## Setup
 
 1. Clone the repository locally
-1. run `npm install`
-2. run `npm run dev` in the terminal in the root of the project to get a local server while developing
-3. run `npm run build` to build the site. The production site will be created in the `/dist` directory.
-4. Copy all the files and fodlers in the `/dist` directory to the server to upload your changes
-5. push your changes to the github account 
 
-***Deployment***
+## Development
 
-1.	build the site using `npm run build`
-2.	a new dirctory called `dist` will appear
-3.	copy all containing files to the ~html directory of the uberspace account using you ftp programm
+1. Run in terminal: `./start.sh`
 
+## Build (optional)
+
+1. run `npm run build` to build the site. The production site will be created in the `/dist` directory.
+1. Copy all the files and fodlers in the `/dist` directory to the server to upload your changes
+1. push your changes to the github account 
+
+## Deployment
+
+1. Deploy to production: run in terminal: `./deploy-production.sh`
+1. Deploy to staging: run in terminal: `./deploy-staging.sh`
 
 **File structure**
 
