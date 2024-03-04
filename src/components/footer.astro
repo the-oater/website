@@ -3,6 +3,7 @@ import logo from "../assets/Oater-Logo.svg";
 
 export interface Props {
     claim: string;
+    womentecheu: string;
     firstcolData: Array;
     firstcoltitle: string;
     secondcolData: Array;
@@ -11,7 +12,7 @@ export interface Props {
     thirdcoltitle: string;
 }
 
-const { claim, firstcolData, firstcoltitle, secondcolData, secondcoltitle, thirdcoltitle, thirdcolData } = Astro.props;
+const { claim, womentecheu, firstcolData, firstcoltitle, secondcolData, secondcoltitle, thirdcoltitle, thirdcolData } = Astro.props;
 ---
 
 <footer class="bg-[url('/footer.svg')] bg-cover">
@@ -22,6 +23,9 @@ const { claim, firstcolData, firstcoltitle, secondcolData, secondcoltitle, third
 
                 <p class="mt-4 max-w-xs text-sm text-gray-600">
                     {claim}
+                </p>
+                <p class="mt-4 max-w-xs text-sm text-gray-600">
+                    {womentecheu}
                 </p>
                 <div class="mt-8 flex gap-4 text-gray-600">
                     <a class="hover:opacity-75" href="https://www.instagram.com/the_oater/" target="_blank" rel="noreferrer">

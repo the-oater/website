@@ -61,6 +61,16 @@ https://manual.uberspace.de/
 1. Copy all the files and fodlers in the `/dist` directory to the server to upload your changes
 1. push your changes to the github account 
 
+## Commit message schreiben
+
+Kopieren, Commit Message (was zu geändert hast) bearbeiten (in die "" nach git commit -m) und im Terminal einfügen:
+
+```
+git add .
+git commit -m "Women TechEU im Footer hinzugefügt."
+git push
+```
+
 ## Deployment
 
 1. Deploy to production: run in terminal: `./deploy-production.sh`
