@@ -67,14 +67,17 @@ Kopieren, Commit Message (was zu geändert hast) bearbeiten (in die "" nach git 
 
 ```
 git add .
-git commit -m "Women TechEU im Footer hinzugefügt."
+git commit -m "Women TechEU Logo im Footer hinzugefügt."
 git push
 ```
 
 ## Deployment
-
-1. Deploy to production: run in terminal: `./deploy-production.sh`
+ERST: 
 1. Deploy to staging: run in terminal: `./deploy-staging.sh`
+Dann gucken obs geht.
+wenn ja:
+1. Deploy to production: run in terminal: `./deploy-production.sh`
+
 
 **File structure**
 
