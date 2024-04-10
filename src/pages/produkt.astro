@@ -30,40 +30,39 @@ import Headline from "../components/headline.astro";
 
     <ImgTextFull reverse title="Abonnement Und Lieferung" id="abo" imgUrl="/ingedientmix_pattern.jpg">
         Als Unternehmen registrierst Du Dich auf unserer digitalen Plattform. Dort gibst Du deinen wöchentlichen Haferdrink-Konsum an. Dies ist die Grundlage für die Berechnung Deines Abonnements. 
-        Der Oater liefert automatisch unsere Zutatenmischung, die Du benötigst – Du zahlst monatlich je nach Abo-Größe. Schluss mit Lieferengpässen und Last-Minute-Einkäufen im Supermarkt. Du kannst das Abonnement anpassen - wir wissen, dass Dein Verbrauch nicht das ganze Jahr über konstant ist.
+        The Oater® liefert automatisch unsere Zutatenmischung, die Du benötigst – Du zahlst monatlich je nach Abo-Größe. Schluss mit Lieferengpässen und Last-Minute-Einkäufen im Supermarkt. Du kannst das Abonnement anpassen - wir wissen, dass Dein Verbrauch nicht das ganze Jahr über konstant ist.
         <br>Zum Beispiel kannst Du...<br>
         ... deine Abonnementgröße monatlich anpassen<br>
         ... in bestimmten Wochen/Monaten vorübergehend mehr Hafermix bestellen<br>
         ... dein Abonnement für bis zu 4 Wochen pro Jahr pausieren
     </ImgTextFull>
-    <ImgTextFull title="The Oater Barista Maschine" imgUrl="/hotel.webp" id="machine">
-        Du leihst die The Oater Barista Maschine und zahlst dafür eine monatliche Leihgebühr. 
+    <ImgTextFull title="The Oater® Barista Maschine" imgUrl="/hotel.webp" id="machine">
+        Du leihst die The Oater® Barista Maschine und zahlst dafür eine monatliche Leasinggebühr. 
         Die Installation und die regelmäßige Wartung der Maschine sind ebenfalls in dieser Pauschale enthalten. 
-        Du zahlst zudem für den Hafer-Mix pro Liter im Abo. Je nach Verbrauch kannst Du zwischen unterschiedlichen
+        Du zahlst zudem für die Zutaten pro Liter im Abo. Je nach Verbrauch kannst Du zwischen unterschiedlichen
          Abo-Größen wählen.
         <Secondary slot="button" buttonName="Die Maschine" buttonUrl="/de/maschinen" />
     </ImgTextFull>
 
     <ImgTextFull reverse title="Herstellung Von Haferdrinks" imgUrl="/Oat drink production.jpg">
         Für die Zubereitung unseres Haferdrinks benötigst Du nur unsere Zutatenpackung (die mitgelieferte Hafermischung und Rapsöl) 
-        und Wasser aus der Leitung. Jedes Unternehmen kann selbst entscheiden, ob ein Festwasseranschluss oder ein Wassertank 
-        besser geeignet ist. Weitere Informationen zu den Zutatenpackungen findest Du hier. 
-        <Secondary slot="button" buttonName="Der Zutaten-Mix" buttonUrl="/de/produkt#ingredientmix" />
+        und Wasser aus der Leitung. Dafür wird ein Festwasseranschluss benötigt. Weitere Informationen zu den Zutatenboxen findest Du hier. 
+        <Secondary slot="button" buttonName="Unser Trockenmix" buttonUrl="/de/produkt#ingredientmix" />
     </ImgTextFull>
     <Oatermix
         id="ingredientmixde"
         imgUrl="/zutaten-mix.png"
-        title="Unser Zutaten-Mix"
+        title="Unser Trockenmix"
         mixpropertiesData={[
             {
                 icon: "/biozertifiziert.svg",
                 title: "HERKUNFT",
-                text: "Alle unsere Zutaten sind biozertifiziert und stammen aus Deutschland. Wir legen Wert auf enge Beziehungen zu unseren Lieferanten, um Transparenz in Bezug auf Qualität, Anbaumethoden und Transport sicherzustellen.",
+                text: "Alle unsere pflanzlichen Zutaten stammen aus Deutschland. Wir legen Wert auf enge Beziehungen zu unseren Lieferanten, um Transparenz in Bezug auf Qualität, Anbaumethoden und Transport sicherzustellen.",
             },
             {
                 icon: "/hafer.svg",
                 title: "ZUTATEN:",
-                text: "Unser Haferdrink enthält biozertifizierte Hafer, Bio-Rapsöl und Bio-Pflanzenprotein für traumhaften Schaum.",
+                text: "Unser Haferdrink enthält Hafer aus Deutschland und Bio-Rapsöl für traumhaften Schaum.",
             },
             {
                 icon: "/zucker.svg",
@@ -73,12 +72,12 @@ import Headline from "../components/headline.astro";
             {
                 icon: "/verpackungsarm.svg",
                 title: "VERPACKUNG:",
-                text: "Um Einwegverpackungen zu vermeiden und die Lebensmittelhygiene zu gewährleisten, liefern wir unseren Hafermix in einem Mehrwegbehälter. Diese können bei jeder neuen Lieferung an den Kurier zurückgeschickt werden.",
+                text: "Wir verschicken nur die Trockenzutaten des Haferdrinks. Dadurch sparen wir 48% Verpackungsmüll ein.",
             },
             {
                 icon: "/pflanzlich.svg",
                 title: "PFLANZLICH",
-                text: "Der Haferdrink Oater Barista ist zu 100% pflanzlich und enthält keine tierischen Produkte. Wir glauben, dass die Zukunft in pflanzlichen Alternativen liegt.",
+                text: "Der The Oater® Haferdrink ist zu 100% pflanzlich und enthält keine tierischen Produkte. Wir glauben, dass die Zukunft in pflanzlichen Alternativen liegt.",
             },
         ]}
     />
@@ -88,38 +87,38 @@ import Headline from "../components/headline.astro";
             {
                 title: "Businesses",
                 imgUrl: "/oateroffice_render.jpg",
-                text: "Du möchtest Deinen Kund:innen Genussmomente bieten, mit köstlichen neuen Erlebnissen. Wir machen es möglich. Unsere cremiger Barista Haferdrink und unsere innovative Maschine mit zeitlosem Design sorgen nicht nur für ein harmonisches Geschmackserlebnis und eine hervorragende Schaumstabilität, sondern bieten Dir auch eine nachhaltigere Alternative und ein besonderes Erlebnis. Du musst unsere Maschine nicht kaufen, Du mietest sie und zahlst im Abo für den Oater Mix, den Du benötigst um in der Maschine Haferdrink herzustellen.",
-                text2: "Wenn Du Fragen hast, kontaktiere uns bitte unter hello@oater.de Keine Fragen mehr? Trage Dich in die Warteliste ein und gehöre zu den ersten, die frisch produzierte Haferdrinks anbieten. Good news are coming!",
+                text: "Du möchtest Deinen Kund:innen Genussmomente bieten, mit köstlichen neuen Erlebnissen. Wir machen es möglich. Unsere cremiger Barista Haferdrink und unsere innovative Maschine mit zeitlosem Design sorgen nicht nur für ein harmonisches Geschmackserlebnis und eine hervorragende Schaumstabilität, sondern bieten Dir auch eine nachhaltigere Alternative und ein besonderes Erlebnis. Du musst unsere Maschine nicht kaufen, Du least sie und zahlst im Abo für die Zutatenbox, den Du benötigst um in der Maschine Haferdrink herzustellen.",
+                text2: "Wenn Du Fragen hast, kontaktiere uns bitte unter hello@oater.de Keine Fragen mehr? Trage Dich in die Warteliste ein und gehöre zu den Ersten, die frisch produzierte Haferdrinks anbieten. Good news are coming!",
             },
             {
                 title: "Für Cafés",
                 imgUrl: "/cafe.jpg",
-                text: "Als Café oder Coffee Shop legst Du Wert auf ein großartiges Kundenerlebnis. Dazu gehört auch, frische, lokale und hausgemachte oder sorgfältig ausgewählte Produkte anzubieten. Da immer mehr Kund:innen nach Haferdrink und anderen pflanzlichen Alternativen bestellen, stellt sich die Frage: Kann ich Frische und Regionalität mit Haferdrink verbinden? Die Antwort ist JA! Mit unserer The Oater Barista Maschine kannst Du perfekt schäumbare und leckere Haferdrinks direkt in Deinem Café herstellen.",
-                text2: "Wenn Du Fragen hast, kontaktiere uns bitte unter hello@oater.de Keine Fragen mehr? Trage Dich in die Warteliste ein und gehöre zu den ersten, die frisch produzierte Haferdrinks anbieten. Good news are coming!",
+                text: "Als Café oder Coffee Shop legst Du Wert auf ein großartiges Kundenerlebnis. Dazu gehört auch, frische, lokale und hausgemachte oder sorgfältig ausgewählte Produkte anzubieten. Da immer mehr Kund:innen nach Haferdrink und anderen pflanzlichen Alternativen bestellen, stellt sich die Frage: Kann ich Frische und Regionalität mit Haferdrink verbinden? Die Antwort ist JA! Mit unserer The Oater® Barista Maschine kannst Du perfekt schäumbare und leckere Haferdrinks direkt in Deinem Café herstellen.",
+                text2: "Wenn Du Fragen hast, kontaktiere uns bitte unter hello@oater.de Keine Fragen mehr? Trage Dich in die Warteliste ein und gehöre zu den Ersten, die frisch produzierte Haferdrinks anbieten. Good news are coming!",
             },
             {
                 title: "Hotels",
                 imgUrl: "/hotel.webp",
-                text: "Du möchtest Deinen Gäst:innen während ihres Aufenthalts bei Dir ein einzigartiges Erlebnis bieten? Unsere The Oater Barista Maschine ist nicht nur schön gestaltet und ein ästhetischer Hingucker. Sie produziert auch köstliche Haferdrinks in Barista-Qualität – perfekt, um den Tag in Deinem Hotel mit einem gemütlichen Haferdrink-Cappuccino zu beginnen. Nachhaltigkeit wird auch im Tourismus immer mehr Thema und Gäst:innen suchen aktiv nach Möglichkeiten, ihren ökologischen Fußabdruck zu verringern. The Oater Barista ist eine gute Wahl, um dem Wunsch Deiner Gäst:innen hier entgegenzukommen.",
-                text2: "Wenn Du Fragen hast, kontaktiere uns bitte unter hello@oater.de Keine Fragen mehr? Trage Dich in die Warteliste ein und gehöre zu den ersten, die frisch produzierte Haferdrinks anbieten. Good news are coming!",
+                text: "Du möchtest Deinen Gäst:innen während ihres Aufenthalts bei Dir ein einzigartiges Erlebnis bieten? Unsere The Oater® Barista Maschine ist nicht nur schön gestaltet und ein ästhetischer Hingucker. Sie produziert auch köstliche Haferdrinks in Barista-Qualität – perfekt, um den Tag in Deinem Hotel mit einem gemütlichen Haferdrink-Cappuccino zu beginnen. Nachhaltigkeit wird auch im Tourismus immer mehr Thema und Gäst:innen suchen aktiv nach Möglichkeiten, ihren ökologischen Fußabdruck zu verringern. The Oater® Barista ist eine gute Wahl, um dem Wunsch Deiner Gäst:innen hier entgegenzukommen.",
+                text2: "Wenn Du Fragen hast, kontaktiere uns bitte unter hello@oater.de Keine Fragen mehr? Trage Dich in die Warteliste ein und gehöre zu den Ersten, die frisch produzierte Haferdrinks anbieten. Good news are coming!",
             },
             {
                 title: "Coworking Spaces/Büros",
                 imgUrl: "/office_kitchen.jpg",
-                text: "Dein Büro ist ein magischer Ort, wo Ideen zum Leben erweckt werden, Zahlen wachsen und Menschen zusammenkommen – alles angeheizt von Kaffee und anderen heißen Getränken. Du strebst nach Innovation und Impact. Warum nicht danach streben, mehr Innovation, Genuss und Nachhaltigkeit auch an den Arbeitsplatz zu bringen? Unsere The Oater Barista Maschine fügt sich nahtlos in Deine Kaffeebar ein und in den täglichen Bedarf Deiner Mitarbeiter:innen an Kaffee, Geschmack und nachhaltigeren Entscheidungen.",
-                text2: "Wenn Du Fragen hast, kontaktiere uns bitte unter hello@oater.de Keine Fragen mehr? Trage Dich in die Warteliste ein und gehöre zu den ersten, die frisch produzierte Haferdrinks anbieten. Good news are coming!",
+                text: "Dein Büro ist ein magischer Ort, wo Ideen zum Leben erweckt werden, Zahlen wachsen und Menschen zusammenkommen – alles angeheizt von Kaffee und anderen heißen Getränken. Du strebst nach Innovation und Impact. Warum nicht danach streben, mehr Innovation, Genuss und Nachhaltigkeit auch an den Arbeitsplatz zu bringen? Unsere The Oater® Barista Maschine fügt sich nahtlos in Deine Kaffeebar ein und in den täglichen Bedarf Deiner Mitarbeiter:innen an Kaffee, Geschmack und nachhaltigeren Entscheidungen.",
+                text2: "Wenn Du Fragen hast, kontaktiere uns bitte unter hello@oater.de Keine Fragen mehr? Trage Dich in die Warteliste ein und gehöre zu den Ersten, die frisch produzierte Haferdrinks anbieten. Good news are coming!",
             },
             {
                 title: "Für Unverpacktläden",
                 imgUrl: "/zerowastestore.jpg",
                 text: "Genau wie wir glaubst Du an die Beseitigung von Verpackungsmüll, um ein nachhaltigeres Konsumverhalten zu schaffen. Wir möchten Dich bei Deiner Mission unterstützen und Deinen Kunden eine neue verpackungsfreie Alternative zur Verfügung stellen: Haferdrink in Barista-Qualität, der direkt in Deinem Geschäft hergestellt wird. Kund:innen können ihre eigenen Flaschen mitbringen, um den Haferdrink direkt in ihren Mehrwegbehälter zu geben.",
-                text2: "Wenn Du Fragen hast, kontaktiere uns bitte unter hello@oater.de Keine Fragen mehr? Trage Dich in die Warteliste ein und gehöre zu den ersten, die frisch produzierte Haferdrinks anbieten. Good news are coming!",
+                text2: "Wenn Du Fragen hast, kontaktiere uns bitte unter hello@oater.de Keine Fragen mehr? Trage Dich in die Warteliste ein und gehöre zu den Ersten, die frisch produzierte Haferdrinks anbieten. Good news are coming!",
             },
         ]}
     />
 
     <ImgText title="Warteliste" imgUrl="/waitlist.webp" minusmargin="-mb-32">
-        Haferdrink im Karton war gestern. The Oater Barista produziert den Haferdrink der Zukunft. Wir denken Haferdrink neu – bei voller Barista Qualität und Frische, ohne Verpackungsmüll, ohne Zuckerzusatz und ohne Kompromisse.
+        Haferdrink im Karton war gestern. The Oater® Barista produziert den Haferdrink der Zukunft. Wir denken Haferdrink neu – bei voller Barista Qualität und Frische, ohne Verpackungsmüll, ohne Zuckerzusatz und ohne Kompromisse.
         <Primary slot="button" buttonName="Auf die Warteliste" buttonUrl="https://share-eu1.hsforms.com/1KM3gGgfeS1mdqBzwXyDhbgfnkng" />
     </ImgText>
 </Layout>
