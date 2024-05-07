@@ -77,7 +77,7 @@ ERST:
 Dann gucken obs geht.
 wenn ja:
 1. Deploy to production: run in terminal: `./deploy-production.sh`
-
+Domain-Provider ist strato.de, Webspace bei uberspace
 
 **File structure**
 
