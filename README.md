@@ -2,6 +2,56 @@
 
 The Oater website uses Tailwindcss for styling and Astro as a static site generator. For versioning Github is used. The site is build locally and hosted on uberspace.de. Please check the corresponding documentations for further information on how each technology works in detail.
 
+### Create a subdomain on Uberspace
+
+Connect to the server
+
+```sh
+ssh oater@oater.de
+```
+
+Create a new subdomain:
+
+```sh
+uberspace web domain add mysubdomainname.oater.de
+```
+
+Create a new directory that is the document root for the target subdomain:
+
+```sh
+mkdir /var/www/virtual/oater/mysubdomainname.oater.de
+cd ~
+ln -s /var/www/virtual/oater/mysubdomainname.oater.de .
+cd mysubdomainname.oater.de
+pwd
+```
+
+The output of the last command gives you the correct document root path. It should look like this: `/home/oater/mysubdomainname.oater.de/`
+
+Uberspace is just the webspace. To register a new subdomain, go to Strato, select the domain oater.de, create a new subdomain and point the A-Record to 95.143.172.250. Wait until the changes take effect (about 5 minutes, up to 24h).
+
+### Debug Log on production server:
+
+```sh
+# enable log file
+uberspace web log access enable
+uberspace web log apache_error enable
+
+# read file
+tail -f ~/logs/webserver/access_log
+tail -f ~/logs/webserver/error_log_apache
+```
+
+### Create a database
+
+https://manual.uberspace.de/database-mysql/#additional-databases
+
+Connect to the server and type (database name must start with `oater_`):
+
+```sh
+mysql -e "CREATE DATABASE oater_mynewname"
+```
+
 ### Astro
 
 Astro is an all-in-one web framework for building fast, content-focused websites. In our case it is used to generate a (mostly) static website. Unlike traditional web development tools, Astro does not send any JavaScript to the browser by default. This results in faster load times and a better browsing experience for your users. However, Astro still allows you to use JavaScript when necessary, so you have the flexibility to create more interactive features when you need them.
