@@ -81,110 +81,26 @@ import Oatermix from "../../components/oatermix.astro";
             },
         ]}
     />
-    <IconbarHome
-        bgcolor="bg-oat-superlight"
-        title="Haferdrink Ohne Kompromisse"
-        icontitle1="Frisch + Lokal"
+    <Iconbar
+        bgcolor="bg-zinc-200"
+        icontitle1="Vegconomist"
         imgUrl1="/frischlokal.svg"
-        icontitle2="Barista-Qualität"
+        icontitle2="DEHOGA"
         imgUrl2="/coffee.svg"
-        icontitle3="Verpackungsarm"
+        icontitle3="WDR"
         imgUrl3="/verpackungsarm.svg"
-        icontitle4="Preiswert"
+        icontitle4="Kölner Stadtanzeiger"
         imgUrl4="/preiswert.svg"
-        icontitle5="Ohne Zuckerzusatz"
+        icontitle5="Gastro Magazin"
         imgUrl5="/zucker.svg"
-    >
-        <Secondary slot="button" buttonName="Unser Produkt" buttonUrl="/de/produkt" />
-    </IconbarHome>
+    />
 
-    <ImgText title="Das OATeam" imgUrl="/founders.webp" reverse>
-        Wir sind ein Team von Träumern und Haferdrink- Enthusiasten aus Köln, die fest daran glauben, dass bei Haferdrink noch Luft nach
-        oben ist. Alles begann als sich unsere CEO Sarah, die seit 7 Jahren Veganerin ist, von dem vielen Verpackungsmüll und der fehlenden
-        Frische ihres Haferdrinks gestört fühlte. Das muss doch besser gehen, hat sie sich gedacht. Und jetzt über ein Jahr später können
-        wir überzeugt sagen: Ja, es geht besser! Unserer Haferdrink ist frischer, regionaler, günstiger köstlicher UND nachhaltiger als
-        vergleichbare Barista Packmilch. Wir sind
-        <a
-            href="https://de.linkedin.com/in/sarah-nesti"
-            target="_blank"
-            class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all"
-            >Sarah</a
-        >, <a
-            href="https://de.linkedin.com/in/henrikburger/en"
-            target="_blank"
-            class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all"
-            >Henrik</a
-        >, <a
-            href="https://de.linkedin.com/in/lisanesti/en"
-            target="_blank"
-            class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all"
-            >Lisa</a
-        > und
-        <a
-            href="https://de.linkedin.com/in/benjamin-auer-68668a1a7/en"
-            target="_blank"
-            class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all"
-            >Benjamin</a
-        > – <span class="font-semibold">Willkommen bei unserer Haferdrink Revolution!</span>
-        <Secondary slot="button" buttonName="Über Uns" buttonUrl="/de/überuns" />
+    <ImgText title="Mission: (Hafer)Milch der Zukunft" imgUrl="/founders.webp" reverse>
+        Hinter The Oater steht ein leidenschaftliches Team aus Kaffee- und Haferdrink-Enthusiast:innen mit Pioniergeist. Uns eint die Mission, Lebensmittelproduktion neu zu denken und die Welt damit ein Stück nachhaltiger zu machen. 
+Unsere Herzensangelegenheit: Gastronom:innen dabei zu unterstützen ihre Ziele bezüglich Qualität und Nachhaltigkeit zu verwirklichen. So setzen wir gemeinsam neue Maßstäbe in der Gastronomie der Zukunft.
+         <span class="font-semibold">Denn für die (Hafer-) Milch der Zukunft braucht es weder Kuh noch Tetrapak.</span>
     </ImgText>
 
-    <Sustainable
-        background="bg-zinc-200"
-        heading="Nachhaltigkeit"
-        subtitle="Mit The Oater…"
-        susData={[
-            {
-                iconUrl: "/kohlenstoffdioxid.svg",
-                title: "…reduzierst Du CO2-Emissionen",
-                text: "Unsere Zutaten-Packs wiegen nur 1/10 von einem abgepackten Haferdrink. Und weniger Gewicht und Hafer aus Deutschland bedeutet weniger Transport Emissionen.",
-            },
-            {
-                iconUrl: "/verpackung.svg",
-                title: "…sparst Du 48% Verpackungsmüll.",
-                text: "Unser Haferdrink kommt ganz ohne Einweg-Verpackung aus und spart somit bis zu 48% Verpackungsmüll ein. Für unsere Zutatenmischung entwickeln wir zur Zeit eine Mehrweg-Verpackungssystem.",
-            },
-            {
-                iconUrl: "/klimaneutral.svg",
-                title: "…bleibst Du Klima-neutral.",
-                text: "Wir achten darauf in unserer gesamten Wertschöpfungskette möglichst wenig Emissionen zu produzieren und optimieren durchgängig. Die unvermeidbaren Emissionen werden kompensiert.",
-            },
-        ]}
-    >
-        <Secondary slot="button" buttonName="Nachhaltigkeit" buttonUrl="/de/nachhaltigkeit" />
-    </Sustainable>
-
-    <Blogsection
-        headline="Magazin"
-        blogData={[
-            {
-                href: "https://magazin.oater.de/de/2022/10/19/mehr-nachhaltigkeit-im-cafe",
-                imgUrl: "/sowirddeincafenachhaltiger.webp",
-                tag: "sustainable",
-                title: "So wird Dein Café nachhaltiger",
-                author: "Sebastian",
-                date: "Okt. 19, 2022",
-            },
-            {
-                href: "https://magazin.oater.de/de/2022/07/07/das-ultimative-vegane-macaroni-and-cheese-rezept",
-                imgUrl: "/macaroni.webp",
-                tag: "REZEPT HUB",
-                title: "DAS vegane Macaroni and Cheese Rezept",
-                author: "Lisa",
-                date: "Jul. 7, 2022",
-            },
-            {
-                href: "https://magazin.oater.de/de/2022/08/02/tipps-gegen-lebensmittelverschwendung",
-                imgUrl: "/retteretich.webp",
-                tag: "ECO-FRIENDLY LIVING",
-                title: "5 Tipps für weniger Lebensmittelverschwendung",
-                author: "Katharina",
-                date: "Aug. 2, 2022",
-            },
-        ]}
-    >
-        <Secondary slot="button" buttonName="Mehr Artikel" buttonUrl="https://magazin.oater.de/de" />
-    </Blogsection>
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/26294092.js"></script>
     <!-- Add a container div to wrap the button -->
     <div id="cookie_button_container">
