@@ -9,128 +9,100 @@ import ImgText from "../components/imagetext.astro";
 import Newsletter from "../components/newslettersignup.astro";
 import Blogsection from "../components/blogsection.astro";
 import IconbarHome from "../components/iconbarHome.astro";
+import Oatermix from "../components/oatermix.astro";
 ---
 <Layout title="THE OATER">
     <Mainhero
-        heroImage="oater-full.png"
-        heroHeading="Press For Revolution"
-        heroSubtitle="The Oater® Oat Drink Machine"
-        heroText="The machine for fresh and sustainable oat drink with barista quality for professionals."
+        heroImage="The Oater Barista Maschine.png"
+        heroHeading="A Fresh Take On Oat Milk"
+        heroSubtitle="For more impact in your café"
+        heroText="Offer your guests a fresh experience – produce sustainable oat drink in barista quality on-site. Discover if The Oater® Barista is right for your café!"
 >
 
-        <Primary slot="button" buttonName="to the waitlist" buttonUrl="https://share-eu1.hsforms.com/1KM3gGgfeS1mdqBzwXyDhbgfnkng" />
+        <Primary slot="button" buttonName="Take the 1-minute quiz" buttonUrl="https://share-eu1.hsforms.com/1KM3gGgfeS1mdqBzwXyDhbgfnkng" />
     </Mainhero>
 
-    <ImgText title="Our Mission" imgUrl="/mission.jpg">
-        Oat drink in a carton was yesterday. The Oater® machine produces the oat drink of the future. We are rethinking oat drink - with full
-        barista quality and freshness – no packaging waste, no added sugar and no tradeoffs.
-        <Secondary slot="button" buttonName="Our Mission" buttonUrl="/about" />
+    <ImgText title="Your café, your oat drink" imgUrl="/cafe mug.png">    
+Developed for the hospitality: With The Oater Barista®, you can produce fresh oat drink on-site, fully automated. With our easy, low-waste solution, you can set new standards in terms of taste and sustainability - for your guests and your team.
+        <Secondary slot="button" buttonName="How it works" buttonUrl="/product" />
     </ImgText>
 
-    <IconbarHome
-        bgcolor="bg-oat-superlight"
-        title="Oat Drink Without Tradeoffs"
-        icontitle1="Fresh + Local"
+<Oatermix
+        id="ingredientmix"
+        imgUrl="/zutaten-mix.png"
+        title="We made it simple. You make it fresh."
+        mixpropertiesData={[
+            {
+                icon: "/biozertifiziert.svg",
+                title: "FRESH",
+                text: "Our Barista oat drink is prepared fresh and on-site. This offers an incomparable customer experience.",
+            },
+            {
+                icon: "/hafer.svg",
+                title: "BARISTA QUALITY",
+                text: "Developed with hospitality professionals, our oat drink delivers excellent foam quality and harmony in coffee.",
+            },
+            {
+                icon: "/zucker.svg",
+                title: "MILK CARTON-FREE",
+                text: "By producing on-site and dispensing into reusable bottles, The Oater Barista® avoids creating environmentally harmful compound carton waste.",
+            },
+            {
+                icon: "/verpackungsarm.svg",
+                title: "FROM GERMANY",
+                text: "The Oater focuses on quality and regionality - we develop and manufacture our products in Germany and source 100% German oats.",
+            },
+            {
+                icon: "/pflanzlich.svg",
+                title: "EASY HANDLING",
+                text: "TOur machine is automated - from dosing to cleaning. Coupled with an intuitive user experience, it fits seamlessly into fast-paced workflows.",
+            },
+        ]}
+    />
+
+    <Sustainable
+    heading="Testimonials"
+    id="ziele"
+    susData={[
+        {
+            iconUrl: "/co2reduction.svg",
+            title: "Robin Franke, Chief Product Officer Melitta Professional",
+            text: "The Oater is a real game-changer in milk alternatives, especially for coffee lovers. At Melitta, we’re excited about this partnership because it’s not just about a sustainable oat milk but about individualization. It's a fresh and exciting approach to milk coffee that we believe will set a new standard in the industry.",
+        },
+        {
+            iconUrl: "/shortdistances.svg",
+            title: "Tanja Goldstein, Owner Heaven’s Kitchen",
+            text: "With the introduction of the first oat milk machine in Stuttgart, Heaven's Kitchen is setting new standards in terms of quality and sustainability. Our daily fresh oat drink not only offers an outstanding taste experience, but also actively contributes to the protection of our environment. The consistently positive feedback from our guests has shown that we have made the right decision with this innovative purchase.",
+        },
+        {
+            iconUrl: "/greenenergy.svg",
+            title: "Britta Barthelmess, Owner moxxa caffè & Roastery",
+            text: "We are very happy to have found The Oater. We have a huge packaging waste problem in the hospitality industry with milk cartons. Two thirds of all the milk we serve is now oat milk. Thanks to The Oater, we can now go into a recycling system with bottles that we fill, serve, wash and reuse. It’s genius.",
+        },
+    ]}
+/>
+
+<Iconbar
+        bgcolor="bg-zinc-200"
+        icontitle1="Vegconomist"
         imgUrl1="/frischlokal.svg"
-        icontitle2="Barista Quality"
+        icontitle2="DEHOGA"
         imgUrl2="/coffee.svg"
-        icontitle3="Low-Waste"
+        icontitle3="WDR"
         imgUrl3="/verpackungsarm.svg"
-        icontitle4="Cost Saving"
+        icontitle4="Kölner Stadtanzeiger"
         imgUrl4="/preiswert.svg"
-        icontitle5="Without Added Sugar"
+        icontitle5="Gastro Magazin"
         imgUrl5="/zucker.svg"
-    >
-        <Secondary slot="button" buttonName="Our Solution" buttonUrl="/solution" />
-    </IconbarHome>
+    />
 
     <ImgText title="The OATeam" imgUrl="/founders.webp" reverse>
-        We are a team of dreamers and oat drink enthusiasts from Cologne, who firmly believe that there is still room for improvement in oat
-        drink. It all started when our CEO Sarah, who has been vegan for 7 years, was bothered by all the packaging waste and the lack of
-        freshness of her oat drink. There has to be a better way, she thought to herself. And now over 1 year later, we can say with
-        conviction: Yes, it can be better! Our oat drink is fresher, more regional, cheaper, more delicious AND more sustainable than other
-        solutions in the market today. We are
-        <a
-            href="https://de.linkedin.com/in/sarah-nesti"
-            target="_blank"
-            class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all"
-            >Sarah</a
-        >, <a
-            href="https://de.linkedin.com/in/henrikburger/en"
-            target="_blank"
-            class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all"
-            >Henrik</a
-        >, <a
-            href="https://de.linkedin.com/in/lisanesti/en"
-            target="_blank"
-            class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all"
-            >Lisa</a
-        > and
-        <a
-            href="https://de.linkedin.com/in/benjamin-auer-68668a1a7/en"
-            target="_blank"
-            class="font-semibold text-oat-dark underline decoration-1 underline-offset-2 duration-500 hover:text-oat hover:transition-all"
-            >Benjamin</a
-        > – <span class="font-semibold">Join our oat drink revolution!</span>
+        Behind The Oater is a passionate team of coffee and oat drink enthusiasts, pioneers and dreamers. We are united by the mission to rethink food production and make the world a little more sustainable. We are passionate about helping hospitality professionals achieve their quality and sustainability goals. Together, we are setting new standards in the gastronomy of the future. 
+        <span class="font-semibold">Because the (oat) milk of the future doesn't need a cow nor a milk carton.</span>
         <Secondary slot="button" buttonName="About Us" buttonUrl="/about" />
     </ImgText>
 
-    <Sustainable
-        background="bg-zinc-200"
-        heading="Sustainability"
-        subtitle="With The Oater®…"
-        susData={[
-            {
-                iconUrl: "/kohlenstoffdioxid.svg",
-                title: "…you reduce C02 emissions.",
-                text: "Our ingredient packs weigh only 1/10 of a packaged oat drink. And less weight and organic oats from Germany means less transport emissions.",
-            },
-            {
-                iconUrl: "/verpackung.svg",
-                title: "…you save 48 % packaging waste.",
-                text: "Our oat drink comes without any disposable packaging at all, saving up to 48 % packaging waste. We are developing a reusable packaging system for our ingredient mix.",
-            },
-            {
-                iconUrl: "/klimaneutral.svg",
-                title: "…you stay climate-neutral",
-                text: "It’s important to us to produce as few emissions as possible in our entire value chain and we optimize continuously. The unavoidable emissions are compensated.",
-            },
-        ]}
-    >
-        <Secondary slot="button" buttonName="sustainability" buttonUrl="/sustainability" />
-    </Sustainable>
 
-    <Blogsection
-        headline="Magazin"
-        blogData={[
-            {
-                href: "https://magazin.oater.de/de/2022/10/19/mehr-nachhaltigkeit-im-cafe",
-                imgUrl: "/sowirddeincafenachhaltiger.webp",
-                tag: "sustainable",
-                title: "So wird Dein Café nachhaltiger",
-                author: "Sebastian",
-                date: "Okt. 19, 2022",
-            },
-            {
-                href: "https://magazin.oater.de/de/2022/07/07/das-ultimative-vegane-macaroni-and-cheese-rezept",
-                imgUrl: "/macaroni.webp",
-                tag: "REZEPT HUB",
-                title: "DAS vegane Macaroni and Cheese Rezept",
-                author: "Lisa",
-                date: "Jul. 7, 2022",
-            },
-            {
-                href: "https://magazin.oater.de/de/2022/08/02/tipps-gegen-lebensmittelverschwendung",
-                imgUrl: "/retteretich.webp",
-                tag: "ECO-FRIENDLY LIVING",
-                title: "5 Tipps für weniger Lebensmittelverschwendung",
-                author: "Katharina",
-                date: "Aug. 2, 2022",
-            },
-        ]}
-    >
-        <Secondary slot="button" buttonName="Read more articles" buttonUrl="https://magazin.oater.de/de" />
-    </Blogsection>
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/26294092.js"></script>
     <!-- Add a container div to wrap the button -->
     <div id="cookie_button_container">
@@ -200,8 +172,8 @@ import IconbarHome from "../components/iconbarHome.astro";
         });
     </script>
     <a id="newsletter_section"></a>
-    <Newsletter headline="Join The OATeam">
-        Sign up for the newsletter and learn immediately about new recipes and company news! And do not worry for our mails the same claim
-        applies, as for our oat drink - no garbage.
-    </Newsletter>
+    <ImgText imgUrl="/henrik.webp" title="Oat drink, made fresh" minusmargin="-mb-20">
+        <span class="font-bold">Ready to wow your guests?</span>
+        <Secondary slot="button" buttonName="Let's chat!" buttonUrl="/de/produkt" />
+    </ImgText>
 </Layout>
